@@ -111,7 +111,7 @@
           <li ng-if="!isRegistered" ng-click="print()"><i class="material-icons">person_add</i>Registrarse</li>
           <li>
             <div ng-hide="googleSignedIn" class="g-signin2" data-onsuccess="onSignIn"></div>
-            <a ng-show="googleSignedIn" href="#" onclick="signOut();">Sign out</a>
+            <a ng-show="googleSignedIn" href="#" ng-click="signOut();">Sign out</a>
           </li>
           <li ng-if="!isRegistered" ng-click="print()"><i class="material-icons">input</i>Ingresar</li>
           <li ng-click="print()"><i class="material-icons">search</i>Buscar</li>
