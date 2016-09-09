@@ -10,6 +10,9 @@
   <script src="static/bower_components/angular-messages/angular-messages.min.js"></script>
   <script src="static/bower_components/angular-material/angular-material.min.js"></script>
   <script src="static/navbar.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  
+  <meta name="google-signin-client_id" content="528825367806-usce9661vsck08nk8nhji3levklj540f.apps.googleusercontent.com">
 
   <style type="text/css">
       @font-face {
@@ -68,7 +71,7 @@
       height: 480px;
     }
   </style>
-
+  
   <script type="text/javascript">
     var map;
     function initMap() {
@@ -106,6 +109,10 @@
       </md-toolbar>
       <md-content layout-padding ng-controller="LeftCtrl">
           <li ng-if="!isRegistered" ng-click="print()"><i class="material-icons">person_add</i>Registrarse</li>
+          <li>
+            <div ng-hide="googleSignedIn" class="g-signin2" data-onsuccess="onSignIn"></div>
+            <a ng-show="googleSignedIn" href="#" onclick="signOut();">Sign out</a>
+          </li>
           <li ng-if="!isRegistered" ng-click="print()"><i class="material-icons">input</i>Ingresar</li>
           <li ng-click="print()"><i class="material-icons">search</i>Buscar</li>
           <li ng-click="print()"><i class="material-icons">my_location</i>Alrededores</li>
