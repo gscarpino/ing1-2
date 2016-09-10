@@ -1,8 +1,9 @@
 angular
   .module('wifindApp', ['ngMaterial'])
-  .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+  .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log, $window) {
     $scope.toggleLeft = buildDelayedToggler('left');
     $scope.toggleRight = buildToggler('right');
+    $scope.googleSignedIn = false;
 
     $scope.isRegistered = false;
 
@@ -13,6 +14,25 @@ angular
     $scope.isOpenRight = function(){
       return $mdSidenav('right').isOpen();
     };
+    
+    $scope.signOut = function() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        $scope.googleSignedIn = false;
+        console.log('User signed out.');
+      });
+    }
+
+    function onSignIn(googleUser) {
+      $scope.googleSignedIn = true;
+      var profile = googleUser.getBasicProfile();
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail());
+    }
+    
+    $window.onSignIn = onSignIn
+    
     /**
      * Supplies a function that will continue to operate until the
      * time is up.
