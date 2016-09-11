@@ -1,6 +1,36 @@
 angular
-  .module('wifindApp', ['ngMaterial'])
-  .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log, $window) {
+  .module('wifindApp', ['ngMaterial','ui.router','uiGmapgoogle-maps'])
+
+  .config(function($stateProvider,uiGmapGoogleMapApiProvider){
+
+    var indexState = {
+      name: 'index',
+      url: '/',
+      templateUrl: '/public/inicio.html',
+      controller: 'InicioCtrl'	
+    };
+
+    var registerUserState = {
+      name: 'Nuevo Usuario',
+      url: '/user/new',
+      templateUrl: '/public/user.new.html',
+      controller: 'UserCtrl'
+    };
+
+    $stateProvider.state(indexState);
+    $stateProvider.state(registerUserState);
+    
+    uiGmapGoogleMapApiProvider.configure({
+        key: 'AIzaSyAgYylgy22-FeNAyLki1roQQzxNhrAChOU',
+        libraries: 'weather,geometry,visualization'
+    });
+  })
+
+  .value('site',{name: 'WifindBar', protocol: 'http', domain: 'wifindbar.sytes.net', port: '5000'})
+
+  .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, site, $log, $window, $http, $mdToast, $state) {
+    $state.transitionTo('index');
+    $scope.url = site.protocol + "://" + site.domain + ":" + site.port; 
     $scope.toggleLeft = buildDelayedToggler('left');
     $scope.toggleRight = buildToggler('right');
     $scope.googleSignedIn = false;
@@ -29,6 +59,23 @@ angular
       console.log('Name: ' + profile.getName());
       console.log('Image URL: ' + profile.getImageUrl());
       console.log('Email: ' + profile.getEmail());
+      var user = {
+        name: profile.getName(),
+        email: profile.getEmail()
+      }
+
+      $http.post($scope.url + "/user/logged",user).then(function(response){
+	$mdToast.show({
+          hideDelay   : 1500,
+          position    : 'top right',
+          controller  : 'ToastCtrl',
+          templateUrl : 'toast-template.html'
+        });
+      }, 
+      function(error){
+	console.log("Error", error);
+      });
+
     }
     
     $window.onSignIn = onSignIn
@@ -82,4 +129,31 @@ angular
           //$log.debug("close LEFT is done");
         });
     };
-  });
+  })
+
+  .controller('ToastCtrl', function($scope, $mdToast, $mdDialog) {
+
+      $scope.closeToast = function() {
+        //if (isDlgOpen) return;
+
+        $mdToast
+          .hide()
+          .then(function() {
+            //isDlgOpen = false;
+          });
+      };
+  })
+
+  .controller('UserCtrl', function($scope){
+    console.log("Usuario");
+  })
+
+  .controller('InicioCtrl', function($scope,uiGmapGoogleMapApi){
+    uiGmapGoogleMapApi.then(function(maps) {
+	console.log("Google maps cargado!");
+	$scope.map = { center: { latitude: -34.397, longitude: 150.644 }, zoom: 8 };
+        //$scope.center = { latitude: -34.397, longitude: 150.644};
+        //$scope.zoom = 8 ;
+    });
+    console.log("Inicio");
+  })

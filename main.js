@@ -40,7 +40,27 @@ var express = require('express'),
 	   console.log("Server listenning at port 5000");
     }); 
 
-    app.post('/user/new', function(req,res){
-        console.log(req.body);
-        res.jsonp({status: "ok"});
+    app.post('/user/logged', function(req,res){
+        if(req.body.email){
+	    models.users.find({email: req.body.email}, function(error, users){
+		if(error){
+		    return res.status(500).send("Error interno");
+		}
+
+		if(!users){
+		    user = new models.users(req.body);
+		    user.save(function(er){
+			console.log("Nuevo usuario registrado");
+			res.jsonp({status: "ok"});	
+		    });
+		}
+		else{
+		    console.log("Usuario ya registrado");
+		    res.jsonp({status: "ok"});
+		}
+	    });
+	}
+	else{
+	    res.status(400).send("Error con parámetros");
+	}
     });
