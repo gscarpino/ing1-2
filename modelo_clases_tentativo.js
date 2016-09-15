@@ -5,50 +5,54 @@
 ////////////////////////////////////////
 
 // Clase abstracta
-class Usuario {
-    constructor(ubicacion) {
-        if (this.constructor === Usuario) {
-            throw new TypeError('No se puede contruir la clase abstracta Usuario');
-        }
+// class Usuario {
+//     constructor(ubicacion) {
+//         if (this.constructor === Usuario) {
+//             throw new TypeError('No se puede contruir la clase abstracta Usuario');
+//         }
 
-        this._ubicacion = ubicacion;
-    }
+//         this._ubicacion = ubicacion;
+//     }
 
-    buscarBar() {
-        // TODO
-        console.log('buscarBar');
-    }
-}
+//     buscarBar() {
+//         // TODO
+//         console.log('buscarBar');
+//     }
+// }
 
-class UsuarioRegistrado extends Usuario {
-    constructor(ubicacion, nombre) {
-        super(ubicacion);
+class BuscadorDeBares{
+    constructor(nombre,ubicacion) {
         this._nombre = nombre;
+        this._ubicacion = ubicacion;
     }
 
     get nombre() {
         return this._nombre;
     }
 
-    calificarBar(bar) {
+    get ubicacion() {
+        return this._ubicacion;
+    }
+
+    calificarBar(bar,puntajeWifi, puntajeEnchufes, conjuntoCalificacionOpcionales, comentario) {
         // TODO
         console.log('calificarBar');
     }
 }
 
-class UsuarioAnonimo extends Usuario {
-    constructor(ubicacion) {
-        super(ubicacion);
-    }
-}
+// class UsuarioAnonimo extends Usuario {
+//     constructor(ubicacion) {
+//         super(ubicacion);
+//     }
+// }
 
 ////////////////////////////////////////
 //          CLASE DBMANAGER           //
 ////////////////////////////////////////
 
-class DBManager {
+class Administrador {
     constructor() {
-        if (this.constructor === DBManager) {
+        if (this.constructor === Administrador) {
             throw new TypeError('No se puede construir la clase abstracta DBManager');
         }
     }
@@ -66,35 +70,35 @@ class DBManager {
     }
 }
 
-class UsuarioManager extends DBManager {
-    buscar() {
+class AdministradorDeBuscadorDeBares extends Administrador {
+    buscar(BuscadorDeBares) {
         // TODO
         console.log('buscar');
     }
 
-    guardar() {
+    guardar(BuscadorDeBares) {
         // TODO
         console.log('guardar');
     }
 
-    borrar() {
+    borrar(BuscadorDeBares) {
         // TODO
         console.log('borrar');
     }
 }
 
-class BarManager extends DBManager {
-    buscar() {
+class AdministradorDeBares extends Administrador {
+    buscar(ubicacion, distancia) {
         // TODO
         console.log('buscar');
     }
 
-    guardar() {
+    guardar(bar) {
         // TODO
         console.log('guardar');
     }
 
-    borrar() {
+    borrar(bar) {
         // TODO
         console.log('borrar');
     }
@@ -113,8 +117,30 @@ class Bar {
         // TODO
         console.log('estaCerca');
     }
+
+    promedioCaracteristica(caracteristica){
+    	// TODO
+        console.log('promedioCaracteristica');
+    } 
+
+    //Conjunto de caractersiticas??
 }
 
+
+////////////////////////////////////////
+//  CLASE CalculadorDistancias        //
+////////////////////////////////////////
+
+class CalculadorDistancias {
+    constructor() {
+      //??
+    }
+
+    distanciaEntre(ubicacion1, ubicacion2) {
+        // TODO
+        console.log('distanciaENtre');
+    }
+}
 ////////////////////////////////////////
 //          CLASE UBICACION           //
 ////////////////////////////////////////
@@ -127,27 +153,49 @@ class Ubicacion {
 }
 
 ////////////////////////////////////////
-//          CLASE ATRIBUTO            //
+//          CLASE CARACTERISTICA      //
 ////////////////////////////////////////
 
-class Atributo {
+//Clase Abstractca
+
+class Caracteristica {
     constructor(nombre, significado_menor, significado_mayor) {
+    	 if (this.constructor === Usuario) {
+    	    throw new TypeError('No se puede contruir la clase abstracta Caracteristica');
+     	}
+
         this._nombre = nombre;
         this._significado_menor = significado_menor;
         this._significado_mayor = significado_mayor;
     }
 }
 
+class CaracteristicaObligatoria extends Caracteristica {
+    constructor(nombre, significado_menor, significado_mayor) {super(nombre, significado_menor, significado_mayor);}
+}
+
+
+class CaracteristicaOpcional extends Caracteristica{
+   constructor(nombre, significado_menor, significado_mayor) {super(nombre, significado_menor, significado_mayor);}
+}
+
+
 ////////////////////////////////////////
 //          CLASE CALIFICACION        //
 ////////////////////////////////////////
 
 class Calificacion {
-    constructor(estrellas) {
+    constructor(estrellas,caracterstica) {
         this._estrellas = estrellas;
+        this.caracterstica = caracterstica	
     }
 
     cantidadEstrellas() {
         return this._estrellas;
     }
 }
+
+
+////////////////////////////////////////
+//          CLASE CRITICA      		  //
+////////////////////////////////////////
