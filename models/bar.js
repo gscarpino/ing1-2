@@ -8,7 +8,8 @@ var barSchema = new Schema({
 	ubicacion: {
 		latitud: Number,
 		longitud: Number
-	}
+	},
+	direccion: String
 });
 
 module.exports = bares....;
