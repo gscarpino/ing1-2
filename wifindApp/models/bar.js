@@ -12,4 +12,5 @@ var BarSchema = new Schema({
 	direccion: String
 });
 
-module.exports = BarSchema;
+var Bar = mongoose.model('Bar', BarSchema);
+module.exports = Bar;

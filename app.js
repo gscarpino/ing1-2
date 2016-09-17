@@ -1,5 +1,5 @@
 angular
-    .module('wifindApp', ['ngMaterial','ui.router','uiGmapgoogle-maps'])
+    .module('wifindApp', ['ngMaterial','ui.router','uiGmapgoogle-maps', 'wifindAppControllers', 'wifindAppServices'])
 
     .config(function($stateProvider,uiGmapGoogleMapApiProvider){
         var indexState = {
@@ -20,7 +20,9 @@ angular
         $stateProvider.state(registerUserState);
 
         uiGmapGoogleMapApiProvider.configure({
-            key: 'AIzaSyAgYylgy22-FeNAyLki1roQQzxNhrAChOU',
+            // key verdadera del sitio
+            // key: 'AIzaSyAgYylgy22-FeNAyLki1roQQzxNhrAChOU',
+            key: 'AIzaSyDiZsEG6n-fyybZiJgGeAQFYIPC5jkHURM',
             libraries: 'weather,geometry,visualization'
         });
     })
@@ -141,18 +143,3 @@ angular
             });
         };
     })
-
-    .controller('UserCtrl', function($scope){
-        console.log("Usuario");
-    })
-
-    .controller('InicioCtrl', function($scope,uiGmapGoogleMapApi){
-        uiGmapGoogleMapApi.then(function(maps) {
-            console.log("Google maps cargado!");
-            $scope.map = { center: { latitude: -34.397, longitude: 150.644 }, zoom: 8 };
-            //$scope.center = { latitude: -34.397, longitude: 150.644};
-            //$scope.zoom = 8 ;
-        });
-        console.log("Inicio");
-    }
-)

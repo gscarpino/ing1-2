@@ -1,12 +1,16 @@
 var bares = require('./models/bar'),
-    users = require('./models/user');
+    User = require('./models/user');
 
+var guiaDeBares = require('./guia_de_bares');
 
 module.exports = function(app) {
 
-    app.post('/user/logged', function(req,res){
-      if(req.body.email){
-        users.find({email: req.body.email}, function(error, users){
+
+    // USUARIOS
+    app.post('/user/logged', function(req,res,next){
+    console.log(req.body);
+      if(req.body.email) {
+        User.find({email: req.body.email}, function(error, users){
           if(error){
             return res.status(500).send("Error interno");
           }
@@ -29,4 +33,37 @@ module.exports = function(app) {
       }
     });
 
+
+    // BARES
+    app.get('/api/bares/buscar', function(req,res,next){
+        console.log("Buscando bares... ");
+        console.log("Body: ");
+        console.log(req.body);
+        var ubicacion = req.body.ubicacion;
+        console.log("Ubicacion: " + ubicacion);
+
+        if (!app.guiaDeBares) console.log("guiaDeBares es nil");
+
+        var resultados = app.guiaDeBares.buscar(ubicacion, 400);
+        res.jsonp({
+                    status: "ok",
+                    bares: resultados
+                });
+    });
+
+    app.post('/api/bares', function(req,res,next){
+        console.log("Agregando bar... ");
+        res.jsonp({
+                    status: "ok",
+                    bares: []
+                });
+    });
+
+    app.delete('/api/bares', function(req,res,next){
+        console.log("Eliminando bar... ");
+        res.jsonp({
+                    status: "ok",
+                    bares: []
+                });
+    });
 }

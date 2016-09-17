@@ -1,12 +1,14 @@
-var dir_root = '/var/www/';
+    var dir_root = '/home/ecoronel/Exactas/isw2/tp/wifind-bar/';
 
-var express = require('express'),
-    app = express(),
-    moment = require('moment'),
-    bodyParser = require('body-parser'),
-    serverConfig = require('./config/server'),
-    database = require('./config/database'),
-    mongoose = require('mongoose');
+    var express = require('express'),
+        app = express(),
+        moment = require('moment'),
+        bodyParser = require('body-parser'),
+        serverConfig = require('./config/server'),
+        database = require('./config/database'),
+        mongoose = require('mongoose');
+
+    var GuiaDeBares = require('./wifindApp/guia_de_bares');
 
     mongoose.connect(database.uri);
 
@@ -16,12 +18,21 @@ var express = require('express'),
         console.log("Connected to MongoDB");
     });
 
+    //
+    app.guiaDeBares = new GuiaDeBares(mongoose.models.Bares);
+
     app.use(function(req,res,next){
         console.log("[" + moment(Date.now()).format("DD/MM/YYYY HH:mm:ss") + "]: " + req.method + " " + req.originalUrl);
         next();
     });
 
-    app.use(bodyParser.json({}));
+    /*app.use(bodyParser.urlencoded({
+        extended: true
+    }));*/
+
+    app.use(bodyParser.json());
+
+    require('./wifindApp/routes')(app);
 
     app.get('/', function(req, res){
         res.sendFile(dir_root + 'public/index.html');
@@ -40,5 +51,3 @@ var express = require('express'),
     app.listen(serverConfig.port, serverConfig.ip, function(){
         console.log("Server listenning at port " + serverConfig.port);
     });
-
-    require('./wifindApp/routes')(app);
