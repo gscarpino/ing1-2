@@ -58,6 +58,9 @@
       /* Support for IE. */
       font-feature-settings: 'liga';
     }
+    body {
+    background: #F2F2F2;
+    }
     li {
       list-style-type: none;
         cursor: pointer;
@@ -115,7 +118,7 @@
         <h1 class="md-toolbar-tools">Wifind Bar</h1>
       </md-toolbar>
       <md-content layout-padding ng-controller="LeftCtrl">
-          <li ng-if="!isRegistered"><a ui-sref="Nuevo Usuario" ui-sref-active="active"><i class="material-icons">person_add</i>Registrarse</a></li>
+          <li ng-if="!isRegistered"><a ui-sref="Nuevo Usuario" ui-sref-active="active"  href="/public/sign-up/user_new.html"  ><i class="material-icons">person_add</i>Registrarse</a></li>
           <li>
             <div ng-hide="googleSignedIn" class="g-signin2" data-onsuccess="onSignIn"></div>
             <a ng-show="googleSignedIn" href="#" ng-click="signOut();">Sign out</a>
