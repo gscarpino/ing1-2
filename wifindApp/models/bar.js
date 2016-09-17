@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var barSchema = new Schema({
+var BarSchema = new Schema({
 	nombre: String,
 	descripcion: String,
 	ubicacion: {
@@ -12,4 +12,4 @@ var barSchema = new Schema({
 	direccion: String
 });
 
-module.exports = bares....;
+module.exports = BarSchema;
