@@ -20,7 +20,9 @@
     });
 
     //
-    app.guiaDeBares = new GuiaDeBares(mongoose.models.Bares, new CalculadorDistancias());
+    var calcDist = new CalculadorDistancias();
+    if (!calcDist) console.log("calcDist is null");
+    app.guiaDeBares = new GuiaDeBares(mongoose.models.Bares, calcDist);
 
     app.use(function(req,res,next){
         console.log("[" + moment(Date.now()).format("DD/MM/YYYY HH:mm:ss") + "]: " + req.method + " " + req.originalUrl);

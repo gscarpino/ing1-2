@@ -1,6 +1,4 @@
-var bares = require('./models/bar'),
-    User = require('./models/user');
-
+var User = require('./models/user');
 var guiaDeBares = require('./guia_de_bares');
 
 module.exports = function(app) {
@@ -55,37 +53,46 @@ module.exports = function(app) {
             res.status(400).send("Error con parámetros");
         }
     });
-
+    /////////////////////////////////////////////////////////////////
     // BARES
+    /////////////////////////////////////////////////////////////////
+
+    // Buscar bares
     app.post('/api/bares/buscar', function(req,res,next){
-        console.log("Buscando bares... ");
-        console.log("Body: ");
-        console.log(req.body);
         var ubicacion = req.body.ubicacion;
-        console.log("Ubicacion: " + ubicacion);
-
-        if (!app.guiaDeBares) console.log("guiaDeBares es nil");
-
-        var resultados = app.guiaDeBares.buscar(ubicacion, 400);
-        res.jsonp({
-                    status: "ok",
-                    bares: resultados
-                });
+        var resultados = app.guiaDeBares.buscar(req.body.ubicacion, req.body.distancia,
+            function(results) {
+                res.jsonp({
+                            status: "ok",
+                            bares: results
+                        });
+            });
     });
 
+    // Agregar un bar
     app.post('/api/bares', function(req,res,next){
-        console.log("Agregando bar... ");
-        res.jsonp({
-                    status: "ok",
-                    bares: []
-                });
+        if (req.body.nombre)
+        {
+            app.guiaDeBares.agregar(req.body, function(result) {
+                res.jsonp({ status: "ok" });
+            });
+        }
+        else {
+            res.status(400).send("Error con parámetros");
+        }
     });
 
+    // Actualizar un bar
+    app.put('/api/bares', function(req,res,next){
+        console.log("No implementado aún.");
+        res.jsonp({ status: "No implementado aún."});
+    });
+
+    // Eliminar un bar
     app.delete('/api/bares', function(req,res,next){
         console.log("Eliminando bar... ");
-        res.jsonp({
-                    status: "ok",
-                    bares: []
-                });
+        app.guiaDeBares.eliminar(req.body, function(result) {
+            res.jsonp({ status: "ok" });
+        });
     });
 }

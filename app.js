@@ -62,7 +62,7 @@ angular
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail());
             var user = {
-                name: profile.getName(),
+                nombre: profile.getName(),
                 email: profile.getEmail()
             };
 

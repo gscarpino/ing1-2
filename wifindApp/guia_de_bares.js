@@ -1,26 +1,43 @@
-var Bar = require('./bar');
+var Bar = require('./bar'),
+    ModelBar = require('./models/bar');
 
 module.exports =
-     function(bares, calculadorDistancias) {
-        this.bares = bares;
+     function(bar, calculadorDistancias) {
         this.calculadorDistancias = calculadorDistancias;
 
         // metodos
-        this.agregar = function(bar) {
-
+        this.agregar = function(bar, successCb) {
+            bar = new ModelBar( {nombre: bar.nombre, descripcion: bar.descripcion, ubicacion: bar.ubicacion, direccion: bar.direccion } );
+            bar.save(function(er){
+                console.log("Nuevo bar registrado");
+                callback();
+            });
         };
 
-        this.buscar = function(ubicacion, distancia) {
-            // stubbed
-            var bar1 = new Bar("La Farola de Cabildo", "Un clasido de Buenos Aires.", {latitud: -34.557279, longitud: -58.461108}, "Av. Cabildo 2630, C1428AAV CABA");
-            var bar2 = new Bar("Café Martínez", "Cafeteria de Buenos Aires.", {latitud: -34.556708, longitud: -58.461150}, "Av. Cabildo 2733, C1428AAJ CABA");
+        this.buscar = function(ubicacion, distancia, callback) {
+            var bares_encontrados = [];
+            var calcDist = this.calculadorDistancias;
 
-            var bares_encontrados = [bar1, bar2];
-            return bares_encontrados;
+            ModelBar.find({}, function(error, bares){
+                if(error){
+                    // TODO refactor this
+                    return res.status(500).send("Error interno");
+                }
+                // console.log(bares);
+
+                bares.forEach(function(bar) {
+                    if (calcDist.calcular(bar.ubicacion, ubicacion) <= distancia){
+                        bares_encontrados.push(bar);
+                    }
+                });
+                callback(bares_encontrados);
+            });
         };
 
-        this.eliminar = function(bar) {
-            this.bares.remove( {"id": bar.id} );
+        this.eliminar = function(bar, callback) {
+            console.log("Eliminando bar");
+            // ModelBar.remove( {"id": bar.id} );
+            callback();
         };
 
     };
