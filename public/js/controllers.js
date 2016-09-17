@@ -7,9 +7,11 @@ angular.module('wifindAppControllers', [])
     .controller('InicioCtrl', function($scope,uiGmapGoogleMapApi){
         uiGmapGoogleMapApi.then(function(maps) {
             console.log("Google maps cargado!");
-            $scope.map = { center: { latitude: -34.397, longitude: 150.644 }, zoom: 8 };
+            
+            $scope.map = { center: { latitude: -34.397, longitude: 150.644 } };
             //$scope.center = { latitude: -34.397, longitude: 150.644};
             //$scope.zoom = 8 ;
+            
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
                     var pos = {
@@ -18,7 +20,9 @@ angular.module('wifindAppControllers', [])
                     };
                     console.log(pos);
                 });
+              
             }
+            
         });
         console.log("Inicio");
     })
