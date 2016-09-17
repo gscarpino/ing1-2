@@ -22,12 +22,13 @@ angular
         uiGmapGoogleMapApiProvider.configure({
             // key verdadera del sitio
             // key: 'AIzaSyAgYylgy22-FeNAyLki1roQQzxNhrAChOU',
-            key: 'AIzaSyDiZsEG6n-fyybZiJgGeAQFYIPC5jkHURM',
+            key: 'AIzaSyBtW3QzoRs2i6j5_VnsBz-0w618rE20wjw',
             libraries: 'weather,geometry,visualization'
         });
     })
 
-    .value('site',{name: 'WifindBar', protocol: 'http', domain: 'wifindbar.sytes.net', port: '5000'})
+    // .value('site',{name: 'WifindBar', protocol: 'http', domain: 'wifindbar.sytes.net', port: '5000'})
+    .value('site',{name: 'WifindBar', protocol: 'http', domain: 'localhost', port: '5000'})
 
     .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, site, $log, $window, $http, $mdToast, $state) {
         $state.transitionTo('index');
@@ -65,7 +66,7 @@ angular
                 email: profile.getEmail()
             };
 
-            $http.post($scope.url + "/user/logged",user).then(function(response){
+            $http.post($scope.url + "/api/user/logged",user).then(function(response){
                     $mdToast.show({
                         hideDelay   : 1500,
                         position    : 'top right',
