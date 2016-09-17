@@ -35,7 +35,7 @@ module.exports = function(app) {
 
 
     // BARES
-    app.get('/api/bares/buscar', function(req,res,next){
+    app.post('/api/bares/buscar', function(req,res,next){
         console.log("Buscando bares... ");
         console.log("Body: ");
         console.log(req.body);

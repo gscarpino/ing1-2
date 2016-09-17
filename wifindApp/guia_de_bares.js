@@ -1,9 +1,11 @@
 var Bar = require('./bar');
 
 module.exports =
-     function(bares) {
+     function(bares, calculadorDistancias) {
         this.bares = bares;
+        this.calculadorDistancias = calculadorDistancias;
 
+        // metodos
         this.agregar = function(bar) {
 
         };
