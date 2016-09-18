@@ -124,7 +124,7 @@
             <a ng-show="googleSignedIn" href="#" ng-click="signOut();">Sign out</a>
           </li>
           <li ng-if="!isRegistered" ng-click="print()" ><a ui-sref="Usuario registrador" ui-sref-active="active"  href="/public/sign-up/login.html"><i class="material-icons">input</i>Ingresar</a></li>
-          <li ng-click="print()"><i class="material-icons">search</i>Buscar</li>
+          <li ng-click="BuscarDir" ><i class="material-icons">search</i>Buscar <input id="address" type="textarea" value="Ciudad Universitaria de Buenos Aires, Buenos Aires, Ciudad Autónoma de Buenos Aires"></li>
           <li ng-click="print()"><i class="material-icons">my_location</i>Alrededores</li>
           <li ng-click="print()"><i class="material-icons">settings</i>Opciones</li>
         </ul>
