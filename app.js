@@ -131,13 +131,19 @@ angular
             .then(function () {
                 //$log.debug("close LEFT is done");
             });
+        };
+
+        $scope.goToState = function(state) {
+            $state.go(state);
         }
 
+    })
 
+
+     .controller('PosCtrl', function ($scope, $timeout,uiGmapGoogleMapApi) {
+        
         $scope.coordenadas = function(){
             $scope.control = {};
-       
-
             uiGmapGoogleMapApi.then(function(maps) {
             $timeout(function(){var map = $scope.map.control.getGMap();},100);
             var address = document.getElementById('address').value;
@@ -158,10 +164,8 @@ angular
          });
         }
 
-        $scope.goToState = function(state) {
-            $state.go(state);
-        }
     })
+
 
     .controller('ToastCtrl', function($scope, $mdToast, $mdDialog) {
         $scope.closeToast = function() {
