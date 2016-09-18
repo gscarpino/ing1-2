@@ -16,7 +16,7 @@ describe('API de Bares', function() {
     describe('Eliminar', function() {
         it('Debe eliminar todos los bares a menos de 5000m.', function(done) {
             var datos_busqueda = {
-                ubicacion: { latitud: -34.557270, longitud: -58.461100 },
+                ubicacion: { latitude: -34.557270, longitude: -58.461100 },
                 distancia: 5000
             };
 

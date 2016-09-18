@@ -15,7 +15,7 @@ describe('API de Bares', function() {
     describe('Actualizar', function() {
         it('Debe actualizar todos los bares que están a menos de 200m.', function(done) {
             var datos_busqueda = {
-                ubicacion: { latitud: -34.557279, longitud: -58.461108 },
+                ubicacion: { latitude: -34.557279, longitude: -58.461108 },
                 distancia: 200
             };
 
