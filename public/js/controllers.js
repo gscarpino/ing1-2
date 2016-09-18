@@ -4,14 +4,14 @@ angular.module('wifindAppControllers', [])
         console.log("Usuario");
     })
 
-    .controller('InicioCtrl', function($scope,uiGmapGoogleMapApi){
+    .controller('InicioCtrl', function($scope, uiGmapGoogleMapApi, $http) {
         uiGmapGoogleMapApi.then(function(map) {
-            $scope.currentPosition = { latitude: -34.588771, longitude: -58.430198 };
+            $scope.currentPosition = { latitude: -34.557279, longitude: -58.461108 };
             $scope.map = { center: $scope.currentPosition , zoom: 13};
 
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
-                    $scope.currentPosition = { latitude: position.coords.latitude, longitude: position.coords.longitude };
+                    // $scope.currentPosition = { latitude: position.coords.latitude, longitude: position.coords.longitude };
 
                     $scope.map.center = $scope.currentPosition;
                 });
@@ -19,6 +19,52 @@ angular.module('wifindAppControllers', [])
         });
 
         $scope.buscarCercanos = function() {
+            $http({
+                method: 'POST',
+                url: 'http://localhost:5000/api/bares/buscar',
+                data: {
+                    ubicacion: $scope.currentPosition,
+                    distancia: 100400
+                }
+            }).then(function successCallback(response) {
+                console.log(response);
+            }, function errorCallback(response) {
+
+            });
+
+            var bares = [
+                {
+                    nombre: "La Farola de Cabildo",
+                    descripcion: "Un clasido de Buenos Aires.",
+                    ubicacion: { latitud: -34.557279, longitud: -58.461108 },
+                    direccion: "Av. Cabildo 2630, C1428AAV CABA"
+                },
+                {
+                    nombre: "Café Martínez",
+                    descripcion: "Cafe de Buenos Aires.",
+                    ubicacion: { latitud: -34.556708, longitud: -58.461150},
+                    direccion: "Av. Cabildo 2733, C1428AAJ CABA"
+                },
+                {
+                    nombre: "Starbucks - Cabildo y Ruiz Huidobro",
+                    descripcion: "Cafe caro y feo.",
+                    ubicacion: { latitud: -34.544711, longitud: -58.471641 },
+                    direccion: "Av. Cabildo 4300, C1429ABN CABA"
+                }
+            ];
+
+            bares.forEach(function(bar) {
+            $http({
+                method: 'POST',
+                url: 'http://localhost:5000/api/bares',
+                data: bar
+            }).then(function successCallback(response) {
+                console.log(response);
+            }, function errorCallback(response) {
+
+            });
+            });
+
             $scope.markers = [{
                 id: 0,
                 coords: $scope.currentPosition,
