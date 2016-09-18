@@ -7,22 +7,16 @@ angular.module('wifindAppControllers', [])
     .controller('InicioCtrl', function($scope,uiGmapGoogleMapApi){
         uiGmapGoogleMapApi.then(function(maps) {
             console.log("Google maps cargado!");
-            
-            $scope.map = { center: { latitude: -34.397, longitude: 150.644 } };
-            //$scope.center = { latitude: -34.397, longitude: 150.644};
-            //$scope.zoom = 8 ;
-            
+            $scope.currentPosition = { latitude: -34.588771, longitude: -58.430198 };
+            $scope.map = { center: $scope.currentPosition , zoom: 13};
+
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
-                    var pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    };
-                    console.log(pos);
+                    $scope.currentPosition = { latitude: position.coords.latitude, longitude: position.coords.longitude };
+                    console.log($scope.currentPosition);
                 });
-              
             }
-            
+
         });
         console.log("Inicio");
     })
