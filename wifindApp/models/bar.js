@@ -6,8 +6,8 @@ var BarSchema = new Schema({
 	nombre: String,
 	descripcion: String,
 	ubicacion: {
-		latitud: Number,
-		longitud: Number
+		latitude: Number,
+		longitude: Number
 	},
 	direccion: String
 });

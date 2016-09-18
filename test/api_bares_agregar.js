@@ -20,19 +20,19 @@ describe('API de Bares', function() {
                 {
                     nombre: "La Farola de Cabildo",
                     descripcion: "Un clasido de Buenos Aires.",
-                    ubicacion: { latitud: -34.557279, longitud: -58.461108 },
+                    ubicacion: { latitude: -34.557279, longitude: -58.461108 },
                     direccion: "Av. Cabildo 2630, C1428AAV CABA"
                 },
                 {
                     nombre: "Café Martínez",
                     descripcion: "Cafe de Buenos Aires.",
-                    ubicacion: { latitud: -34.556708, longitud: -58.461150},
+                    ubicacion: { latitude: -34.556708, longitude: -58.461150},
                     direccion: "Av. Cabildo 2733, C1428AAJ CABA"
                 },
                 {
                     nombre: "Starbucks - Cabildo y Ruiz Huidobro",
                     descripcion: "Cafe caro y feo.",
-                    ubicacion: { latitud: -34.544711, longitud: -58.471641 },
+                    ubicacion: { latitude: -34.544711, longitude: -58.471641 },
                     direccion: "Av. Cabildo 4300, C1429ABN CABA"
                 }
             ];

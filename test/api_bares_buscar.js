@@ -13,7 +13,7 @@ describe('API de Bares', function() {
     describe('Buscar', function() {
         it('Debe encontrar 2 bares de 3, correctamente.', function(done) {
             var datos_busqueda = {
-                ubicacion: { latitud: -34.557279, longitud: -58.461108 },
+                ubicacion: { latitude: -34.557279, longitude: -58.461108 },
                 distancia: 400
             };
 

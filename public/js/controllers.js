@@ -6,8 +6,15 @@ angular.module('wifindAppControllers', [])
 
     .controller('InicioCtrl', function($scope, uiGmapGoogleMapApi, $http) {
         uiGmapGoogleMapApi.then(function(map) {
-            $scope.currentPosition = { latitude: -34.557279, longitude: -58.461108 };
-            $scope.map = { center: $scope.currentPosition , zoom: 13};
+            $scope.currentPosition = { latitude: -34.588771, longitude: -58.430198 };
+            $scope.map = { center: $scope.currentPosition , zoom: 13,
+                events:{
+                    click: function(mapModel, eventName, originalEventArgs) {
+                        var e = originalEventArgs[0];
+                        $scope.$apply();
+                    }
+                }
+            };
 
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
