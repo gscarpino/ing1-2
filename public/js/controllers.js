@@ -5,20 +5,41 @@ angular.module('wifindAppControllers', [])
     })
 
     .controller('InicioCtrl', function($scope,uiGmapGoogleMapApi){
-        uiGmapGoogleMapApi.then(function(maps) {
-            console.log("Google maps cargado!");
+        uiGmapGoogleMapApi.then(function(map) {
             $scope.currentPosition = { latitude: -34.588771, longitude: -58.430198 };
             $scope.map = { center: $scope.currentPosition , zoom: 13};
 
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
                     $scope.currentPosition = { latitude: position.coords.latitude, longitude: position.coords.longitude };
-                    console.log($scope.currentPosition);
+
+                    $scope.map.center = $scope.currentPosition;
                 });
             }
-
         });
-        console.log("Inicio");
+
+        $scope.buscarCercanos = function() {
+            $scope.markers = [{
+                id: 0,
+                coords: $scope.currentPosition,
+                options: {
+                    icon: {
+                        url: 'img/bar-icon.png',
+                        scaledSize: {
+                            height: 40,
+                            width: 40
+                        }
+                    }
+                },
+                window: {
+                    title: 'Bar prueba',
+                    options: {
+                        visible: false
+                    }
+                }
+            }];
+        }
+
     })
 
     .controller('BuscarDir',function($scope,uiGmapGoogleMapApi){
