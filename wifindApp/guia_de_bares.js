@@ -6,11 +6,11 @@ module.exports =
         this.calculadorDistancias = calculadorDistancias;
 
         // metodos
-        this.agregar = function(bar, successCb) {
+        this.agregar = function(bar, callback) {
             bar = new ModelBar( {nombre: bar.nombre, descripcion: bar.descripcion, ubicacion: bar.ubicacion, direccion: bar.direccion } );
-            bar.save(function(er){
+            bar.save(function(err){
                 console.log("Nuevo bar registrado");
-                callback();
+                callback(err);
             });
         };
 
@@ -18,26 +18,48 @@ module.exports =
             var bares_encontrados = [];
             var calcDist = this.calculadorDistancias;
 
-            ModelBar.find({}, function(error, bares){
-                if(error){
-                    // TODO refactor this
-                    return res.status(500).send("Error interno");
+            ModelBar.find({}, function(err, bares){
+                if(!err) {
+                    bares.forEach(function(bar) {
+                        if (calcDist.calcular(bar.ubicacion, ubicacion) <= distancia){
+                            bares_encontrados.push(bar);
+                        }
+                    });
+                    callback(err, bares_encontrados);
                 }
-                // console.log(bares);
-
-                bares.forEach(function(bar) {
-                    if (calcDist.calcular(bar.ubicacion, ubicacion) <= distancia){
-                        bares_encontrados.push(bar);
-                    }
-                });
-                callback(bares_encontrados);
+                else {
+                    callback(err);
+                }
             });
         };
 
-        this.eliminar = function(bar, callback) {
+        this.actualizar = function(editedBar, callback) {
+            console.log("Actualizando bar");
+            if (editedBar._id) {
+                ModelBar.update(
+                    {_id: editedBar._id},
+                    { $set: {
+                        nombre: editedBar.nombre, descripcion: editedBar.descripcion,
+                        direccion: editedBar.direccion, ubicacion: editedBar.ubicacion }
+                    },
+                    callback
+                );
+            }
+            else {
+                callback({name: "Se requiere el campo _id"});
+            }
+        };
+
+        this.eliminar = function(id, callback) {
             console.log("Eliminando bar");
-            // ModelBar.remove( {"id": bar.id} );
-            callback();
+            if (id) {
+                ModelBar.remove( {_id: id}, function(err) {
+                    callback(err);
+                });
+            }
+            else {
+                callback({name: "Campo id invalido."});
+            }
         };
 
     };

@@ -17,7 +17,7 @@ angular
         };
 
         $stateProvider.state(indexState);
-        $stateProvider.state(registerUserState);
+        //$stateProvider.state(registerUserState);
 
         uiGmapGoogleMapApiProvider.configure({
             // key verdadera del sitio

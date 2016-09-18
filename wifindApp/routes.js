@@ -53,6 +53,7 @@ module.exports = function(app) {
             res.status(400).send("Error con parámetros");
         }
     });
+
     /////////////////////////////////////////////////////////////////
     // BARES
     /////////////////////////////////////////////////////////////////
@@ -61,20 +62,29 @@ module.exports = function(app) {
     app.post('/api/bares/buscar', function(req,res,next){
         var ubicacion = req.body.ubicacion;
         var resultados = app.guiaDeBares.buscar(req.body.ubicacion, req.body.distancia,
-            function(results) {
-                res.jsonp({
+            function(err, results) {
+                if (!err) {
+                    res.jsonp({
                             status: "ok",
                             bares: results
                         });
+                }
+                else {
+                    res.status(500).send("Error interno: " + err.name);
+                }
             });
     });
 
     // Agregar un bar
     app.post('/api/bares', function(req,res,next){
-        if (req.body.nombre)
-        {
-            app.guiaDeBares.agregar(req.body, function(result) {
-                res.jsonp({ status: "ok" });
+        if (req.body.nombre) {
+            app.guiaDeBares.agregar(req.body, function(err, result) {
+                if (!err) {
+                    res.jsonp({ status: "ok" });
+                }
+                else {
+                    res.status(500).send("Error interno: " + err.name);
+                }
             });
         }
         else {
@@ -84,15 +94,25 @@ module.exports = function(app) {
 
     // Actualizar un bar
     app.put('/api/bares', function(req,res,next){
-        console.log("No implementado aún.");
-        res.jsonp({ status: "No implementado aún."});
+        app.guiaDeBares.actualizar(req.body, function(err, result) {
+            if (!err) {
+                res.jsonp({ status: "ok" });
+            }
+            else {
+                res.status(500).send("Error interno: " + err.name);
+            }
+        });
     });
 
     // Eliminar un bar
-    app.delete('/api/bares', function(req,res,next){
-        console.log("Eliminando bar... ");
-        app.guiaDeBares.eliminar(req.body, function(result) {
-            res.jsonp({ status: "ok" });
+    app.delete('/api/bares/:_id', function(req,res,next){
+        app.guiaDeBares.eliminar(req.params._id, function(err, result) {
+            if (!err) {
+                res.jsonp({ status: "ok" });
+            }
+            else {
+                res.status(500).send("Error interno: " + err.name);
+            }
         });
     });
 }
