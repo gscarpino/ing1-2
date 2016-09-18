@@ -1,7 +1,7 @@
 {
   "name": "wifind-bar",
   "version": "1.0.0",
-  "description": "",
+  "description": "TP de ISW 2016",
   "main": "main.js",
   "dependencies": {
     "angular-google-maps": "^2.3.4",
@@ -9,8 +9,11 @@
     "body-parser": "^1.15.2",
     "bower": "^1.7.9",
     "lodash": "^4.15.0",
+    "mocha": "^3.0.2",
     "moment": "^2.14.1",
-    "mongoose": "^4.6.0"
+    "mongoose": "^4.6.0",
+    "should": "^11.1.0",
+    "supertest": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -20,10 +23,18 @@
     "type": "git",
     "url": "git+https://github.com/gscarpino/ing1-2.git"
   },
-  "author": "",
+  "author": "Grupo 12",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gscarpino/ing1-2/issues"
   },
-  "homepage": "https://github.com/gscarpino/ing1-2#readme"
+  "homepage": "https://github.com/gscarpino/ing1-2#readme",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "isw",
+    "wifi",
+    "bar"
+  ]
 }
