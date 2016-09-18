@@ -21,29 +21,10 @@ angular.module('wifindAppControllers', [])
         console.log("Inicio");
     })
 
-    .controller('BuscarDir',function($scope,uiGmapGoogleMapApi){
-         console.log("convertir a coordenada");
-         uiGmapGoogleMapApi.then(function(maps) {
-         var map = $scope.map;
-         var geocoder = new google.maps.Geocoder();
-         var address = document.getElementById('address').value;
-             geocoder.geocode( { 'address': address}, function(results, status) {
-                 if (status == 'OK') {
-                    map.setCenter(results[0].geometry.location);
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: results[0].geometry.location
-                    });
-                }
-                else {
-                    alert('Geocode was not successful for the following reason: ' + status);
-                }
-            });
-        });
-    })
 
     .controller('LoginCtrl', function($scope) {
         console.log('hola');
+        $scope.map;
         $scope.showLogin = true;
 
         $scope.login = function() {
