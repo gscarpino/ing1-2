@@ -56,7 +56,6 @@ angular.module('wifindAppControllers', [])
     })
   
 
-
     .controller('BaresCtrl', function($scope, $http) {
 
         $scope.barData = {}
