@@ -1,8 +1,14 @@
 <style>
-.angular-google-map-container { height: 400px;width: 640px }
+.angular-google-map-container{ 
+	height: 85%;
+	width: 100% 
+}
+ui-view{
+	width: 100%;
+}
 </style>
 
-<button ng-click="buscarCercanos()">Buscar bares cercanos</button>
+<md-button class="md-raised md-primary" ng-click="buscarCercanos()">Buscar bares cercanos</md-button>
 
 <ui-gmap-google-map ng-if="map.center" center='map.center' zoom='map.zoom'>
 	<ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" idkey="marker.id" click="marker.window.options.visible = !marker.window.options.visible;">
