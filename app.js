@@ -178,7 +178,3 @@ angular
             });
         };
     })
-
-    .controller('PosCtrl', function($scope) {
-
-    })
