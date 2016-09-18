@@ -4,20 +4,41 @@ angular.module('wifindAppControllers', [])
         console.log("Usuario");
     })
 
-    .controller('InicioCtrl', function($scope,uiGmapGoogleMapApi){
+ .controller('InicioCtrl', function($scope,uiGmapGoogleMapApi){
         uiGmapGoogleMapApi.then(function(maps) {
             console.log("Google maps cargado!");
             $scope.currentPosition = { latitude: -34.588771, longitude: -58.430198 };
-            $scope.map = { center: $scope.currentPosition , zoom: 13};
+            $scope.map = { center: $scope.currentPosition , 
+                           zoom: 13,
+                           events: {
+                                click: function (map, click, MouseEvent) {
+                                    
+
+                                    var e = originalEventArgs[0];
+                                    var lat = e.latLng.lat(),lon = e.latLng.lng();
+                                    var marker = {
+                                        id: Date.now(),
+                                        coords: {
+                                            latitude: lat,
+                                            longitude: lon
+                                        }
+                                    };
+                                    $scope.map.markers.push(marker);
+                                    console.log($scope.map.markers);
+                                    $scope.$apply();
+                                }
+        }};
 
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
                     $scope.currentPosition = { latitude: position.coords.latitude, longitude: position.coords.longitude };
-                    console.log($scope.currentPosition);
+                    $scope.map = { center: $scope.currentPosition , zoom: 13};
                 });
             }
-
+            console.log($scope.currentPosition);
+                    
         });
+        
         console.log("Inicio");
     })
 
