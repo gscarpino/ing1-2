@@ -1,45 +1,886 @@
-    {
-    	"nombre": "La Farola de Cabildo",
-    	"descripcion": "Un clasido de Buenos Aires.",
-    	"ubicacion": {
-    		"latitude": -34.557279,
-    		"longitude": -58.461108
-    	},
-    	"direccion": "Av. Cabildo 2630, C1428AAV CABA"
-    }
-    {
-    	"nombre": "Cafe Martínez",
-    	"descripcion": "Cafe de Buenos Aires.",
-    	"ubicacion": {
-    		"latitude": -34.556708,
-    		"longitude": -58.461150
-    	},
-    	"direccion": "Av. Cabildo 2733, C1428AAJ CABA"
-    }
-    {
-    	"nombre": "Starbucks - Cabildo y Ruiz Huidobro",
-    	"descripcion": "Cafe caro y feo.",
-    	"ubicacion": {
-    		"latitude": -34.544711,
-    		"longitude": -58.471641
-    	},
-    	"direccion": "Av. Cabildo 4300, C1429ABN CABA"
-    }
-    {
-        "nombre": "McDonald's - Av. Libertador",
-        "descripcion": "Cafe barato y feo.",
-        "ubicacion": {
-            "latitude": -34.547231,
-            "longitude": -58.456768
-        },
-        "direccion": "Av. del Libertador 7112, C1429BMR CABA"
-    }
-    {
-        "nombre": "Divino Nuñez - Bistro de Barrio",
-        "descripcion": "WiFi, Cafe, buenos platos.",
-        "ubicacion": {
-            "latitude": -34.548545,
-            "longitude": -58.460754
-        },
-        "direccion": "Manuela Pedraza 1802, C1429CBH, Cdad. Autónoma de Buenos Aires"
-    }
+{'descripcion': 'Autogenerado', 'nombre': 'DepXsito Museo del Cine', 'direccion': 'MINISTRO BRIN615, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62951969063209, 'longitude': -58.360381317503006}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Alicia Moreau de Justo y Chile', 'direccion': 'MOREAU DE JUSTO, ALICIA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.616134896383926, 'longitude': -58.36626021473038}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'XXlvaro Yunque', 'direccion': 'SOLDADO DE LA FRONTERA AV.5210, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6849788440007, 'longitude': -58.463348839735644}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Anfiteatro Parque Centenario', 'direccion': 'GALLARDO, ANGEL AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60601532799845, 'longitude': -58.43656291736947}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Antonio Devoto', 'direccion': 'BAHIA BLANCA4025, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59928342886267, 'longitude': -58.51072473530591}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Av. de Mayo y PerX', 'direccion': 'DE MAYO AV.591, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60838842517266, 'longitude': -58.374783453811176}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EMAD - Escuela Metropolitana de Arte DramXtico', 'direccion': 'SARMIENTO2573, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60626006647004, 'longitude': -58.4031550381375}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Benito Lynch', 'direccion': 'YRUPE6741, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66802227731021, 'longitude': -58.496620558775234}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Portal Inclusivo Ciudad Oculta', 'direccion': 'PIEDRA BUENA3140, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.670446918891166, 'longitude': -58.494888069276094}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Caminito', 'direccion': 'MAGALLANES, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63934310901002, 'longitude': -58.36270606461007}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Carlos Guido y Spano', 'direccion': 'GUEMES4601, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58128189468453, 'longitude': -58.42379893175881}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Conservatorio Superior de MXsica Manuel de Falla', 'direccion': 'SARMIENTO3401, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60595499060771, 'longitude': -58.41376202232278}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Cementerio de la Chacarita', 'direccion': 'NEWBERY, JORGE AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59303323201878, 'longitude': -58.45763356143185}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural Homero Manzi', 'direccion': 'TILCARA3365, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65463657524525, 'longitude': -58.420512835462794}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural JuliXn Centeya', 'direccion': 'SAN JUAN AV.3255, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62470556395129, 'longitude': -58.41138541427566}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural Recoleta', 'direccion': 'JUNIN1930, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.586592499215676, 'longitude': -58.39180491577454}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural Sur', 'direccion': 'CASEROS AV.1750, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63355312926226, 'longitude': -58.38666361692413}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 14', 'direccion': 'CASCO, HORACIO, DR.4446, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6602242621088, 'longitude': -58.47392056421122}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn San JosX de Flores - LXnea A', 'direccion': 'RIVADAVIA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62908722741321, 'longitude': -58.463540510662334}} 
+
+{'descripcion': 'En 03/2015 se ampliX la seXal', 'nombre': 'CeSAC NX 19', 'direccion': 'CURAPALIGUE, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64334106215446, 'longitude': -58.442043722418205}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 22', 'direccion': 'GUZMAN90, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59213779869796, 'longitude': -58.44945206463393}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 29', 'direccion': 'DELLEPIANE, LUIS, TTE. GRAL.6999, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.68475164750213, 'longitude': -58.48594729847142}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 34', 'direccion': 'ARTIGAS, JOSE GERVASIO, GRAL.2262, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60669255250452, 'longitude': -58.47824428874213}} 
+
+{'descripcion': 'En mayo 2016 se amplXa la seXal', 'nombre': 'CeSAC NX 35', 'direccion': 'CRUZ, OSVALDO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65660442634455, 'longitude': -58.39900462351675}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 39', 'direccion': '24 DE NOVIEMBRE1679, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63097617136526, 'longitude': -58.410025348695484}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 4', 'direccion': 'ALBERDI, JUAN BAUTISTA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.655563673540236, 'longitude': -58.50720149928787}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 41', 'direccion': 'BRIN, MINISTRO843, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63132911414978, 'longitude': -58.35793977766692}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 45', 'direccion': 'COCHABAMBA2622, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.625482122390665, 'longitude': -58.4022092745493}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CIFA', 'direccion': 'ESCALADA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66589462740101, 'longitude': -58.46107757988878}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'ComisarXa Comunal 12', 'direccion': 'RAMALLO4389, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.5511265769768, 'longitude': -58.49082947718903}} 
+
+{'descripcion': 'Autogenerado', 'nombre': "Centro de InformaciXn TurXstica 'Roberto Arlt'", 'direccion': 'RIVADAVIA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60814121394015, 'longitude': -58.37787404753555}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Metropolitano de DiseXo', 'direccion': 'ALGARROBO1041, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65473846149823, 'longitude': -58.37949780825517}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn PueyrredXn - LXnea B', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60457807416803, 'longitude': -58.40539967904458}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Del Docente', 'direccion': 'ENTRE RIOS AV.1349, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62458762753176, 'longitude': -58.39162735786778}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Diagonal Norte y Florida', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.607019631507434, 'longitude': -58.37489317149835}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Diagonal Norte y MaipX', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.606245686660735, 'longitude': -58.37638466889997}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Diagonal Norte y PerXn', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60577826677362, 'longitude': -58.37726600559958}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Diagonal Norte y San MartXn', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.607644381568775, 'longitude': -58.37370672362711}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Diagonal Norte y Sarmiento', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60489009502834, 'longitude': -58.37902860256243}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Diagonal Sur y Peru', 'direccion': 'ROCA, JULIO A., PRESIDENTE AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61034429318606, 'longitude': -58.374854938614014}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Barrio Los Piletones', 'direccion': 'SAN JUAN BAUTISTA DE LA SALLE AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.655382439331504, 'longitude': -58.47193218957449}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'DirecciXn de Licencias', 'direccion': 'ROCA, CNEL. AV.5200, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6845494283853, 'longitude': -58.454686581775505}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'DirecciXn Gral. de Museos', 'direccion': 'DE LOS ITALIANOS AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.609424093970105, 'longitude': -58.360322024145916}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'DirecciXn Gral. Sist. Pluviales', 'direccion': 'BELLO, ANDRES, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.55733516792065, 'longitude': -58.43063256514464}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'El Progreso', 'direccion': 'RIESTRA AV.5655, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.676923360823025, 'longitude': -58.47460235148323}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Enrique Banchs', 'direccion': 'CASEROS AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.637934957224324, 'longitude': -58.407733090864134}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Alsina', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61107089137102, 'longitude': -58.381171727514044}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Belgrano', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61347307322406, 'longitude': -58.381042460193484}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Chile', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61667948831391, 'longitude': -58.38094499279384}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn CXrdoba', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59942746726185, 'longitude': -58.38185505229515}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Estados Unidos', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.618876714053805, 'longitude': -58.38085405723954}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Esteban EcheverrXa - LXnea B', 'direccion': 'TRIUNVIRATO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57779737780493, 'longitude': -58.48101350412162}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Independencia', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61789047737055, 'longitude': -58.38088276912784}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Juan B. Justo', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59476403076143, 'longitude': -58.44430015384696}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Juan D. PerXn', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60645681544223, 'longitude': -58.381458739779916}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Juan Manuel de Rosas - LXnea B', 'direccion': 'TRIUNVIRATO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57431891420635, 'longitude': -58.48638534849258}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Marcelo T. de Alvear', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59712017639659, 'longitude': -58.382001519434404}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn MXxico', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6155097729598, 'longitude': -58.38099052840269}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Mitre', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6075846089842, 'longitude': -58.38139186616656}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Obelisco Norte', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.601725441982516, 'longitude': -58.38175355783434}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Obelisco Sur', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6053778858849, 'longitude': -58.381539420247655}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Paraguay', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59825315730383, 'longitude': -58.38189502223024}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. DonaciXn F. Santojanni', 'direccion': 'PILAR950, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.649186697653136, 'longitude': -58.51563732914728}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Santa Fe', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59584500505403, 'longitude': -58.382130340180176}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Teatro ColXn', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6005804300295, 'longitude': -58.381812310392924}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Venezuela', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6145006069406, 'longitude': -58.38103035694496}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Yrigoyen', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.609944087864065, 'longitude': -58.38125556654896}} 
+
+{'descripcion': 'En 01/16 se agrega una antena', 'nombre': 'Htal. de Enfermedades Infecciosas F. MuXiz', 'direccion': 'USPALLATA2200, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63948130543118, 'longitude': -58.391441533347155}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Municipal de OncologXa Maria Curie', 'direccion': 'CANGALLO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60716348257038, 'longitude': -58.43313972991024}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. de RehabilitaciXn Respiratoria Maria Ferrer', 'direccion': 'FINOCHIETTO ENRIQUE DR.849, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63021229120703, 'longitude': -58.37584521852597}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de NiXos Pedro de Elizalde', 'direccion': 'MONTES DE OCA, MANUEL40, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62897106389097, 'longitude': -58.37746432470223}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. de OdontologXa Infantil Don Benito Quinquela MartXn', 'direccion': 'DON PEDRO DE MENDOZA AV.1795, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63889293036988, 'longitude': -58.36012674304616}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque del Precinto 12 (Plaza HungrXa)', 'direccion': 'GOYENECHE, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.550537197947946, 'longitude': -58.491013332942806}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos D.Velez Sarfield', 'direccion': 'CALDERON DE LA BARCA, PEDRO1550, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62533689048156, 'longitude': -58.507613939585944}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos A. Zubizarreta', 'direccion': 'NUEVA YORK3952, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59997255095613, 'longitude': -58.51105898820901}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Jardin Botanico Carlos Thays', 'direccion': 'SANTA FE AV.3951, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58277858053832, 'longitude': -58.41711683892535}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'JardXn BotXnico (Casona)', 'direccion': 'SANTA FE AV.3917, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.5825078593767, 'longitude': -58.418701295810386}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Javier VillafaXe', 'direccion': 'JANER, ANA MARIA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64790261440334, 'longitude': -58.43638241999166}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural Eladia BlXzquez', 'direccion': 'RABANAL2275, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65949261164017, 'longitude': -58.42902478656093}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'JosX MXrmol', 'direccion': 'JURAMENTO2937, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.56485276855175, 'longitude': -58.46181978439906}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Julio CXsar Saguier', 'direccion': 'ESCALADA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66518959545441, 'longitude': -58.4743663619951}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Julio CortXzar', 'direccion': 'LAVALLEJA924, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.597807553466424, 'longitude': -58.42993127780284}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Leopoldo Lugones', 'direccion': 'LA PAMPA2215, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.563677240126694, 'longitude': -58.452597381931064}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Manuel GXlvez', 'direccion': 'CORDOBA AV.1558, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59957927898463, 'longitude': -58.38900087866661}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Miguel CanX', 'direccion': 'JUSTO, JUAN B. AV.9668, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63482979469473, 'longitude': -58.52645792475179}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo Carlos Gardel', 'direccion': 'JAURES, JEAN735, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60167841233752, 'longitude': -58.407762286836885}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo de Arte Moderno (MAMBA)', 'direccion': 'SAN JUAN AV.350, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62197343718736, 'longitude': -58.3705271174278}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo de la Ciudad', 'direccion': 'DEFENSA219, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61044764827414, 'longitude': -58.37222312897221}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo del Cine', 'direccion': 'CAFFARENA, AGUSTIN R.49, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62948797506088, 'longitude': -58.3570953812576}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo del Cine Pablo Ducros Hicken', 'direccion': 'SALMUN FEIJOO, JOSE AARON555, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.638938577660106, 'longitude': -58.37907302273284}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo FernXndez Blanco', 'direccion': 'SUIPACHA1422, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.5910625898017, 'longitude': -58.380237052959785}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo JosX HernXndez', 'direccion': 'DEL LIBERTADOR AV.2373, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.579609196809066, 'longitude': -58.40497016047443}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo Larreta', 'direccion': 'JURAMENTO AV.2291, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.56126759741793, 'longitude': -58.45569195223391}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo Luis Perlotti', 'direccion': 'PUJOL642, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.617738814144225, 'longitude': -58.452518884684146}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo SXvori', 'direccion': 'ISABEL, INFANTA AV.555, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.570576610611745, 'longitude': -58.421432051906024}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque 3 de Febrero', 'direccion': 'CASARES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57534422183949, 'longitude': -58.411136452601895}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Avellaneda', 'direccion': 'DIRECTORIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64518547800611, 'longitude': -58.47917804374836}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Centenario', 'direccion': 'DIAZ VELEZ AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60653851424381, 'longitude': -58.43570321050348}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Centenario - ExtensiXn', 'direccion': 'DIAZ VELEZ AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.607084304976496, 'longitude': -58.437416944346836}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Chacabuco', 'direccion': 'PERON, EVA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63494395626302, 'longitude': -58.44294841873567}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Chacabuco - ExtensiXn', 'direccion': 'ASAMBLEA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63451862840603, 'longitude': -58.44301702484411}} 
+
+{'descripcion': 'En 05/2016 se ampliX la seXal', 'nombre': 'Parque de la Ciudad', 'direccion': 'FERNANDEZ DE LA CRUZ, F., GRAL. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.67173430863631, 'longitude': -58.451094095231525}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque de la Memoria', 'direccion': 'OBLIGADO RAFAEL, AV.COSTANERA5700, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.5410387601409, 'longitude': -58.43821440159948}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque de las Victorias', 'direccion': 'ROCA, CNEL. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.67930261466344, 'longitude': -58.458526417626814}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque del Hospital Alvear', 'direccion': 'WARNES AV.2600, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59782936807667, 'longitude': -58.47279529047428}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque de los NiXos', 'direccion': 'PAZ, GRAL. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.52856110257355, 'longitude': -58.45796265637422}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque EspaXa', 'direccion': 'ALCORTA, AMANCIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63382883329979, 'longitude': -58.38541475719912}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Indoamericano', 'direccion': 'ESCALADA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.665298796542714, 'longitude': -58.45911099504925}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Lezama', 'direccion': 'GARCIA, MARTIN AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62683734994908, 'longitude': -58.36920692870335}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Los Andes', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58988961020221, 'longitude': -58.450454777315}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Facultad de Derecho', 'direccion': 'ALCORTA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58280767470707, 'longitude': -58.392002296605654}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Patricios', 'direccion': 'USPALLATA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63861027922997, 'longitude': -58.40675857684788}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Roca', 'direccion': 'ROCA, CNEL. AV.3400, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.674653689653006, 'longitude': -58.44134595145155}} 
+
+{'descripcion': 'Evento Temporal Terminado', 'nombre': 'BA Playa (Parque Indoamericano)', 'direccion': 'ESCALADA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.665450183252894, 'longitude': -58.46336191240085}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Santojanni', 'direccion': 'LEGUIZAMON, MARTINIANO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64782921422003, 'longitude': -58.514068416161194}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Sarmiento', 'direccion': 'BALBIN, RICARDO, DR. AV.4750, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.5573636158096, 'longitude': -58.49977231949233}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Thays', 'direccion': 'DEL LIBERTADOR AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58439374846232, 'longitude': -58.38767412744015}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Paseo de la Recoleta', 'direccion': 'JUNIN, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58907154968275, 'longitude': -58.393781980142485}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 16', 'direccion': 'CALIFORNIA2346, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64852706694108, 'longitude': -58.380120110870244}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Paseo de la Victoria', 'direccion': 'LA PLATA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.615257367500725, 'longitude': -58.42921902688496}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Patio de la Cultura', 'direccion': 'DE MAYO AV.575, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60840049569734, 'longitude': -58.37457601746913}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Edificio del Plata', 'direccion': 'PELLEGRINI, CARLOS200, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.605475873379525, 'longitude': -58.380649680485604}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Almagro', 'direccion': 'BULNES, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6057623846296, 'longitude': -58.419107087310714}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Arenales (Pza. Devoto)', 'direccion': 'MERCEDES, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59938461393888, 'longitude': -58.51224689549109}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Austria', 'direccion': 'DEL LIBERTADOR AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58595235007534, 'longitude': -58.38546697035201}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Cnel. Martin Irigoyen', 'direccion': 'FONROUGE, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6426040640063, 'longitude': -58.51264164561518}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza de la Republica', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60331464311183, 'longitude': -58.38162958075236}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza de Mayo', 'direccion': 'YRIGOYEN, HIPOLITO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60841646677543, 'longitude': -58.37215501038602}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Don Bosco', 'direccion': 'CALDERON DE LA BARCA, PEDRO1500, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62580212424546, 'longitude': -58.50780903597575}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Portal Inclusivo 6 - Bo. CildaXez', 'direccion': 'SAN JUAN BAUTISTA DE LA SALLE AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65559523563868, 'longitude': -58.47113586973044}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Gral. Manuel Belgrano', 'direccion': 'VUELTA DE OBLIGADO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.56166626149267, 'longitude': -58.4548225713544}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Houssay', 'direccion': 'CORDOBA AV.2100, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59914062111599, 'longitude': -58.39814260300668}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Irlanda', 'direccion': 'GAONA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61468913774287, 'longitude': -58.45781917821955}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Lavalle', 'direccion': 'TUCUMAN, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60096327509523, 'longitude': -58.38459165389313}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Miserere', 'direccion': 'RIVADAVIA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60972975571526, 'longitude': -58.40742971756127}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza San MartXn', 'direccion': 'SUIPACHA1300, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59452300044454, 'longitude': -58.37555468585425}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Vaticano', 'direccion': 'VIAMONTE, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60062372680204, 'longitude': -58.38270058903981}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plazoleta Juan XXIII', 'direccion': 'ORTIZ, ROBERTO M., PRES., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58780845321152, 'longitude': -58.39170278090386}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Planetario', 'direccion': 'SARMIENTO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.56969999803276, 'longitude': -58.411699767026505}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Portal Inclusico 21 - 24', 'direccion': 'CRUZ, OSVALDO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65582940922598, 'longitude': -58.40019201627822}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Portal Inclusivo 1 - 11 - 14', 'direccion': 'VARELA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.649016444257526, 'longitude': -58.445894115999856}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Portal Inclusivo 20', 'direccion': 'FONROUGE4251, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.67660890761506, 'longitude': -58.46823148510855}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro de Primera Infancia PULGARCITO', 'direccion': 'OSVALDO CRUZ2101, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65242425179337, 'longitude': -58.3761724022273}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Portal Inclusivo Barrio RamXn Carrillo', 'direccion': 'ACOSTA, MARIANO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.655996953093485, 'longitude': -58.455159347838354}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Pza. Alvear / Pza. Francia', 'direccion': 'DEL LIBERTADOR AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58489795137572, 'longitude': -58.39343166706728}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Reina Batata (Infantil)', 'direccion': 'LA PAMPA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.56125033639441, 'longitude': -58.44863144209131}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 1', 'direccion': 'URUGUAY AV.740, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60008744861296, 'longitude': -58.38702185437978}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 10', 'direccion': 'BACACAY3952, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63182121844873, 'longitude': -58.48328816849595}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 11', 'direccion': 'BEIRO, FRANCISCO AV.4629, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60821333214524, 'longitude': -58.51608274272201}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 12', 'direccion': 'MILLER2751, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.56862366949607, 'longitude': -58.4827880530232}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 13', 'direccion': 'CABILDO AV.3067, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.55369435830885, 'longitude': -58.46398566844651}} 
+
+{'descripcion': 'En 09/2015 se ampliX la seXal', 'nombre': 'Sede de Comuna 14', 'direccion': 'BERUTI3325, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58719466845585, 'longitude': -58.409075229157466}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 15', 'direccion': 'CORDOBA AV.5690, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58704089013586, 'longitude': -58.44144544035805}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 2', 'direccion': 'URIBURU JOSE E., PRES.1022, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59671875922147, 'longitude': -58.39901515235221}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 3', 'direccion': 'JUNIN521, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60302549232146, 'longitude': -58.39668162322129}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 4', 'direccion': 'CALDERON DE LA BARCA, PEDRO2906, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.650226330990535, 'longitude': -58.42471701171088}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Polo Circo', 'direccion': 'COMBATE DE LOS POZOS1700, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62840118364406, 'longitude': -58.392250869299914}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 5', 'direccion': 'SARANDI1273, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.623771234865075, 'longitude': -58.39391574705492}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 6', 'direccion': 'DIAZ VELEZ AV.4558, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60895573851818, 'longitude': -58.43123293626976}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 8', 'direccion': 'ROCA, CNEL. AV.5252, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.68492359496232, 'longitude': -58.45509319725701}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 9', 'direccion': 'GORDILLO, TIMOTEO2212, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.659546835403724, 'longitude': -58.504943587635545}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Subsede Comunal 11', 'direccion': 'GUTIERREZ, RICARDO3253, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60140643065658, 'longitude': -58.49809806877975}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Subsede Comunal 5', 'direccion': 'CASEROS AV.3250, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63813046820768, 'longitude': -58.41035096051607}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Subsede Comunal 6', 'direccion': 'MITRE, EMILIO954, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.632164368432264, 'longitude': -58.441067183161415}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Subsede Comunal 9', 'direccion': 'DIRECTORIO AV.4344, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64573296048744, 'longitude': -58.48485912121748}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Teatro San MartXn', 'direccion': 'CORRIENTES AV.1530, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6043767825154, 'longitude': -58.38861786303156}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Torre Monumental', 'direccion': 'DEL LIBERTADOR AV.49, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59277787681625, 'longitude': -58.374188679667526}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'UGIS', 'direccion': 'ESCALADA AV.4501, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.67903235505772, 'longitude': -58.45226054862462}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Usina del Arte', 'direccion': 'DON PEDRO DE MENDOZA AV.501, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62867753798314, 'longitude': -58.35687384988061}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Zona parquizada en Blanes 500', 'direccion': 'BLANES, JUAN MANUEL500, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63199824893202, 'longitude': -58.363618670525774}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Gould - Planetario', 'direccion': 'AV. SARMIENTO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.56911503940963, 'longitude': -58.41141910983009}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 1', 'direccion': 'VELEZ SARSFIELD1271, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.649019022478996, 'longitude': -58.389284658427364}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Alfonsina Storni y MartXn Del Barco Centenera', 'direccion': 'REPUBLICA BOLIVARIANA DE VENEZUELA1538, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.614858230332295, 'longitude': -58.38805456625441}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Corrientes 1550', 'direccion': 'CORRIENTES1550, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6042484290622, 'longitude': -58.38871170316411}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 31', 'direccion': 'MOM, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64587065423641, 'longitude': -58.433727462871765}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Parque Patricios - LXnea H', 'direccion': 'CASEROS AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.637195876981224, 'longitude': -58.40607956003468}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural AdXn Buenosayres', 'direccion': 'ASAMBLEA1200, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63599089846982, 'longitude': -58.441671343918706}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Uruguay - LXnea B', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.604093648362756, 'longitude': -58.38729625176454}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 6', 'direccion': 'RABANAL, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66675512740281, 'longitude': -58.44125476319875}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Callao - LXnea B', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60441986983239, 'longitude': -58.392314694213525}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Medrano - LXnea B', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60316604062151, 'longitude': -58.420961056651976}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Malabia - Osvaldo Pugliese - LXnea B', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59966856782959, 'longitude': -58.439033245663076}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos P. PiXero', 'direccion': 'VARELA1301, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6442095473877, 'longitude': -58.453827774159215}} 
+
+{'descripcion': 'En mayo 2016 se amplXa la seXal.', 'nombre': 'CeSAC NX 5', 'direccion': 'PIEDRA BUENA3200, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.67101453572952, 'longitude': -58.49450888365972}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 18', 'direccion': 'BATLLE ORDOXEZ5080, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.67374599778427, 'longitude': -58.46796427188825}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 20', 'direccion': 'CHARRUA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.649349532498455, 'longitude': -58.438103601877096}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 32', 'direccion': 'CHARRUA2900, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65416900298443, 'longitude': -58.431138100108164}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 24', 'direccion': 'MARTINEZ CASTRO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6580914282992, 'longitude': -58.45570098792996}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Estanislao del Campo', 'direccion': 'DE LAS ARTES1210, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63403621054586, 'longitude': -58.438297501356544}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 40', 'direccion': 'BONORINO1729, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64513136771431, 'longitude': -58.445664029162884}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Mariano Pelliza', 'direccion': 'CRANWEL819, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63781415664429, 'longitude': -58.456448305910996}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'JoaquXn V. GonzXlez', 'direccion': 'PERON, JUAN DOMINGO, TTE. GENERAL1242, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60635206881233, 'longitude': -58.38421764890547}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural Plaza Flores', 'direccion': 'CACHIMAYO1675, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63847197907091, 'longitude': -58.436138156807935}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Ministerio de EducaciXn GCBA', 'direccion': 'ESMERALDA55, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60753736954181, 'longitude': -58.37775816536768}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Agencia Gubenamental de Control', 'direccion': 'PERON, JUAN DOMINGO, TTE. GENERAL2941, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.607769820408116, 'longitude': -58.408219745607624}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural Tato Bores', 'direccion': 'SOLER3929, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59181776805134, 'longitude': -58.41721831978888}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural Alfonsina Storni', 'direccion': 'TUCUMAN3233, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.600279564438694, 'longitude': -58.411596410982696}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'DirecciXn Gral. de Infracciones', 'direccion': 'CARLOS PELLEGRINI211, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.605494217604, 'longitude': -58.38069702612906}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Corrientes 1450', 'direccion': 'CORRIENTES1450, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60412626448812, 'longitude': -58.38718487227851}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 2', 'direccion': 'TERRADA5850, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57643849325502, 'longitude': -58.5093951086896}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Reserva EcolXgica Costanera Sur (SalXn eventos y oficinas)', 'direccion': 'ACHAVAL RODRIGUEZ, T., DR. AV.1402, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61602991959149, 'longitude': -58.35485690138772}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Municipal de Exposiciones', 'direccion': 'COUTURE, EDUARDO J., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58198345607197, 'longitude': -58.39020991119836}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Corrientes 1650', 'direccion': 'CORRIENTES1650, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60435929350593, 'longitude': -58.39011576427365}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro de Exposiciones El Dorrego', 'direccion': 'DORREGO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.580057891378985, 'longitude': -58.44194652244941}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Ente de Turismo', 'direccion': 'BALCARCE360, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.612020733825204, 'longitude': -58.37050644097827}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Ente de Higiene Urbana', 'direccion': 'VARELA555, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63595442441906, 'longitude': -58.46252397667907}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'SECHI', 'direccion': 'ACOSTA, MARIANO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66528955925037, 'longitude': -58.443141085312504}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Xnico de CoordinaciXn y Control', 'direccion': 'NEWBERY, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59026347857573, 'longitude': -58.452028351122365}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos Dr. C. Argerich', 'direccion': 'PI Y MARGALL750, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62778813266393, 'longitude': -58.36601986713855}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Manuel Belgrano (ex KTD)', 'direccion': 'SALGUERO, JERONIMO3400, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.56853865323838, 'longitude': -58.402902172437514}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Planta Asfalto (EMUI)', 'direccion': 'CASTAXARES2350, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64495673023716, 'longitude': -58.44693011225184}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Teatro Sarmiento', 'direccion': 'SARMIENTO AV.2715, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.579061763653364, 'longitude': -58.418379865631145}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo Cornelio Saavedra', 'direccion': 'CRISXLOGO LARRALDE6293, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.56853287499553, 'longitude': -58.50791792414208}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. de OftalmologXa Santa LucXa', 'direccion': 'AV SAN JUAN2021, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62283424035839, 'longitude': -58.39446588394576}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plazoleta Lacarra y Somellera', 'direccion': 'ACOSTA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65654526462131, 'longitude': -58.45583867281063}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. de GastroenterologXa B. Udaondo', 'direccion': 'CASEROS2061, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63409965266172, 'longitude': -58.39141003595609}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos C. Durand', 'direccion': 'DXAZ VELEZ5044, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60905514509721, 'longitude': -58.43793511310346}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Portal Inclusivo Villa Soldati', 'direccion': 'ACOSTA, MARIANO2300, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65323979095988, 'longitude': -58.45748640865905}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. OftalmolXgico Dr. P. Lagleyze', 'direccion': 'JUAN B. JUSTO4151, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.605431106409625, 'longitude': -58.46016940917787}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de NiXos Ricardo GutiXrrez', 'direccion': 'GALLO1330, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59439183329993, 'longitude': -58.41097819451416}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Templete Parque Patricios', 'direccion': 'CASEROS3250, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.638084477724654, 'longitude': -58.40989817728448}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos Dr. I. Pirovano', 'direccion': 'MONROE3555, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.565107568124716, 'longitude': -58.47098627071778}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. de RehabilitaciXn M. Rocca', 'direccion': 'SEGUROLA1949, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61849412405337, 'longitude': -58.50173328625054}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Instituto Vocacional de Arte " M. J. Labarden" - Sede Garay', 'direccion': 'GARAY1684, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.627363456330954, 'longitude': -58.38914977030201}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural General San MartXn', 'direccion': 'SARMIENTO1551, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60530588513135, 'longitude': -58.388695591616106}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro Cultural Saladillo', 'direccion': 'BERXN DE ASTRADA5920, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.68891790893345, 'longitude': -58.46351830938059}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Materno Infantil R. SardX', 'direccion': 'ESTEBAN DE LUCA2151, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63489159843031, 'longitude': -58.4027254390375}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 25', 'direccion': 'LETONIA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.589118059706, 'longitude': -58.37052794238554}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Instituto Vocacional de Arte " M. J. Labarden" - Sede Curapaligue', 'direccion': 'CURAPALIGUE1026, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6350614133523, 'longitude': -58.446934847960996}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Infanto Juvenil "C.Tobar GarcXa"', 'direccion': 'RAMXN CARRILLO315, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63559203018673, 'longitude': -58.38231077355322}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 36', 'direccion': 'MERCEDES1371, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.621941563503185, 'longitude': -58.49180371261496}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CanXnigo Luis J. ChorroarXn', 'direccion': 'SOLDADO DE LA FRONTERA5059, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.68420211388961, 'longitude': -58.46528378224395}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 9', 'direccion': 'IRALA1254, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64012750374631, 'longitude': -58.36595018059459}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 7', 'direccion': '2 DE ABRIL DE 1982, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.67811974129474, 'longitude': -58.49126799803815}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 17', 'direccion': 'EL SALVADOR4087, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.592599595652295, 'longitude': -58.42038595230552}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 11', 'direccion': 'AGUERO940, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.598761165355384, 'longitude': -58.41073362014075}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 15', 'direccion': 'HUMBERTO 1X470, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62080278438023, 'longitude': -58.372461866945905}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 21', 'direccion': 'GENDARMERIA NACIONAL AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58479623910499, 'longitude': -58.37336187032791}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 44', 'direccion': 'SARAZA4202, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66067332573148, 'longitude': -58.46692559867234}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 26', 'direccion': 'GURRUCHAGA1939, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58733999358533, 'longitude': -58.425809454108396}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn San Pedrito - LXnea A', 'direccion': 'RIVADAVIA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6307070870644, 'longitude': -58.4696396292697}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Hogar San MartXn', 'direccion': 'WARNES2650, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.597260718069855, 'longitude': -58.47600474484752}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Corrientes 1750', 'direccion': 'CORRIENTES1750, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60445854643667, 'longitude': -58.39142075539579}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 27', 'direccion': 'ARIAS3783, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.5476317749942, 'longitude': -58.48668343664601}} 
+
+{'descripcion': 'Evento Temporal Terminado', 'nombre': 'Ciudad del Rock', 'direccion': 'FERNANDEZ DE LA CRUZ F, GRAL. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66950975959603, 'longitude': -58.45371238443656}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Ministerio de Ambiente y Espacio PXblico', 'direccion': 'ROQUE SAENZ PEXA570, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60756450037782, 'longitude': -58.37467183464417}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 30', 'direccion': 'AMANCIO ALCORTA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64988460814893, 'longitude': -58.40457740737869}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro de AtenciXn Primaria de Alta ResoluciXn Cecilia Grierson', 'direccion': 'FERNANDEZ DE LA CRUZ F, GRAL. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.67191683444017, 'longitude': -58.45612322137348}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro de DXa NX 24', 'direccion': 'YRUPE6702, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66783378632984, 'longitude': -58.496360916004384}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 33', 'direccion': 'CORDOBA5741, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58645247654454, 'longitude': -58.44172375449927}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Distrito TecnolXgico Caseros y Almafuerte', 'direccion': 'CASEROS, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63815906067511, 'longitude': -58.4116257957169}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital PueyrredXn - LXnea B', 'direccion': 'CORRIENTES, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.604563683844795, 'longitude': -58.40546946259032}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Ministerio de ModernizaciXn', 'direccion': 'ROQUE SAENZ PEXA788, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60599985163462, 'longitude': -58.37765053399983}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Distrito TecnolXgico SXnchez de Loria y Rondeau', 'direccion': 'SXNCHEZ DE LORIA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.637043167074765, 'longitude': -58.41092736357705}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Conservatorio Superior de MXsica Manuel de Falla', 'direccion': 'GALLO238, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60581468072267, 'longitude': -58.413736965818295}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Corrientes - LXnea H', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6044879535193, 'longitude': -58.4054498907215}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 37', 'direccion': 'DE LOS CORRALES, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.662241679038424, 'longitude': -58.499758038260175}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 38', 'direccion': 'MEDRANO350, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.606615046006645, 'longitude': -58.421423568285995}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Distrito TecnolXgico Caseros 3405', 'direccion': 'CASEROS3405, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63839808255248, 'longitude': -58.41337641538738}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Portal Inclusivo 31. Edif. PolicXa Metropolitana', 'direccion': 'CASTILLO, RAMON S., PRES. AV.1728, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.578395597777195, 'longitude': -58.38598978783309}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro de DXa NX 8', 'direccion': 'CONDARCO5155, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.5811910834447, 'longitude': -58.50319713566069}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Corrientes 1150', 'direccion': 'CORRIENTES1150, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.603861722097385, 'longitude': -58.3828744091875}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Corrientes 1250', 'direccion': 'CORRIENTES1250, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60394819850708, 'longitude': -58.38434216267311}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro de DXa NX 9', 'direccion': 'PARAGUAY5170, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57975871698257, 'longitude': -58.43063165767169}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Corrientes 1350', 'direccion': 'CORRIENTES1350, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60402977887425, 'longitude': -58.3857528339668}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Distrito TecnolXgico PepirX y Los Patos', 'direccion': 'PEPIRX, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.641673660739755, 'longitude': -58.409121253829134}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro de DXa NX 19', 'direccion': 'JUAN DE GARAY765, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62478209360019, 'longitude': -58.37619995431409}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro de DXa NX 17', 'direccion': 'AGRELO3356, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61822398090746, 'longitude': -58.413540413247034}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Distrito TecnolXgico Almafuerte y Pomar', 'direccion': 'ALMAFUERTE, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.639618416035695, 'longitude': -58.411825738082364}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Distrito TecnolXgico Almafuerte y Puna', 'direccion': 'ALMAFUERTE, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.641738773359094, 'longitude': -58.41269836639374}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Distrito TecnolXgico Dr. Prof. P. Chutro 3434', 'direccion': 'CHUTRO3434, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.642917076207816, 'longitude': -58.41205681327169}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Distrito TecnolXgico Cortajarena 3514', 'direccion': 'CORTEJARENA3514, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64383124151181, 'longitude': -58.411710392750855}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Distrito TecnolXgico MiriXay 3532', 'direccion': 'MIRIXAY3532, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64420079195237, 'longitude': -58.412013617429}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 47', 'direccion': 'COCHABAMBA1436, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.624026967529076, 'longitude': -58.3864195875654}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro de DXa NX 27', 'direccion': 'RAMON FALCON4778, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63814910940261, 'longitude': -58.49441265789345}} 
+
+{'descripcion': 'En 03/2015 se ampliX la seXal', 'nombre': 'EstaciXn Saludable Retiro', 'direccion': 'DEL LIBERTADOR, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.592673318587906, 'longitude': -58.37414270890953}} 
+
+{'descripcion': 'En 04/2015 se ampliX la seXal', 'nombre': 'EstaciXn Saludable PacXfico', 'direccion': 'SANTA FE, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57754157704251, 'longitude': -58.42697833713301}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn de Combis', 'direccion': '9 DE JULIO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60527784731743, 'longitude': -58.38197024575948}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Jujuy', 'direccion': 'JUJUY, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.631770742473286, 'longitude': -58.400997086944486}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza Irlanda - Centro de Jubilados', 'direccion': 'SEGUX850, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61559817529903, 'longitude': -58.456522993908955}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Diagonal Norte y C. Pellegrini', 'direccion': 'ROQUE SAENZ PEXA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60414445054139, 'longitude': -58.38057207667906}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable SACTA', 'direccion': 'AV. ROCA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.680530730857, 'longitude': -58.44886448981141}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede de Comuna 7', 'direccion': 'RIVADAVIA AV.7202, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.630249835757425, 'longitude': -58.4669382206226}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EMAD - Escuela Metropolitana de Arte DramXtico', 'direccion': 'JUFRE141, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59768890323279, 'longitude': -58.430229971205485}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'JardXn ZoolXgico', 'direccion': 'CALZADA CIRCULAR PLAZA ITALIA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58090463351675, 'longitude': -58.41977417407877}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Pasaje Carlos Gardel', 'direccion': 'CARLOS GARDEL, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60338471968764, 'longitude': -58.40935964242513}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Baldomero FernXndez Moreno', 'direccion': 'CONCEPCIXN ARENAL4206, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59142737583938, 'longitude': -58.450247701684866}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn ConstituciXn', 'direccion': 'BRASIL, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62774098705073, 'longitude': -58.37963355575952}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'COPIDIS', 'direccion': 'HUERGO, ING. AV.1189, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6211941479523, 'longitude': -58.36631262929295}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Evaristo Carriego', 'direccion': 'HONDURAS3784, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.594283954669635, 'longitude': -58.41604029287303}} 
+
+{'descripcion': 'Tramo Perito Moreno 1701 - 2379', 'nombre': 'SECHI Corredor Saludable Perito Moreno', 'direccion': 'PERITO MORENO AV.1701, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65074090203974, 'longitude': -58.43787128467737}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'SECHI Nidito', 'direccion': 'PERITO MORENO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64979298627045, 'longitude': -58.43334650336501}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'SECHI Plaza Rotonda / Espejo', 'direccion': 'PERITO MORENO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65058984778119, 'longitude': -58.431860238905294}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Diagonal y Florida (Refuerzo)', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60695079146932, 'longitude': -58.37513243748793}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Carlos Pellegrini', 'direccion': 'PELLEGRINI CARLOS AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60390132932176, 'longitude': -58.38076807386401}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Peru', 'direccion': 'AV. DE MAYO570, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6087571006617, 'longitude': -58.374462322206185}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Rosedal', 'direccion': 'IRAOLA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57153623747762, 'longitude': -58.41265370944486}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Nueva Sede GCBA (Recepciones PXblico)', 'direccion': 'LOS PATOS3151, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6412710325493, 'longitude': -58.406913025687295}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'SubsecretarXa Ciudad Inteligente', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV.637, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60653765114911, 'longitude': -58.375838905154005}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Florida 25', 'direccion': 'FLORIDA25, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60777008119901, 'longitude': -58.37479634602823}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Florida 180', 'direccion': 'FLORIDA180, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60600633277198, 'longitude': -58.375168847710135}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Florida 364', 'direccion': 'FLORIDA364, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.603920991958816, 'longitude': -58.375288553858994}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Florida 540', 'direccion': 'FLORIDA540, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.601722937154506, 'longitude': -58.37539482244621}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Florida 870', 'direccion': 'FLORIDA870, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59792238855684, 'longitude': -58.37551917488997}} 
+
+{'descripcion': 'Evento Temporal Terminado', 'nombre': 'BA Fit', 'direccion': 'PEPIRI135, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.639245733490746, 'longitude': -58.40886419275538}} 
+
+{'descripcion': 'Evento Temporal Terminado', 'nombre': 'BA Moda', 'direccion': 'DORREGO1898, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58014248457801, 'longitude': -58.44204364616419}} 
+
+{'descripcion': 'Evento Temporal Terminado', 'nombre': 'BA Playa (Puerto Pibes)', 'direccion': 'CANTILO, INT., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.549661908691746, 'longitude': -58.434845366629155}} 
+
+{'descripcion': 'Evento Temporal Terminado', 'nombre': 'BA Rock', 'direccion': 'ESCALADA AV.4501, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66995470713422, 'longitude': -58.453197014727685}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Catedral - LXnea D', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV.501, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60780850318931, 'longitude': -58.37390905750622}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn 9 de Julio - LXnea D', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV.951, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.604272427300266, 'longitude': -58.38054793363715}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Facultad de Medicina - LXnea D', 'direccion': 'CORDOBA AV.2100, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59975677698516, 'longitude': -58.397859611854244}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Plaza Italia - LXnea D', 'direccion': 'SANTA FE AV.4100, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.581452933808556, 'longitude': -58.421162397697266}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Palermo - LXnea D', 'direccion': 'SANTA FE AV.4600, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.578455499669936, 'longitude': -58.425651515447}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'GalerXa Pasaje Obelisco Sur', 'direccion': 'PELLEGRINI, CARLOS327, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60448305447899, 'longitude': -58.38079759650671}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'GalerXa Pasaje Obelisco Norte', 'direccion': 'PELLEGRINI, CARLOS451, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60309324481129, 'longitude': -58.38088186749889}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos J.M. Ramos MejXa', 'direccion': 'GRAL. URQUIZA609, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.617571435770486, 'longitude': -58.409622498606346}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos B. Rivadavia', 'direccion': 'AV. GRAL. LAS HERAS2670, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58472727127977, 'longitude': -58.400575907639386}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos Dr. T. Alvarez', 'direccion': 'ARANGUREN2701, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62414755780535, 'longitude': -58.469357704715556}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. de Salud Mental J. Borda', 'direccion': 'CARRILLO, RAMON, DR.375, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63640149463512, 'longitude': -58.38212216156139}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. de RehabilitaciXn PsicofXsica', 'direccion': 'ECHEVERRIA955, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.55388342649695, 'longitude': -58.4409944809488}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. OdontolXgico Dr. R. Carrillo (Ex Nacional)', 'direccion': 'SANCHEZ DE BUSTAMANTE2529, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.584497131405655, 'longitude': -58.4025806700771}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. de OdontologXa J. DueXas', 'direccion': 'MUXIZ15, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6146432564541, 'longitude': -58.427663291289704}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos Dr. J. A. FernXndez', 'direccion': 'CERVIXO3356, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58115333552533, 'longitude': -58.40690098381162}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Corrientes LXnea H', 'direccion': 'CORRIENTES, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.604508762478105, 'longitude': -58.405456689024284}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable ConstituciXn', 'direccion': 'GARAY, JUAN DE AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62692512996439, 'longitude': -58.38223474035232}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Parque Avellaneda', 'direccion': 'BILBAO, FRANCISCO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.644950991523125, 'longitude': -58.47587711003856}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Parque Centenario', 'direccion': 'MACHADO, ANTONIO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.605122946914676, 'longitude': -58.43456074451136}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Parque Chacabuco', 'direccion': 'ASAMBLEA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63500546961449, 'longitude': -58.43953012404454}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Parque Indoamericano', 'direccion': 'CASTAXARES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.664376767455344, 'longitude': -58.46660078036904}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro del Distrito TecnolXgico (Espacios de recepciXn al pXblico)', 'direccion': 'USPALLATA2802, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63917990010769, 'longitude': -58.40235362053107}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Patricios (Distrito TecnolXgico)', 'direccion': 'CASEROS AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.639039859805656, 'longitude': -58.409087616900955}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Parque Uriburu', 'direccion': 'PEPIRI, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64225502304249, 'longitude': -58.40986974150091}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza JosX C. Paz', 'direccion': 'PAZ, JOSE C., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.644519539565096, 'longitude': -58.41046467874707}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Pzta. Dr. Genaro Giacobini', 'direccion': 'USPALLATA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.640236601911084, 'longitude': -58.408367230993356}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Plaza RamXn FernXndez', 'direccion': 'SARMIENTO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57329034617145, 'longitude': -58.41461510162455}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 10', 'direccion': 'AMANCIO ALCORTA1402, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.633557387172914, 'longitude': -58.38347756349796}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 12', 'direccion': 'OLAZABAL3960, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.569890119473015, 'longitude': -58.47416417934894}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 13', 'direccion': 'DIRECTORIO AV.4210, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.644421137076726, 'longitude': -58.48325075726566}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 28', 'direccion': 'CAFAYATE5388, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.68840787108288, 'longitude': -58.463571056404184}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CeSAC NX 3', 'direccion': 'SOLDADO DE LA FRONTERA5144, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.684313998720064, 'longitude': -58.46396972196414}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. de Salud Mental Braulio Moyano', 'direccion': 'BRANDSEN2570, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63939125746622, 'longitude': -58.38464725409103}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos J.A. Penna', 'direccion': 'PEDRO CHUTRO3380, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6431146919935, 'longitude': -58.41085401429197}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. de Emergencias PsiquiXtricas Torcuato de Alvear', 'direccion': 'WARNES2630, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.597217566673386, 'longitude': -58.47525884713414}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Htal. Gral. de Agudos Dr. E. TornX', 'direccion': 'COMBATIENTES DE MALVINAS3002, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58734517927903, 'longitude': -58.47124183750385}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 6', 'direccion': 'ESTADOS UNIDOS1936, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61961726698072, 'longitude': -58.39366446105392}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 7', 'direccion': 'PATRON6119, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.645210736189846, 'longitude': -58.51244704325896}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 8', 'direccion': 'LA CAPITAL1131, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64096721857591, 'longitude': -58.43169762683208}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Parque Los Andes', 'direccion': 'JORGE NEWBERY4100, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.591760386784195, 'longitude': -58.448178344708424}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Parque Patricios', 'direccion': 'PATAGONES, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6380445107306, 'longitude': -58.406364079855656}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Plaza Flores', 'direccion': 'FRAY CAYETANO RODRIGUEZ, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62868569086607, 'longitude': -58.46310518984377}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Saludable Plaza Miserere', 'direccion': 'PUEYRREDON, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.609694815012254, 'longitude': -58.407114698704284}} 
+
+{'descripcion': 'Hall de acceso', 'nombre': 'Instituto de Zoonosis Luis Pasteur', 'direccion': 'DIAZ VELEZ4821, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60828090113856, 'longitude': -58.435053244816935}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Posta Digital - Centro de DXa NX 22', 'direccion': 'HERNANDARIAS370, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63219677433756, 'longitude': -58.36883108243496}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Posta Digital - Centro Metropolitano de DiseXo', 'direccion': 'ALGARROBO1041, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65484736227198, 'longitude': -58.3794556783378}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 13', 'direccion': 'CAMARONES2834, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.612079112010356, 'longitude': -58.47971828706309}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 12', 'direccion': 'PAEZ2283, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61923596183584, 'longitude': -58.46518954325248}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'SECHI Sede Barrio FXtima', 'direccion': 'PERGAMINO2950, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.660409973312916, 'longitude': -58.44696496683506}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'SECHI Plaza Carrillo', 'direccion': 'ACOSTA2461, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65596757819052, 'longitude': -58.45560235595532}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital San Pedrito - LXnea A', 'direccion': 'RIVADAVIA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63068359143806, 'longitude': -58.46958276976292}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Callao - LXnea B', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60441874505357, 'longitude': -58.39228722159393}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Alem - LXnea B', 'direccion': 'CORRIENTES AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.602987065474764, 'longitude': -58.3699222450556}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Ministro Carranza - LXnea D', 'direccion': 'SANTA FE AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57518425359004, 'longitude': -58.43500907709321}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Palermo - LXnea D', 'direccion': 'SANTA FE AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57838393375454, 'longitude': -58.42574254797277}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Plaza Italia - LXnea D', 'direccion': 'SANTA FE AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58144407489984, 'longitude': -58.421181262304586}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Facultad de Medicina - LXnea D', 'direccion': 'CORDOBA AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.599753521969184, 'longitude': -58.39802640036531}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital 9 de Julio - LXnea D', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.604230711465895, 'longitude': -58.380591040893734}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Catedral - LXnea D', 'direccion': 'SAENZ PEXA, ROQUE, PRES. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -89.99820048201178, 'longitude': 137.41950921668692}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Caseros - LXnea H', 'direccion': 'CASEROS AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6357491066328, 'longitude': -58.39894740746773}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Bolivar - LXnea E', 'direccion': 'ROCA, JULIO A., PRESIDENTE AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.609206402831376, 'longitude': -58.37362209376905}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Humberto 1X - LXnea H', 'direccion': 'JUJUY AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62310516105896, 'longitude': -58.40232030513493}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Espacio Subte Digital Once - 30 de Diciembre - LXnea H', 'direccion': 'MITRE, BARTOLOME, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60893437019684, 'longitude': -58.406038933873155}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Tribunales - LXnea D', 'direccion': 'TUCUMAN, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60171820946995, 'longitude': -58.38518292842749}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn AgXero - LXnea D', 'direccion': 'AGUERO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.591564961042366, 'longitude': -58.407010060664554}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn R. Scalabrini Ortiz - LXnea D', 'direccion': 'SCALABRINI ORTIZ, RAUL, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.585145423917375, 'longitude': -58.41598071149391}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Bulnes - LXnea D', 'direccion': 'BULNES, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58828107755558, 'longitude': -58.41126571202718}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn PueyrredXn - LXnea D', 'direccion': 'PUEYRREDON AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.594437648683346, 'longitude': -58.402398660555455}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Callao - LXnea D', 'direccion': 'CALLAO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59960993944405, 'longitude': -58.393100343805635}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Ministro Carranza - LXnea D', 'direccion': 'DORREGO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.57517823716708, 'longitude': -58.4350318685778}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Olleros - LXnea D', 'direccion': 'LACROZE, FEDERICO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.5700088330131, 'longitude': -58.44472336454625}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn JosX HernXndez - LXnea D', 'direccion': 'CABILDO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.5661895972887, 'longitude': -58.45218530485135}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Juramento - LXnea D', 'direccion': 'JURAMENTO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.56225443188704, 'longitude': -58.45650996651561}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Congreso de TucumXn - LXnea D', 'direccion': 'CONGRESO, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.555642285754665, 'longitude': -58.46238275653949}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Venezuela - LXnea H', 'direccion': 'BELGRANO AV, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61523851541233, 'longitude': -58.40473034751156}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Inclan - LXnea H', 'direccion': 'INCLAN, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.629377232289194, 'longitude': -58.40097960759386}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Caseros - LXnea H', 'direccion': 'CASEROS AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63575646516383, 'longitude': -58.39894602022317}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Hospitales - LXnea H', 'direccion': 'PUNA, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64126891985722, 'longitude': -58.41237737274386}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Once - 30 de Diciembre - LXnea H', 'direccion': 'MITRE, BARTOLOME, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60894925040331, 'longitude': -58.40603690596112}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'EstaciXn Humberto 1X - LXnea H', 'direccion': 'JUJUY AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62312836504132, 'longitude': -58.40231844825333}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Conservatorio S. M. "Manuel de Falla" Piso 2', 'direccion': 'SUIPACHA443, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60302976468983, 'longitude': -58.37942378376169}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Conservatorio S. M. "Manuel de Falla" Piso 1', 'direccion': 'SUIPACHA443, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60307753969464, 'longitude': -58.37941794545371}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'SECHI Madre del Pueblo', 'direccion': 'MORENO, PERITO AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65065200368979, 'longitude': -58.43194505671186}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 22', 'direccion': 'ARAOZ2637, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58502022282057, 'longitude': -58.413704401963955}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 20', 'direccion': 'ARAUJO1246, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64934933048436, 'longitude': -58.4943539169553}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 19', 'direccion': 'COLIGXE2977, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.613738907611435, 'longitude': -58.52665991859367}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Villa OlXmpica - Auditorio ex admin.', 'direccion': 'FERNANDEZ DE LA CRUZ, F., GRAL. AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6697640706031, 'longitude': -58.44627976551297}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Polideportivo Colegiales', 'direccion': 'CONDE235, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.579885727734386, 'longitude': -58.445559429253755}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Polideportivo Santojanni', 'direccion': 'PATRON6222, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.646649699093125, 'longitude': -58.51354233179484}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 23', 'direccion': 'TEJEDOR251, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.629743322669434, 'longitude': -58.42971477957079}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 24', 'direccion': 'BRASIL AV.2867, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63280088894047, 'longitude': -58.40401805362255}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 25', 'direccion': 'ECHEANDIA3417, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.647870575484774, 'longitude': -58.46511017454454}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 26', 'direccion': 'GUAYRA2193, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.551657125142974, 'longitude': -58.46318357196404}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 27', 'direccion': 'ANTEZANA340, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60518699653762, 'longitude': -58.444859264240286}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Centro de AcciXn Familiar BartolomX Mitre', 'direccion': 'LARRAYA4370, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.67820329648793, 'longitude': -58.46728428209806}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 28', 'direccion': 'ECHEANDIA5567, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66585915907535, 'longitude': -58.48498257055845}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 29', 'direccion': 'SAAVEDRA205, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61247899814101, 'longitude': -58.40331978610443}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 30', 'direccion': 'ARZOBISPO ESPINOSA1211, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.6335602283666, 'longitude': -58.37054292995811}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 31', 'direccion': 'AVELINO DIAZ1971, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.63939778791396, 'longitude': -58.44607327632173}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 32', 'direccion': 'CALDERON DE LA BARCA, PEDRO1198, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.628030848962425, 'longitude': -58.50400489491119}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 34', 'direccion': 'HUMBOLDT1130, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58941523804219, 'longitude': -58.44117339369921}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 33', 'direccion': 'CRAMER AV.4354, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.54477961007678, 'longitude': -58.476632643200766}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 35', 'direccion': 'SALVADOR MARXA DEL CARRIL2956, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.59126928409558, 'longitude': -58.49881535735488}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 36', 'direccion': 'BURELA1604, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58520623373664, 'longitude': -58.486062753099105}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 37', 'direccion': 'ISABEL LA CATOLICA1492, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.64619382244907, 'longitude': -58.37178295680972}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 38', 'direccion': 'MORETO1581, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.651883559052465, 'longitude': -58.47782208000667}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CMB NX 39', 'direccion': 'VARELA AV.3395, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.66082124012246, 'longitude': -58.43327395794944}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Servicio Social Zonal 11', 'direccion': 'BEIRO FRANCISCO5229, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61326208826275, 'longitude': -58.52420954753367}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Servicio Social Zonal 12', 'direccion': 'CHARLONE1563, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58048487275156, 'longitude': -58.4641398266598}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Same Monasterio', 'direccion': 'MONASTERIO480, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.641027035445774, 'longitude': -58.39380347714546}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Terminal de Combis Puerto Madero', 'direccion': 'MADERO EDUARDO AV.401, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60220748586292, 'longitude': -58.36804175263863}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'DirecciXn General de Defensa del Consumidor', 'direccion': 'MAIPU169, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.606043098225925, 'longitude': -58.376428589195086}} 
+
+{'descripcion': 'Evento Temporal terminado', 'nombre': 'FIBA (Evento)', 'direccion': 'CORRIENTES1681, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60417427022653, 'longitude': -58.390506857706384}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Portal Inclusivo Villa 31', 'direccion': 'GENDARMERIA NACIONAL AV., Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58394121938301, 'longitude': -58.37492913928781}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'ISC - ASI Desarrollo', 'direccion': 'ZUVIRIA64, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62857116911452, 'longitude': -58.42726602533765}} 
+
+{'descripcion': 'En 01 y 05 2016 ampliX la seXal', 'nombre': 'Edificio Lezama', 'direccion': 'GARCIA, MARTIN AV.300, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62902070888041, 'longitude': -58.369857015584365}} 
+
+{'descripcion': 'Evento Temporal Terminado', 'nombre': 'Usina del Arte (Evento)', 'direccion': 'DON PEDRO DE MENDOZA AV.501, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.628731646222626, 'longitude': -58.35679974289007}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Servicio Social Zonal 10', 'direccion': 'SEGUI, F. J., ALTE.2125, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60168181343412, 'longitude': -58.46226188957486}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Servicio Social Zonal 15', 'direccion': 'SEGUI, F. J., ALTE.2125, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.601729903398166, 'longitude': -58.46227775071152}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Servicio Social Zonal 3', 'direccion': 'SAN JUAN AV.2353, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62319767940665, 'longitude': -58.3986234574163}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Servicio Social Zonal 5', 'direccion': 'COCHABAMBA4048, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62776778181566, 'longitude': -58.421881160377524}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Servicio Social Zonal 2', 'direccion': 'RODRIGUEZ PEXA780, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60002434781798, 'longitude': -58.39160729221424}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Servicio Social Zonal 13', 'direccion': 'CABILDO AV.3067, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.55372521402672, 'longitude': -58.46393855135409}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Servicio Social Zonal 14', 'direccion': 'CORONEL DXAZ2110, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.58721697355791, 'longitude': -58.40907284524339}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CIM Elvira Rawson', 'direccion': 'SALGUERO765, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60126017457201, 'longitude': -58.41914214354498}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CIM Margarita Malharro', 'direccion': '24 DE NOVIEMBRE113, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.612171039189086, 'longitude': -58.41174460578005}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'CIM Villa Lugano', 'direccion': 'ESCALADA AV.4502, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.67643268773, 'longitude': -58.454127724244564}} 
+
+{'descripcion': 'En 01/2016 se ampliX la seXal', 'nombre': 'Ministerio de EducaciXn', 'direccion': 'PASEO COLON255, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.610674532241624, 'longitude': -58.369845571340115}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Villa OlXmpica (Sede Paseo ColXn)', 'direccion': 'PASEO COLON221, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.610209474581104, 'longitude': -58.36985902006713}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'SeXalamiento Luminoso', 'direccion': 'MACHADO94, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.60434794560624, 'longitude': -58.4329743585245}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Sede NIDO - Barrio Zavaleta', 'direccion': 'IGUAZU, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.65038250642828, 'longitude': -58.40289870549547}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Agencia de ProtecciXn Ambiental', 'direccion': 'MORENO1379, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61218766332835, 'longitude': -58.38586008363411}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Ente de Mantenimiento Urbano', 'direccion': 'INDEPENDENCIA3253, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62036461622406, 'longitude': -58.41161216785089}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Edificio Finochietto', 'direccion': 'FINOCHIETTO435, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.62807259555042, 'longitude': -58.37141464651929}} 
+
+{'descripcion': 'Autogenerado', 'nombre': 'Museo de Esculturas Luis Perlotti', 'direccion': 'PUJOL642, Ciudad Autonoma de Buenos Aires', 'ubicacion': {'latitude': -34.61505257769492, 'longitude': -58.4483193420971}} 
+
