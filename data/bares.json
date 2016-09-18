@@ -1,4 +1,3 @@
-[
     {
     	"nombre": "La Farola de Cabildo",
     	"descripcion": "Un clasido de Buenos Aires.",
@@ -7,16 +6,16 @@
     		"longitude": -58.461108
     	},
     	"direccion": "Av. Cabildo 2630, C1428AAV CABA"
-    },
+    }
     {
-    	"nombre": "Café Martínez",
+    	"nombre": "Cafe Martínez",
     	"descripcion": "Cafe de Buenos Aires.",
     	"ubicacion": {
     		"latitude": -34.556708,
     		"longitude": -58.461150
     	},
     	"direccion": "Av. Cabildo 2733, C1428AAJ CABA"
-    },
+    }
     {
     	"nombre": "Starbucks - Cabildo y Ruiz Huidobro",
     	"descripcion": "Cafe caro y feo.",
@@ -25,7 +24,7 @@
     		"longitude": -58.471641
     	},
     	"direccion": "Av. Cabildo 4300, C1429ABN CABA"
-    },
+    }
     {
         "nombre": "McDonald's - Av. Libertador",
         "descripcion": "Cafe barato y feo.",
@@ -34,9 +33,9 @@
             "longitude": -58.456768
         },
         "direccion": "Av. del Libertador 7112, C1429BMR CABA"
-    },
+    }
     {
-        "nombre": "Divino Nuñez - Bistró de Barrio",
+        "nombre": "Divino Nuñez - Bistro de Barrio",
         "descripcion": "WiFi, Cafe, buenos platos.",
         "ubicacion": {
             "latitude": -34.548545,
@@ -44,4 +43,3 @@
         },
         "direccion": "Manuela Pedraza 1802, C1429CBH, Cdad. Autónoma de Buenos Aires"
     }
-]
