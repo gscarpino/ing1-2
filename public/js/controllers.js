@@ -4,11 +4,15 @@ angular.module('wifindAppControllers', [])
         console.log("Usuario");
     })
 
-    .controller('InicioCtrl', function($scope, uiGmapGoogleMapApi, $http) {
+    .controller('InicioCtrl', function($scope, uiGmapGoogleMapApi, $http, $mdToast) {
+        $scope.markers = [];
+
         uiGmapGoogleMapApi.then(function(map) {
-            $scope.currentPosition = { latitude: -34.588771, longitude: -58.430198 };
-            $scope.map = { center: $scope.currentPosition , zoom: 13,
-                events:{
+            $scope.currentPosition = { latitude: -34.549259, longitude: -58.466245 };
+            $scope.map = { 
+                center: $scope.currentPosition, 
+                zoom: 13,
+                events: {
                     click: function(mapModel, eventName, originalEventArgs) {
                         var e = originalEventArgs[0];
                         $scope.currentPosition = {latitude: e.latLng.lat(), longitude: e.latLng.lng()};
@@ -19,6 +23,10 @@ angular.module('wifindAppControllers', [])
                         }];
                         $scope.$apply();
                     }
+                },
+                userMarker: {
+                    stroke: { color: '#3F51B5' },
+                    fill: { color: '#3F51B5' }
                 }
             };
 
@@ -32,71 +40,44 @@ angular.module('wifindAppControllers', [])
         });
 
         $scope.buscarCercanos = function() {
+            $scope.markers = [];
+
             $http({
                 method: 'POST',
                 url: 'http://localhost:5000/api/bares/buscar',
                 data: {
                     ubicacion: $scope.currentPosition,
-                    distancia: 100400
+                    distancia: 800
                 }
             }).then(function successCallback(response) {
-                console.log(response);
-            }, function errorCallback(response) {
+                var bares = response.data.bares;
 
-            });
-
-            var bares = [
-                {
-                    nombre: "La Farola de Cabildo",
-                    descripcion: "Un clasido de Buenos Aires.",
-                    ubicacion: { latitud: -34.557279, longitud: -58.461108 },
-                    direccion: "Av. Cabildo 2630, C1428AAV CABA"
-                },
-                {
-                    nombre: "Café Martínez",
-                    descripcion: "Cafe de Buenos Aires.",
-                    ubicacion: { latitud: -34.556708, longitud: -58.461150},
-                    direccion: "Av. Cabildo 2733, C1428AAJ CABA"
-                },
-                {
-                    nombre: "Starbucks - Cabildo y Ruiz Huidobro",
-                    descripcion: "Cafe caro y feo.",
-                    ubicacion: { latitud: -34.544711, longitud: -58.471641 },
-                    direccion: "Av. Cabildo 4300, C1429ABN CABA"
-                }
-            ];
-
-            bares.forEach(function(bar) {
-            $http({
-                method: 'POST',
-                url: 'http://localhost:5000/api/bares',
-                data: bar
-            }).then(function successCallback(response) {
-                console.log(response);
-            }, function errorCallback(response) {
-
-            });
-            });
-
-            $scope.markers = [{
-                id: 0,
-                coords: $scope.currentPosition,
-                options: {
-                    icon: {
-                        url: 'img/bar-icon.png',
-                        scaledSize: {
-                            height: 40,
-                            width: 40
+                bares.forEach(function(bar) {
+                    $scope.markers.push({
+                        id: bar._id,
+                        coords: bar.ubicacion,
+                        options: {
+                            icon: {
+                                url: 'img/bar-icon.png',
+                                scaledSize: {
+                                    height: 40,
+                                    width: 40
+                                }
+                            }
+                        },
+                        window: {
+                            title: bar.nombre,
+                            description: bar.descripcion,
+                            location: bar.direccion,
+                            options: {
+                                visible: false
+                            }
                         }
-                    }
-                },
-                window: {
-                    title: 'Bar prueba',
-                    options: {
-                        visible: false
-                    }
-                }
-            }];
+                    });
+                });
+            }, function errorCallback(response) {
+
+            });
         }
 
     })

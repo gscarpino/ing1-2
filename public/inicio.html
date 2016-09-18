@@ -11,10 +11,14 @@ ui-view{
 <md-button class="md-raised md-primary" ng-click="buscarCercanos()">Buscar bares cercanos</md-button>
 
 <ui-gmap-google-map ng-if="map.center" center='map.center' zoom='map.zoom'>
+	<ui-gmap-circle center="map.center" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="150" visible="true"></ui-gmap-circle>
+
 	<ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" idkey="marker.id" click="marker.window.options.visible = !marker.window.options.visible;">
 		<ui-gmap-window options="marker.window.options" closeClick="marker.window.options.visible = false">
             <div style="color:rgb(63,81,181)">
             	<h2>{{marker.window.title}}</h2>
+            	<p>{{marker.window.description}}</p>
+            	<p>{{marker.window.location}}</p>
             </div>
         </ui-gmap-window>
 	</ui-gmap-marker>
