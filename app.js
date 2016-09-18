@@ -3,7 +3,7 @@ angular
 
     .config(function($stateProvider,uiGmapGoogleMapApiProvider){
         var indexState = {
-            name: 'index',
+            name: 'Inicio',
             url: '/',
             templateUrl: '/public/inicio.html',
             controller: 'InicioCtrl'
@@ -12,7 +12,7 @@ angular
         var registerUserState = {
             name: 'Nuevo Usuario',
             url: '/user/new',
-            templateUrl: '/public/user.new.html',
+            templateUrl: '/public/sign-up/login.html',
             controller: 'UserCtrl'
         };
 
@@ -31,7 +31,7 @@ angular
     .value('site',{name: 'WifindBar', protocol: 'http', domain: 'localhost', port: '5000'})
 
     .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, site, $log, $window, $http, $mdToast, $state) {
-        $state.transitionTo('index');
+        $state.go('Inicio');
         $scope.url = site.protocol + "://" + site.domain + ":" + site.port;
         $scope.toggleLeft = buildDelayedToggler('left');
         $scope.toggleRight = buildToggler('right');
@@ -123,7 +123,7 @@ angular
         }
     })
 
-    .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log,uiGmapGoogleMapApi) {
+    .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log,uiGmapGoogleMapApi, $state) {
       
         $scope.close = function () {
             // Component lookup should always be available since we are not using `ng-if`
@@ -158,6 +158,9 @@ angular
          });
         }
 
+        $scope.goToState = function(state) {
+            $state.go(state);
+        }
     })
 
     .controller('ToastCtrl', function($scope, $mdToast, $mdDialog) {
@@ -170,4 +173,8 @@ angular
                 // isDlgOpen = false;
             });
         };
+    })
+
+    .controller('PosCtrl', function($scope) {
+
     })

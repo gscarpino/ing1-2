@@ -1,154 +1,155 @@
 <html lang="en" ng-app="wifindApp">
 <head>
-  <!-- Angular Material style sheet -->
-  <link rel="stylesheet" href="static/bower_components/angular-material/angular-material.min.css">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="static/bower_components/angular-material/angular-material.min.css">
 
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src='static/bower_components/lodash/lodash.js'></script>
-  <script src="static/bower_components/angular/angular.js"></script>
-  <script src='static/bower_components/angular-simple-logger/dist/angular-simple-logger.js'></script>
-  <script src='static/bower_components/angular-google-maps/dist/angular-google-maps.js'></script>
-  <script src="static/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <script src="static/bower_components/angular-animate/angular-animate.min.js"></script>
-  <script src="static/bower_components/angular-aria/angular-aria.min.js"></script>
-  <script src="static/bower_components/angular-messages/angular-messages.min.js"></script>
-  <script src="static/bower_components/angular-material/angular-material.min.js"></script>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src='static/bower_components/lodash/lodash.js'></script>
+    <script src="static/bower_components/angular/angular.js"></script>
+    <script src='static/bower_components/angular-simple-logger/dist/angular-simple-logger.js'></script>
+    <script src='static/bower_components/angular-google-maps/dist/angular-google-maps.js'></script>
+    <script src="static/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="static/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="static/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="static/bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="static/bower_components/angular-material/angular-material.min.js"></script>
 
-  <script src="static/public/js/controllers.js"></script>
-  <script src="static/public/js/services.js"></script>
-  <script src="static/app.js"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="static/public/js/controllers.js"></script>
+    <script src="static/public/js/services.js"></script>
+    <script src="static/app.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-  <meta name="google-signin-client_id" content="1005832661607-6a6fnq59g600n8mf5gale2bd39gr4ksk.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="1005832661607-6a6fnq59g600n8mf5gale2bd39gr4ksk.apps.googleusercontent.com">
 
-  <style type="text/css">
-      @font-face {
-        font-family: 'Material Icons';
-        font-style: normal;
-        font-weight: 400;
-        src: url(static/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
-        src: local('Material Icons'),
-             local('MaterialIcons-Regular'),
-             url(static/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-             url(static/iconfont/MaterialIcons-Regular.woff) format('woff'),
-             url(static/iconfont/MaterialIcons-Regular.ttf) format('truetype');
-      }
+    <style type="text/css">
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(static/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+            src: local('Material Icons'),
+            local('MaterialIcons-Regular'),
+            url(static/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+            url(static/iconfont/MaterialIcons-Regular.woff) format('woff'),
+            url(static/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+        }
 
-      .material-icons {
-      font-family: 'Material Icons';
-      font-weight: normal;
-      font-style: normal;
-      font-size: 24px;  /* Preferred icon size */
-      display: inline-block;
-      line-height: 1;
-      text-transform: none;
-      letter-spacing: normal;
-      word-wrap: normal;
-      white-space: nowrap;
-      direction: ltr;
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;  /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
 
-      /* Support for all WebKit browsers. */
-      -webkit-font-smoothing: antialiased;
-      /* Support for Safari and Chrome. */
-      text-rendering: optimizeLegibility;
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering: optimizeLegibility;
 
-      /* Support for Firefox. */
-      -moz-osx-font-smoothing: grayscale;
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
 
-      /* Support for IE. */
-      font-feature-settings: 'liga';
-    }
-    body {
-    background: #F2F2F2;
-    }
-    li {
-      list-style-type: none;
-        cursor: pointer;
-    }
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+        }
+        body {
+            background: #F2F2F2;
+            height: 100%;
+        }
+        div.app_container{
+            height: 100%;
+        }
 
-
-    li:hover {
-      background-color:#CCC;
-    }
-
-    li > a {
-	text-decoration: none;
-        color: black;
-        cursor: pointer;
-    }
-
- li  > i {
-        margin-right: 24px;
-        vertical-align: bottom;
-    }
+        li {
+            list-style-type: none;
+            cursor: pointer;
+        }
 
 
+        li:hover {
+            background-color:#CCC;
+        }
 
-    li > a > i {
-        margin-right: 24px;
-        vertical-align: bottom;
-    }
+        li > a {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
 
-    #map{
-      width: 640px;
-      height: 480px;
-    }
-  </style>
+        li  > i {
+            margin-right: 24px;
+            vertical-align: bottom;
+        }
+
+
+
+        li > a > i {
+            margin-right: 24px;
+            vertical-align: bottom;
+        }
+
+        #map{
+            width: 640px;
+            height: 480px;
+        }
+    </style>
 
 </head>
 <body ng-controller="AppCtrl">
 
 
 
-  <script type="text/javascript">
-    /**
-     * You must include the dependency on 'ngMaterial'
-     */
-    //angular.module('wifindApp', ['ngMaterial']);
-  </script>
+    <script type="text/javascript">
+/**
+* You must include the dependency on 'ngMaterial'
+*/
+//angular.module('wifindApp', ['ngMaterial']);
+</script>
 
-  <div layout="column" style="height:500px;" ng-cloak>
+<div layout="column" class="app_container" ng-cloak>
     <section layout="row" flex>
-    <md-sidenav
-        class="md-sidenav-left"
-        md-component-id="left"
-        md-is-locked-open="$mdMedia('gt-md')"
-        md-whiteframe="4">
-      <md-toolbar class="md-theme-indigo">
-        <h1 class="md-toolbar-tools">Wifind Bar</h1>
-      </md-toolbar>
-      <md-content layout-padding ng-controller="LeftCtrl">
-          <li ng-if="!isRegistered"><a href="/public/sign-up/login.html" ><i class="material-icons">person_add</i>Registrarse</a></li>
-          <li>
-            <div ng-hide="googleSignedIn" class="g-signin2" data-onsuccess="onSignIn"></div>
-            <a ng-show="googleSignedIn" href="#" ng-click="signOut();">Sign out</a>
-          </li>
-          <li ng-if="!isRegistered" ng-click="print()" ><a ui-sref-active="active"  href="/public/sign-up/login.html"><i class="material-icons">input</i>Ingresar</a></li>
-          <li ng-click = "coordenadas()" ><i class="material-icons">search</i>Buscar</li>
-          <li ng-click="print()"><i class="material-icons">my_location</i>Alrededores</li>
-          <li ng-click="print()"><i class="material-icons">settings</i>Opciones</li>
-        </ul>
-      </md-content>
-    </md-sidenav>
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">Wifind Bar</h1>
+            </md-toolbar>
+            <md-content layout-padding ng-controller="LeftCtrl">
+                <li ng-click="goToState('Inicio')"><i class="material-icons">home</i>Inicio</li>
+                <li ng-if="!isRegistered" ng-click="goToState('Nuevo Usuario')"><i class="material-icons">person_add</i>Registrarse</li>
+                <li>
+                    <div ng-hide="googleSignedIn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                    <a ng-show="googleSignedIn" href="#" ng-click="signOut();">Sign out</a>
+                </li>
+                <li ng-if="!isRegistered" ng-click="print()" ><a ui-sref-active="active"  href="/public/sign-up/login.html"><i class="material-icons">input</i>Ingresar</a></li>
+                <li ng-click = "coordenadas()" ><i class="material-icons">search</i>Buscar</li>
+                <li ng-click="print()"><i class="material-icons">my_location</i>Alrededores</li>
+                <li ng-click="print()"><i class="material-icons">settings</i>Opciones</li>
+            </md-content>
+        </md-sidenav>
 
 
-    <md-content flex layout-padding ng-controller="PosCtrl">
-      <div layout="column" layout-align="top center">
-        <ui-view></ui-view>
+        <md-content flex layout-padding ng-controller="PosCtrl">
+            <div layout="column" layout-align="top center">
+                <ui-view></ui-view>
 
-            <li ng-click = "coordenadas()" >Mi Posicion <input id="address" type="textarea" value="Ciudad Universitaria de Buenos Aires, Buenos Aires, Ciudad Autónoma de Buenos Aires"></li>
-     
-      </div>
-    </md-content>
-  </section>
-  </div>
+                <li ng-click = "coordenadas()" >Mi Posicion <input id="address" type="textarea" value="Ciudad Universitaria de Buenos Aires, Buenos Aires, Ciudad Autónoma de Buenos Aires"></li>
+
+            </div>
+        </md-content>
+    </section>
+</div>
 <script type="text/ng-template" id="toast-template.html">
-<md-toast>
-  <span class="md-toast-text" flex>Usuario logueado</span>
-  <md-button ng-click="closeToast()">
-    Cerrar
-  </md-button>
-</md-toast>
+    <md-toast>
+        <span class="md-toast-text" flex>Usuario logueado</span>
+        <md-button ng-click="closeToast()">
+            Cerrar
+        </md-button>
+    </md-toast>
 </script>
 </body>
 </html>
