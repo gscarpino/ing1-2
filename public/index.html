@@ -124,15 +124,20 @@
             <a ng-show="googleSignedIn" href="#" ng-click="signOut();">Sign out</a>
           </li>
           <li ng-if="!isRegistered" ng-click="print()" ><a ui-sref-active="active"  href="/public/sign-up/login.html"><i class="material-icons">input</i>Ingresar</a></li>
-          <li ng-controller = "BuscarDir" ><i class="material-icons">search</i>Buscar <input id="address" type="textarea" value="Ciudad Universitaria de Buenos Aires, Buenos Aires, Ciudad Autónoma de Buenos Aires"></li>
+          <li ng-click = "coordenadas()" ><i class="material-icons">search</i>Buscar</li>
           <li ng-click="print()"><i class="material-icons">my_location</i>Alrededores</li>
           <li ng-click="print()"><i class="material-icons">settings</i>Opciones</li>
         </ul>
       </md-content>
     </md-sidenav>
-    <md-content flex layout-padding>
+
+
+    <md-content flex layout-padding ng-controller="PosCtrl">
       <div layout="column" layout-align="top center">
         <ui-view></ui-view>
+
+            <li ng-click = "coordenadas()" >Mi Posicion <input id="address" type="textarea" value="Ciudad Universitaria de Buenos Aires, Buenos Aires, Ciudad Autónoma de Buenos Aires"></li>
+     
       </div>
     </md-content>
   </section>
