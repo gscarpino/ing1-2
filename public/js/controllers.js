@@ -11,6 +11,12 @@ angular.module('wifindAppControllers', [])
                 events:{
                     click: function(mapModel, eventName, originalEventArgs) {
                         var e = originalEventArgs[0];
+                        $scope.currentPosition = {latitude: e.latLng.lat(), longitude: e.latLng.lng()};
+                        console.log($scope.currentPosition);
+                        $scope.markers = [{
+                            id: 0,
+                            coords: $scope.currentPosition,
+                        }];
                         $scope.$apply();
                     }
                 }
