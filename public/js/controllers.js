@@ -41,6 +41,19 @@ angular.module('wifindAppControllers', [])
             });
         });
     })
+
+    .controller('LoginCtrl', function($scope) {
+        console.log('hola');
+        $scope.showLogin = true;
+
+        $scope.login = function() {
+            $scope.showLogin = true;
+        }
+
+        $scope.register = function() {
+            $scope.showLogin = false;
+        }
+    })
   
 
 

@@ -13,7 +13,7 @@ angular
             name: 'Nuevo Usuario',
             url: '/user/new',
             templateUrl: '/public/sign-up/login.html',
-            controller: 'UserCtrl'
+            controller: 'LoginCtrl'
         };
 
         $stateProvider.state(indexState);
