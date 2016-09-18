@@ -2,7 +2,7 @@
 module.exports =
      function() {
 
-        this.calcular = function(ubicacion1, ubicacion2) {
+        this.distanciaEntre = function(ubicacion1, ubicacion2) {
             var dist = this.distance(ubicacion1.latitud, ubicacion1.longitud, ubicacion2.latitud, ubicacion2.longitud) ;
             return dist;
         };

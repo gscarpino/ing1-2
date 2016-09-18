@@ -21,7 +21,7 @@ module.exports =
             ModelBar.find({}, function(err, bares){
                 if(!err) {
                     bares.forEach(function(bar) {
-                        if (calcDist.calcular(bar.ubicacion, ubicacion) <= distancia){
+                        if (calcDist.distanciaEntre(bar.ubicacion, ubicacion) <= distancia){
                             bares_encontrados.push(bar);
                         }
                     });
