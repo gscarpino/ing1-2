@@ -123,14 +123,41 @@ angular
         }
     })
 
-    .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+    .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log,uiGmapGoogleMapApi) {
+      
         $scope.close = function () {
             // Component lookup should always be available since we are not using `ng-if`
             $mdSidenav('left').close()
             .then(function () {
                 //$log.debug("close LEFT is done");
             });
-        };
+        }
+
+
+        $scope.coordenadas = function(){
+            $scope.control = {};
+       
+
+            uiGmapGoogleMapApi.then(function(maps) {
+            $timeout(function(){var map = $scope.map.control.getGMap();},100);
+            var address = document.getElementById('address').value;
+          
+             geocoder = new google.maps.Geocoder();
+             geocoder.geocode( { 'address': address}, function(results, status) {
+                 if (status == 'OK') {
+                    map.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: $scope.map,
+                        position: results[0].geometry.location
+                    });
+                }
+                else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+         });
+        }
+
     })
 
     .controller('ToastCtrl', function($scope, $mdToast, $mdDialog) {
