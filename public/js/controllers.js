@@ -41,13 +41,13 @@ angular.module('wifindAppControllers', [])
 
         $scope.buscarCercanos = function() {
             $scope.markers = [];
-
+            console.log('Buscando bares...')
             $http({
                 method: 'POST',
-                url: 'http://localhost:5000/api/bares/buscar',
+                url: $scope.url + '/api/bares/buscar',
                 data: {
                     ubicacion: $scope.currentPosition,
-                    distancia: 800
+                    distancia: 400
                 }
             }).then(function successCallback(response) {
                 var bares = response.data.bares;
@@ -75,6 +75,7 @@ angular.module('wifindAppControllers', [])
                         }
                     });
                 });
+                $scope.map.zoom = 16;
             }, function errorCallback(response) {
 
             });
@@ -94,6 +95,7 @@ angular.module('wifindAppControllers', [])
                             console.log(results[0].formatted_address);
                             $scope.map.center = $scope.currentPosition;
                             $scope.map.zoom = 18;
+                            $scope.address = results[0].formatted_address;
                             $scope.loading = false;
                             $scope.$apply();
                         }
@@ -217,6 +219,34 @@ angular.module('wifindAppControllers', [])
                 function(error){
                     console.log("Error", error);
                 });
+        }
+
+        $scope.getCoordenadas = function(event) {
+            if (event.which === 13) {
+                $scope.loading = true;
+                uiGmapGoogleMapApi.then(function(maps) {
+                    geocoder = new google.maps.Geocoder();
+                    geocoder.geocode( { 'address': $scope.bar.direccion}, function(results, status) {
+                        if (status == 'OK') {
+
+                            $scope.bar.ubicacion = {
+                                latitude: results[0].geometry.location.lat(),
+                                longitude: results[0].geometry.location.lng()
+                            }
+                            console.log(results[0].formatted_address);
+                            $scope.bar.direccion = results[0].formatted_address;
+                            // $scope.map.center = $scope.currentPosition;
+                            // $scope.map.zoom = 18;
+                            $scope.loading = false;
+                            $scope.$apply();
+                        }
+                        else {
+                            alert('Geocode was not successful for the following reason: ' + status);
+                            $scope.loading = false;
+                        }
+                    });
+                });
+            }
         }
 
         $scope.eliminarBar = function() {

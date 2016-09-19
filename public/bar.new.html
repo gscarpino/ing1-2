@@ -12,13 +12,13 @@
         <div layout-gt-md="row">
           <md-input-container class="md-block" flex-gt-sm="">
             <label>Nombre del Bar</label>
-            <input ng-model="bar.nombre">
+            <input ng-model="bar.nombre" ng-required="true">
           </md-input-container>
         </div>
 
         <md-input-container class="md-block">
           <label>Dirección</label>
-          <input ng-model="bar.direccion" type="text" ng-keypress="coordenadas($event)">
+          <input ng-model="bar.direccion" type="text" ng-keypress="getCoordenadas($event)" ng-required="true">
           <md-icon class="material-icons">place</md-icon>
         </md-input-container>
 
