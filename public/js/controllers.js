@@ -173,6 +173,19 @@ angular.module('wifindAppControllers', [])
 
     .controller('BaresCtrl', function($scope, $http, $state, $mdToast) {
 
+        $scope.carecteristicas = [
+            {
+                nombre: "Tiene Wi-Fi?",
+                descripcion: "1 Estrella: Malo.",
+                check: false
+            },
+            {
+                nombre: "Tiene enchufes?",
+                descripcion: "1 Estrella: Malo.",
+                check: false
+            }
+        ];
+
         $scope.crearNuevoBar = function() {
             console.log("agregando bar...");
             console.log("nombre: " + $scope.bar.nombre );
