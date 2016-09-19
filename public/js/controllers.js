@@ -91,7 +91,9 @@ angular.module('wifindAppControllers', [])
                                 latitude: results[0].geometry.location.lat(),
                                 longitude: results[0].geometry.location.lng()
                             }
+                            console.log(results[0].formatted_address);
                             $scope.map.center = $scope.currentPosition;
+                            $scope.map.zoom = 18;
                             $scope.loading = false;
                             $scope.$apply();
                         }
@@ -171,7 +173,7 @@ angular.module('wifindAppControllers', [])
         }
     })
 
-    .controller('BaresCtrl', function($scope, $http, $state, $mdToast) {
+    .controller('BaresCtrl', function($scope, $http, $state, $mdToast, uiGmapGoogleMapApi) {
 
         $scope.carecteristicas = [
             {

@@ -18,7 +18,7 @@
 
         <md-input-container class="md-block">
           <label>Dirección</label>
-          <input ng-model="bar.direccion">
+          <input ng-model="bar.direccion" type="text" ng-keypress="coordenadas($event)">
           <md-icon class="material-icons">place</md-icon>
         </md-input-container>
 
