@@ -22,7 +22,7 @@ a:hover {
 }
 
 .form {
-  background: rgba(19, 35, 47, 0.9);
+  background: #F2F2F2;
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;
@@ -45,7 +45,7 @@ a:hover {
   text-decoration: none;
   padding: 15px;
   background: rgba(160, 179, 176, 0.25);
-  color: #a0b3b0;
+  color:  black;
   font-size: 20px;
   float: left;
   width: 50%;
@@ -55,17 +55,17 @@ a:hover {
   transition: .5s ease;
 }
 .tab-group li a:hover {
-  background: #179b77;
+  background: #546CBA;
   color: #ffffff;
 }
 .tab-group .active a {
-  background: #1ab188;
-  color: #ffffff;
+  background: #AFBEC4;
+  color: #546CBA;
 }
 
 h1 {
   text-align: center;
-  color: #ffffff;
+  color: black;
   font-weight: 300;
   margin: 0 0 40px;
 }
@@ -75,7 +75,7 @@ label {
   -webkit-transform: translateY(6px);
           transform: translateY(6px);
   left: 13px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #575C5E;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
@@ -109,7 +109,7 @@ input, textarea {
   background: none;
   background-image: none;
   border: 1px solid #a0b3b0;
-  color: #ffffff;
+  color: #272A2B;
   border-radius: 0;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
   transition: border-color .25s ease, box-shadow .25s ease;
@@ -152,7 +152,7 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: #1ab188;
+  background: #546CBA;
   color: #ffffff;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
