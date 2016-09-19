@@ -1,51 +1,75 @@
+<style>
+.angular-google-map-container{
+	height: 60%;
+	width: 99%
+}
+</style>
 
-<md-toolbar class="md-theme-light">
-  <h2 class="md-toolbar-tools">
-    <span>Nuevo Bar</span>
-  </h2>
-</md-toolbar>
+<section layout="row" flex="">
 
-<md-content layout-padding="" layout-gt-sm="row">
-<div>
-    <form name="nuevoBarForm">
+    <md-content layout-padding="" layout-gt-sm="row">
+    <div>
+        <md-toolbar class="md-theme-light">
+          <h2 class="md-toolbar-tools">
+            <span>Nuevo Bar</span>
+          </h2>
+        </md-toolbar>
 
-        <div layout-gt-md="row">
-          <md-input-container class="md-block" flex-gt-sm="">
-            <label>Nombre del Bar</label>
-            <input ng-model="bar.nombre" ng-required="true">
-          </md-input-container>
-        </div>
+        <form name="nuevoBarForm">
 
-        <md-input-container class="md-block">
-          <label>Dirección</label>
-          <input ng-model="bar.direccion" type="text" ng-keypress="getCoordenadas($event)" ng-required="true">
-          <md-icon class="material-icons">place</md-icon>
-        </md-input-container>
+            <div layout-gt-md="row">
+              <md-input-container class="md-block" flex-gt-sm="">
+                <label>Nombre del Bar</label>
+                <input ng-model="bar.nombre" ng-required="true">
+              </md-input-container>
+            </div>
 
-        <md-input-container class="md-block">
-          <label>Descripción</label>
-          <textarea ng-model="bar.descripcion" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
-        </md-input-container>
+            <md-input-container class="md-block">
+              <label>Dirección</label>
+              <input ng-model="bar.direccion" type="text" ng-keypress="getCoordenadas($event)" ng-required="true">
+              <md-icon class="material-icons">place</md-icon>
+            </md-input-container>
 
-        <md-content>
-            <md-list>
-                <md-list-item class="md-3-line" ng-repeat="caract in carecteristicas">
-                    <div class="md-list-item-text">
-                        <h3>{{caract.nombre}}</h3>
-                        <p>{{caract.descripcion}}</p>
-                    </div>
-                    <md-checkbox ng-model="caract.check" aria-label="Checkbox"></md-checkbox>
-                    <md-divider ng-if="!$last"></md-divider>
-                </md-list-item>
-            </md-list>
-        </md-content>
+            <md-input-container class="md-block">
+              <label>Descripción</label>
+              <textarea ng-model="bar.descripcion" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
+            </md-input-container>
 
-    </form>
+            <md-content>
+                <md-list>
+                    <md-list-item class="md-3-line" ng-repeat="caract in carecteristicas">
+                        <div class="md-list-item-text">
+                            <h3>{{caract.nombre}}</h3>
+                            <p>{{caract.descripcion}}</p>
+                        </div>
+                        <md-checkbox ng-model="caract.check" aria-label="Checkbox"></md-checkbox>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+            </md-content>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-        <md-button ng-click="crearNuevoBar()" class="md-raised md-primary"><md-icon class="material-icons">save</md-icon> Guardar</md-button>
-        <md-button ng-click="goToState('Inicio')" class="md-raised"><md-icon class="material-icons">cancel</md-icon> Cancelar</md-button>
-    </section>
+        </form>
 
-</div>
-</md-content>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+            <md-button ng-click="crearNuevoBar()" class="md-raised md-primary"><md-icon class="material-icons">save</md-icon> Guardar</md-button>
+            <md-button ng-click="goToState('Inicio')" class="md-raised"><md-icon class="material-icons">cancel</md-icon> Cancelar</md-button>
+        </section>
+
+
+    </div>
+    </md-content>
+
+    <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
+      <md-content layout-padding="">
+          <ui-gmap-google-map ng-if="map.center" center='map.center' zoom='map.zoom' events='map.events'>
+          	<ui-gmap-circle center="bar.ubicacion" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="150" visible="true"></ui-gmap-circle>
+
+          	<ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" idkey="marker.id" click="marker.window.options.visible = !marker.window.options.visible;">
+
+          	</ui-gmap-marker>
+          </ui-gmap-google-map>
+      </md-content>
+
+    </md-sidenav>
+
+</section>

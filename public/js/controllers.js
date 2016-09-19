@@ -177,6 +177,30 @@ angular.module('wifindAppControllers', [])
 
     .controller('BaresCtrl', function($scope, $http, $state, $mdToast, uiGmapGoogleMapApi) {
 
+        uiGmapGoogleMapApi.then(function(map) {
+            $scope.currentPosition = { latitude: -34.549259, longitude: -58.466245 };
+            $scope.map = {
+                center: $scope.currentPosition,
+                zoom: 16,
+                events: {
+                    click: function(mapModel, eventName, originalEventArgs) {
+                        var e = originalEventArgs[0];
+                        $scope.currentPosition = {latitude: e.latLng.lat(), longitude: e.latLng.lng()};
+                        console.log($scope.currentPosition);
+                        $scope.markers = [{
+                            id: 0,
+                            coords: $scope.currentPosition,
+                        }];
+                        $scope.$apply();
+                    }
+                },
+                userMarker: {
+                    stroke: { color: '#3F51B5' },
+                    fill: { color: '#3F51B5' }
+                }
+            };
+        });
+
         $scope.carecteristicas = [
             {
                 nombre: "Tiene Wi-Fi?",
@@ -235,8 +259,8 @@ angular.module('wifindAppControllers', [])
                             }
                             console.log(results[0].formatted_address);
                             $scope.bar.direccion = results[0].formatted_address;
-                            // $scope.map.center = $scope.currentPosition;
-                            // $scope.map.zoom = 18;
+                            $scope.map.center = $scope.currentPosition;
+                            $scope.map.zoom = 18;
                             $scope.loading = false;
                             $scope.$apply();
                         }
