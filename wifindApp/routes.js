@@ -4,7 +4,11 @@ var guiaDeBares = require('./guia_de_bares');
 module.exports = function(app) {
 
 
-    // USUARIOS
+    /////////////////////////////////////////////////////////////////
+    // BARES
+    /////////////////////////////////////////////////////////////////
+
+    // Para usuarios registrados con Gmail (API de Google)
     app.post('/api/user/logged', function(req,res,next){
         console.log(req.body);
         if(req.body.email) {
@@ -32,6 +36,34 @@ module.exports = function(app) {
         }
     });
 
+    // Para registrar nuevos usuarios
+    app.post('/api/user', function(req,res,next){
+        console.log(req.body);
+        if(req.body.email) {
+            User.find({email: req.body.email}, function(error, users){
+                if(error){
+                    return res.status(500).send("Error interno");
+                }
+
+                if(users.length > 0) {
+                    console.log("Usuario ya registrado");
+                    return res.status(400).send("El usuario ya esta registrado");
+                }
+                else{
+                    user = new User( {email: req.body.email,  nombre: req.body.nombre, password: req.body.password});
+                    user.save(function(er){
+                        console.log("Nuevo usuario registrado");
+                        res.jsonp({status: "ok"});
+                    });
+                }
+            });
+        }
+        else {
+            res.status(400).send("Error con parámetros");
+        }
+    });
+
+    // Para buscar usuarios
     app.get('/api/user/:email', function(req,res,next){
         console.log(req.params.email);
         if(req.params.email) {
