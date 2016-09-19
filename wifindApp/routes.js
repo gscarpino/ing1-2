@@ -64,10 +64,9 @@ module.exports = function(app) {
     });
 
     // Para buscar usuarios
-    app.get('/api/user/:email', function(req,res,next){
-        console.log(req.params.email);
-        if(req.params.email) {
-            User.find({email: req.params.email}, function(error, users){
+    app.post('/api/user/email', function(req,res,next){
+        if(req.body.email) {
+            User.find({email: req.body.email}, function(error, users){
                 if(error){
                     return res.status(500).send("Error interno");
                 }
