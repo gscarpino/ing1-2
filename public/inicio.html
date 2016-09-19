@@ -4,14 +4,31 @@
 	width: 100% 
 }
 ui-view{
-	width: 100%;
+	width: 99%;
+}
+md-input-container input{
+	max-width: 50%;
+}
+md-input-container i{
+	float: left;
+	display: inline-block;
+}
+md-input-container .md-primary{
+	float: right;
+	position: relative;
+	top: -10px
 }
 </style>
 
-<md-button class="md-raised md-primary" ng-click="buscarCercanos()">Buscar bares cercanos</md-button>
+<md-input-container md-no-float class="md-block">
+	<i class="material-icons">place</i>
+	<input ng-model="address" type="text" placeholder="Address" ng-keypress="coordenadas($event)">
+	<md-button class="md-raised md-primary" ng-click="buscarCercanos()">Buscar bares cercanos</md-button>
+</md-input-container>
+<md-progress-linear md-mode="indeterminate" ng-show="loading"></md-progress-linear>
 
 <ui-gmap-google-map ng-if="map.center" center='map.center' zoom='map.zoom'>
-	<ui-gmap-circle center="map.center" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="150" visible="true"></ui-gmap-circle>
+	<ui-gmap-circle center="currentPosition" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="150" visible="true"></ui-gmap-circle>
 
 	<ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" idkey="marker.id" click="marker.window.options.visible = !marker.window.options.visible;">
 		<ui-gmap-window options="marker.window.options" closeClick="marker.window.options.visible = false">

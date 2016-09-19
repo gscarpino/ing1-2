@@ -6,6 +6,7 @@ angular.module('wifindAppControllers', [])
 
     .controller('InicioCtrl', function($scope, uiGmapGoogleMapApi, $http, $mdToast) {
         $scope.markers = [];
+        $scope.address = 'Ciudad Universitaria de Buenos Aires, Buenos Aires, Ciudad Autónoma de Buenos Aires';
 
         uiGmapGoogleMapApi.then(function(map) {
             $scope.currentPosition = { latitude: -34.549259, longitude: -58.466245 };
@@ -78,6 +79,30 @@ angular.module('wifindAppControllers', [])
             }, function errorCallback(response) {
 
             });
+        };
+
+        $scope.coordenadas = function(event) {
+            if (event.which === 13) {
+                $scope.loading = true;
+                uiGmapGoogleMapApi.then(function(maps) {
+                    geocoder = new google.maps.Geocoder();
+                    geocoder.geocode( { 'address': $scope.address}, function(results, status) {
+                        if (status == 'OK') {
+                            $scope.currentPosition = {
+                                latitude: results[0].geometry.location.lat(),
+                                longitude: results[0].geometry.location.lng()
+                            }
+                            $scope.map.center = $scope.currentPosition;
+                            $scope.loading = false;
+                            $scope.$apply();
+                        }
+                        else {
+                            alert('Geocode was not successful for the following reason: ' + status);
+                            $scope.loading = false;
+                        }
+                    });
+                });
+            }
         }
 
     })
