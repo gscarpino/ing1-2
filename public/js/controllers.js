@@ -71,7 +71,7 @@ angular.module('wifindAppControllers', [])
                         }
                     });
                 });
-                $scope.map.zoom = 16;
+                // $scope.map.zoom = 16;
             }, function errorCallback(response) {
 
             });
@@ -90,10 +90,11 @@ angular.module('wifindAppControllers', [])
                             }
                             console.log(results[0].formatted_address);
                             $scope.map.center = $scope.currentPosition;
-                            $scope.map.zoom = 18;
+                            $scope.map.zoom = 17;
                             $scope.address = results[0].formatted_address;
                             $scope.loading = false;
                             $scope.$apply();
+                            $scope.buscarCercanos();
                         }
                         else {
                             alert('Geocode was not successful for the following reason: ' + status);
