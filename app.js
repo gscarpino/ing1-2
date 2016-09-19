@@ -59,12 +59,14 @@ angular
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
                 $scope.googleSignedIn = false;
+                $scope.isRegistered = false;
                 console.log('User signed out.');
             });
         }
 
         function onSignIn(googleUser) {
             $scope.googleSignedIn = true;
+            $scope.isRegistered = true;
             var profile = googleUser.getBasicProfile();
             console.log('Name: ' + profile.getName());
             console.log('Image URL: ' + profile.getImageUrl());
