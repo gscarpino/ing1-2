@@ -141,9 +141,9 @@ angular.module('wifindAppControllers', [])
             console.log("logueando...")
              $http({
                 method: 'POST',
-                url: 'http://localhost:5000/api/user/:email',
+                url: 'http://localhost:5000/api/user/email',
                 data: {
-                    email: $scope.regEmail
+                    email:$scope.regEmail
                 }
 
             }).then(function successCallback(response) {
