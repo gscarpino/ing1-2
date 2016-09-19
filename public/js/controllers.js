@@ -6,9 +6,10 @@ angular.module('wifindAppControllers', [])
 
     .controller('InicioCtrl', function($scope, uiGmapGoogleMapApi, $http, $mdToast) {
         $scope.markers = [];
-
+        $scope.distancia = 400;
+        $scope.radius = $scope.distancia;
         uiGmapGoogleMapApi.then(function(map) {
-            $scope.currentPosition = { latitude: -34.549259, longitude: -58.466245 };
+            $scope.currentPosition = { latitude: -34.562087, longitude: -58.456724 };
             $scope.map = {
                 center: $scope.currentPosition,
                 zoom: 16,
@@ -28,8 +29,7 @@ angular.module('wifindAppControllers', [])
 
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
-                    // $scope.currentPosition = { latitude: position.coords.latitude, longitude: position.coords.longitude };
-
+                    $scope.currentPosition = { latitude: position.coords.latitude, longitude: position.coords.longitude };
                     $scope.map.center = $scope.currentPosition;
                 });
             }
@@ -43,11 +43,11 @@ angular.module('wifindAppControllers', [])
                 url: $scope.url + '/api/bares/buscar',
                 data: {
                     ubicacion: $scope.currentPosition,
-                    distancia: 400
+                    distancia: $scope.distancia
                 }
             }).then(function successCallback(response) {
                 var bares = response.data.bares;
-
+                $scope.radius = $scope.distancia;
                 bares.forEach(function(bar) {
                     $scope.markers.push({
                         id: bar._id,

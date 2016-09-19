@@ -27,12 +27,19 @@ md-input-container .md-primary{
 	<i class="material-icons">place</i>
 	<label>Ubicación</label>
 	<input ng-model="address" type="text" ng-keypress="coordenadas($event)">
+    <div layout>
+      <div flex-gt-sm layout layout-align="center center">
+        <span class="md-body-1">Distancia:</span>
+      </div>
+      <md-slider flex-gt-sm md-discrete ng-model="distancia" step="100" min="400" max="2000" aria-label="distancia">
+      </md-slider>
+    </div>
 	<md-button class="md-raised md-primary" ng-click="buscarCercanos()">Buscar bares cercanos</md-button>
 </md-input-container>
 <md-progress-linear md-mode="indeterminate" ng-show="loading"></md-progress-linear>
 
 <ui-gmap-google-map ng-if="map.center" center='map.center' zoom='map.zoom' events='map.events'>
-	<ui-gmap-circle center="currentPosition" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="400" visible="true"></ui-gmap-circle>
+	<ui-gmap-circle center="currentPosition" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="radius" visible="true"></ui-gmap-circle>
 
 	<ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" idkey="marker.id" click="marker.window.options.visible = !marker.window.options.visible;">
 		<ui-gmap-window options="marker.window.options" closeClick="marker.window.options.visible = false">
