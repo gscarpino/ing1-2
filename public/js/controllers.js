@@ -6,7 +6,6 @@ angular.module('wifindAppControllers', [])
 
     .controller('InicioCtrl', function($scope, uiGmapGoogleMapApi, $http, $mdToast) {
         $scope.markers = [];
-        $scope.address = 'Ciudad Universitaria de Buenos Aires, Buenos Aires, Ciudad Autónoma de Buenos Aires';
 
         uiGmapGoogleMapApi.then(function(map) {
             $scope.currentPosition = { latitude: -34.549259, longitude: -58.466245 };
