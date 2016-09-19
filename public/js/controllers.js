@@ -176,13 +176,13 @@ angular.module('wifindAppControllers', [])
         $scope.carecteristicas = [
             {
                 nombre: "Tiene Wi-Fi?",
-                descripcion: "1 Estrella: Malo.",
-                check: false
+                descripcion: "El sitio cuanta con Wi-Fi gratuito disponible para los clientes.",
+                check: true
             },
             {
                 nombre: "Tiene enchufes?",
-                descripcion: "1 Estrella: Malo.",
-                check: false
+                descripcion: "El sitio cuanta con enchufes gratuito disponible para los clientes.",
+                check: true
             }
         ];
 
