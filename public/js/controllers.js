@@ -11,7 +11,7 @@ angular.module('wifindAppControllers', [])
             $scope.currentPosition = { latitude: -34.549259, longitude: -58.466245 };
             $scope.map = {
                 center: $scope.currentPosition,
-                zoom: 13,
+                zoom: 16,
                 events: {
                     click: function(mapModel, eventName, originalEventArgs) {
                         var e = originalEventArgs[0];
@@ -23,10 +23,6 @@ angular.module('wifindAppControllers', [])
                         }];
                         $scope.$apply();
                     }
-                },
-                userMarker: {
-                    stroke: { color: '#3F51B5' },
-                    fill: { color: '#3F51B5' }
                 }
             };
 
@@ -87,7 +83,7 @@ angular.module('wifindAppControllers', [])
                 uiGmapGoogleMapApi.then(function(maps) {
                     geocoder = new google.maps.Geocoder();
                     geocoder.geocode( { 'address': $scope.address}, function(results, status) {
-                        if (status == 'OK') {
+                        if (status == google.maps.GeocoderStatus.OK) {
                             $scope.currentPosition = {
                                 latitude: results[0].geometry.location.lat(),
                                 longitude: results[0].geometry.location.lng()
@@ -117,7 +113,7 @@ angular.module('wifindAppControllers', [])
          var geocoder = new google.maps.Geocoder();
          var address = document.getElementById('address').value;
              geocoder.geocode( { 'address': address}, function(results, status) {
-                 if (status == 'OK') {
+                 if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
                     var marker = new google.maps.Marker({
                         map: map,
@@ -141,7 +137,7 @@ angular.module('wifindAppControllers', [])
             console.log("logueando...")
              $http({
                 method: 'POST',
-                url: 'http://localhost:5000/api/user/:email',
+                url: $scope.url + '/api/user/:email',
                 data: {
                     email: $scope.regEmail
                 }
@@ -159,7 +155,7 @@ angular.module('wifindAppControllers', [])
             console.log("Registrando...");
                 $http({
                 method: 'POST',
-                url: 'http://localhost:5000/api/user',
+                url: $scope.url + '/api/user',
                 data: {
                     email: $scope.userEmail,
                     nombre:$scope.userName,
@@ -176,27 +172,43 @@ angular.module('wifindAppControllers', [])
     })
 
     .controller('BaresCtrl', function($scope, $http, $state, $mdToast, uiGmapGoogleMapApi) {
+        $scope.bar = {
+            nombre: "",
+            direccion: "",
+            ubicacion: { latitude: -34.549259, longitude: -58.466245 }
+        }
+
+        $scope.geocode = function(input, next) {
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode( input, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    next(results);
+                }
+                else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                    $scope.loading = false;
+                }
+            });
+        }
 
         uiGmapGoogleMapApi.then(function(map) {
-            $scope.currentPosition = { latitude: -34.549259, longitude: -58.466245 };
             $scope.map = {
-                center: $scope.currentPosition,
+                center: $scope.bar.ubicacion,
                 zoom: 16,
                 events: {
                     click: function(mapModel, eventName, originalEventArgs) {
                         var e = originalEventArgs[0];
-                        $scope.currentPosition = {latitude: e.latLng.lat(), longitude: e.latLng.lng()};
-                        console.log($scope.currentPosition);
+                        $scope.bar.ubicacion = {latitude: e.latLng.lat(), longitude: e.latLng.lng()};
                         $scope.markers = [{
                             id: 0,
-                            coords: $scope.currentPosition,
+                            coords: $scope.bar.ubicacion
                         }];
-                        $scope.$apply();
+
+                        $scope.geocode({'location' : e.latLng}, function(results){
+                            $scope.bar.direccion = results[0].formatted_address;
+                            $scope.$apply();
+                        });
                     }
-                },
-                userMarker: {
-                    stroke: { color: '#3F51B5' },
-                    fill: { color: '#3F51B5' }
                 }
             };
         });
@@ -249,25 +261,22 @@ angular.module('wifindAppControllers', [])
             if (event.which === 13) {
                 $scope.loading = true;
                 uiGmapGoogleMapApi.then(function(maps) {
-                    geocoder = new google.maps.Geocoder();
-                    geocoder.geocode( { 'address': $scope.bar.direccion}, function(results, status) {
-                        if (status == 'OK') {
-
+                    $scope.geocode({'address': $scope.bar.direccion}, function(results) {
                             $scope.bar.ubicacion = {
                                 latitude: results[0].geometry.location.lat(),
                                 longitude: results[0].geometry.location.lng()
                             }
-                            console.log(results[0].formatted_address);
+
+                            $scope.markers = [{
+                                id: 0,
+                                coords: $scope.bar.ubicacion
+                            }];
+
                             $scope.bar.direccion = results[0].formatted_address;
-                            $scope.map.center = $scope.currentPosition;
+                            $scope.map.center = $scope.bar.ubicacion;
                             $scope.map.zoom = 18;
                             $scope.loading = false;
                             $scope.$apply();
-                        }
-                        else {
-                            alert('Geocode was not successful for the following reason: ' + status);
-                            $scope.loading = false;
-                        }
                     });
                 });
             }
