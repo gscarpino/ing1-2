@@ -9,7 +9,9 @@ var BarSchema = new Schema({
 		latitude: Number,
 		longitude: Number
 	},
-	direccion: String
+	direccion: String,
+    wifi: { type: Boolean, default: true },
+    enchufes: { type: Boolean, default: true }
 });
 
 var Bar = mongoose.model('Bar', BarSchema);

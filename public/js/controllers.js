@@ -229,13 +229,17 @@ angular.module('wifindAppControllers', [])
             console.log("agregando bar...");
             console.log("nombre: " + $scope.bar.nombre );
             console.log("direccion: " + $scope.bar.direccion );
+            console.log("ubicacion: ");
+            console.log($scope.bar.ubicacion );
             console.log("descripcion: " + $scope.bar.descripcion );
 
             var nuevoBar = {
                 nombre: $scope.bar.nombre,
                 descripcion: $scope.bar.descripcion,
-                ubicacion: { latitude: -34.557279, longitude: -58.461108 },
-                direccion: $scope.bar.direccion
+                ubicacion: $scope.bar.ubicacion,
+                direccion: $scope.bar.direccion,
+                wifi: $scope.carecteristicas[0].check,
+                enchufes: $scope.carecteristicas[1].check,
             };
 
             $http.post($scope.url + "/api/bares", nuevoBar).then(function(response){

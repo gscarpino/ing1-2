@@ -7,7 +7,7 @@ module.exports =
 
         // metodos
         this.agregar = function(bar, callback) {
-            bar = new ModelBar( {nombre: bar.nombre, descripcion: bar.descripcion, ubicacion: bar.ubicacion, direccion: bar.direccion } );
+            bar = new ModelBar( {nombre: bar.nombre, descripcion: bar.descripcion, ubicacion: bar.ubicacion, direccion: bar.direccion, wifi: bar.wifi, enchufes: bar.enchufes} );
             bar.save(function(err){
                 console.log("Nuevo bar registrado");
                 callback(err);
@@ -21,7 +21,10 @@ module.exports =
             ModelBar.find({}, function(err, bares){
                 if(!err) {
                     bares.forEach(function(bar) {
-                        if (calcDist.distanciaEntre(bar.ubicacion, ubicacion) <= distancia){
+                        console.log(bar.nombre);
+                        var dist = calcDist.distanciaEntre(bar.ubicacion, ubicacion);
+                        console.log(dist);
+                        if (dist <= distancia){
                             bares_encontrados.push(bar);
                         }
                     });
