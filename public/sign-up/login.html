@@ -19,29 +19,17 @@
                 <form method="post">
                     <div class="top-row">
                         <div class="field-wrap">
-                            <label>
-                                Nombre<span class="req">*</span>
-                            </label>
-                            <input type="text" required ng-model="userName" autocomplete="off" />
+                            <input type="text" placeholder="Nombre" required ng-model="userName" autocomplete="off" />
                         </div>
                         <div class="field-wrap">
-                            <label>
-                                Apellido<span class="req">*</span>
-                            </label>
-                            <input type="text"required autocomplete="off"/>
+                            <input type="text" placeholder="Apellido" required autocomplete="off"/>
                         </div>
                     </div>
                     <div class="field-wrap">
-                        <label>
-                            email<span class="req">*</span>
-                        </label>
-                        <input type="email" ng-model = "userEmail" required autocomplete="off"/>
+                        <input type="email" ng-model="userEmail" placeholder="Email" required autocomplete="off"/>
                     </div>
                     <div class="field-wrap">
-                        <label>
-                            Password<span class="req">*</span>
-                        </label>
-                        <input type="password" ng-model="userPass" required autocomplete="off"/>
+                        <input type="password" ng-model="userPass" placeholder="Password" required autocomplete="off"/>
                     </div>
                     <button ng-click="register()" class="button button-block"/>Registrarse</button>
                 </form>
@@ -50,16 +38,10 @@
                 <h1>Bienvenido!</h1>
                 <form method="post">
                     <div class="field-wrap">
-                        <label>
-                            email<span class="req">*</span>
-                        </label>
-                        <input type="email" ng-model="regEmail"required autocomplete="off"/>
+                        <input type="email" ng-model="regEmail" placeholder="Email" required autocomplete="off"/>
                     </div>
                     <div class="field-wrap">
-                        <label>
-                            Password<span class="req">*</span>
-                        </label>
-                        <input type="password" ng-model="regPass"required autocomplete="off"/>
+                        <input type="password" ng-model="regPass" placeholder="Password" required autocomplete="off"/>
                     </div>
                     <p class="forgot"><a href="#">Olvido su Password?</a></p>
                     <button  ng-click="login()" class="button button-block"/>Ingresar</button>
