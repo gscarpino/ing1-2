@@ -16,8 +16,16 @@ angular
             controller: 'LoginCtrl'
         };
 
+        var nuevoBarState = {
+            name: 'Nuevo Bar',
+            url: '/bares/new',
+            templateUrl: '/public/bar.new.html',
+            controller: 'BaresCtrl'
+        };
+
         $stateProvider.state(indexState);
         $stateProvider.state(registerUserState);
+        $stateProvider.state(nuevoBarState);
 
         uiGmapGoogleMapApiProvider.configure({
             // key verdadera del sitio
@@ -124,7 +132,7 @@ angular
     })
 
     .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log,uiGmapGoogleMapApi, $state) {
-      
+
         $scope.close = function () {
             // Component lookup should always be available since we are not using `ng-if`
             $mdSidenav('left').close()

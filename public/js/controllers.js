@@ -10,8 +10,8 @@ angular.module('wifindAppControllers', [])
 
         uiGmapGoogleMapApi.then(function(map) {
             $scope.currentPosition = { latitude: -34.549259, longitude: -58.466245 };
-            $scope.map = { 
-                center: $scope.currentPosition, 
+            $scope.map = {
+                center: $scope.currentPosition,
                 zoom: 13,
                 events: {
                     click: function(mapModel, eventName, originalEventArgs) {
@@ -140,22 +140,45 @@ angular.module('wifindAppControllers', [])
             $scope.showLogin = false;
         }
     })
-  
 
-    .controller('BaresCtrl', function($scope, $http) {
+    .controller('BaresCtrl', function($scope, $http, $state, $mdToast) {
 
-        $scope.barData = {}
-
-        $scope.buscarBares = function(ubicacion, distancia) {
-            console.log("Buscando bares...");
-        }
-
-        $scope.agregarBar = function() {
+        $scope.crearNuevoBar = function() {
             console.log("agregando bar...");
+            console.log("nombre: " + $scope.bar.nombre );
+            console.log("direccion: " + $scope.bar.direccion );
+            console.log("descripcion: " + $scope.bar.descripcion );
+
+            var nuevoBar = {
+                nombre: $scope.bar.nombre,
+                descripcion: $scope.bar.descripcion,
+                ubicacion: { latitude: -34.557279, longitude: -58.461108 },
+                direccion: $scope.bar.direccion
+            };
+
+            $http.post($scope.url + "/api/bares", nuevoBar).then(function(response){
+                    $mdToast.show({
+                        hideDelay   : 1500,
+                        position    : 'top right',
+                        controller  : 'ToastCtrl',
+                        templateUrl : 'toast-template.html'
+
+                    })
+                    .then(function() {
+                        $state.go('Inicio');
+                    });
+
+                },
+                function(error){
+                    console.log("Error", error);
+                });
         }
 
         $scope.eliminarBar = function() {
             console.log("Eliminando bar...");
         }
 
+        $scope.goToState = function(state) {
+            $state.go(state);
+        }
     });

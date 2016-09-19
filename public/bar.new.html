@@ -1,0 +1,31 @@
+
+<md-content layout-padding="" layout-gt-sm="row">
+<div>
+  <form name="nuevoBarForm">
+
+    <div layout-gt-md="row">
+      <md-input-container class="md-block" flex-gt-sm="">
+        <label>Nombre del Bar</label>
+        <input ng-model="bar.nombre">
+      </md-input-container>
+    </div>
+
+    <md-input-container class="md-block">
+      <label>Dirección</label>
+      <input ng-model="bar.direccion">
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Descripción</label>
+      <textarea ng-model="bar.descripcion" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
+    </md-input-container>
+
+  </form>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button ng-click="crearNuevoBar()" class="md-raised md-primary">Guardar</md-button>
+        <md-button ng-click="goToState('Inicio')" class="md-raised">Cancelar</md-button>
+    </section>
+
+</div>
+</md-content>
