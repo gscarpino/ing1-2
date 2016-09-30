@@ -1,3 +1,5 @@
+'use strict';
+
 class Bar {
     constructor(nombre, descripcion, ubicacion, direccion) {
         this.nombre = nombre;
@@ -7,4 +9,4 @@ class Bar {
     }
 }
 
-module.exports.Bar = Bar;
+module.exports = Bar;

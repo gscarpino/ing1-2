@@ -1,3 +1,5 @@
+'use strict';
+
 class CalculadorDistancias {
     distanciaEntre(ubicacion1, ubicacion2) {
         var dist = this.distance(ubicacion1.latitude, ubicacion1.longitude, ubicacion2.latitude, ubicacion2.longitude) ;
@@ -21,4 +23,4 @@ class CalculadorDistancias {
     }
 }
 
-module.exports.CalculadorDistancias = CalculadorDistancias;
+module.exports = CalculadorDistancias;

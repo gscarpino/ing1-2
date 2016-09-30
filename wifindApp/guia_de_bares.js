@@ -1,3 +1,5 @@
+'use strict';
+
 var Bar = require('./bar'),
     ModelBar = require('./models/bar');
 
@@ -66,4 +68,4 @@ class GuiaDeBares {
     };
 }
 
-module.exports.GuiaDeBares = GuiaDeBares;
+module.exports = GuiaDeBares;
