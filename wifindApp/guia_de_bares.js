@@ -14,7 +14,7 @@ class GuiaDeBares {
             console.log("Nuevo bar registrado");
             callback(err);
         });
-    };
+    }
 
     buscar(ubicacion, distancia, callback) {
         var bares_encontrados = [];
@@ -36,7 +36,7 @@ class GuiaDeBares {
                 callback(err);
             }
         });
-    };
+    }
 
     actualizar(editedBar, callback) {
         console.log("Actualizando bar");
@@ -53,7 +53,7 @@ class GuiaDeBares {
         else {
             callback({name: "Se requiere el campo _id"});
         }
-    };
+    }
 
     eliminar(id, callback) {
         console.log("Eliminando bar");
@@ -65,7 +65,7 @@ class GuiaDeBares {
         else {
             callback({name: "Campo id invalido."});
         }
-    };
+    }
 }
 
 module.exports = GuiaDeBares;
