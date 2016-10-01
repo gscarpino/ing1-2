@@ -6,7 +6,7 @@ angular
             name: 'Inicio',
             url: '/',
             templateUrl: '/public/inicio.html',
-            controller: 'InicioCtrl'
+            controller: 'BuscadorDeBares'
         };
 
         var registerUserState = {

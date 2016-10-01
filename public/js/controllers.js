@@ -1,4 +1,4 @@
-angular.module('wifindAppControllers', [])
+angular.module('wifindAppControllers')
 
     .controller('UserCtrl', function($scope){
         console.log("Usuario");
