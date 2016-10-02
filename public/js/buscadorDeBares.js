@@ -2,16 +2,22 @@ angular.module('wifindAppControllers')
 .controller('BuscadorDeBares', function($scope, $http, $mdToast) {
     $scope.distancia = 400;
     $scope.Bares = [];
+    $scope.Filtros = [];
 
     buscarTodosLosBares(function(Bares) {
         $scope.Bares = Bares;
     });
+
+    $scope.Filtros = filtrosDisponibles();
 
     ///////////////////////////
     //  Metodos de la clase  //
     ///////////////////////////
     
     function buscarBares(Ubicacion, Distancia, Filtro, callback) {
+        var filtroJSON = Filtro.filtrar();
+        console.log(filtroJSON);
+
         $http({
             method: 'POST',
             url: $scope.url + '/api/bares/buscar',
@@ -49,6 +55,20 @@ angular.module('wifindAppControllers')
 
     function filtrosDisponibles() {
         // Collection<Filtro>
+        return [
+            {
+                nombre: 'Wifi',
+                clase: FiltroWifi
+            },
+            {
+                nombre: 'Enchufes',
+                clase: FiltroEnchufes
+            },
+            {
+                nombre: 'Higiene',
+                clase: FiltroHigiene
+            }
+        ];
     }
 
     /////////////////////////////
@@ -63,7 +83,12 @@ angular.module('wifindAppControllers')
     };
     
     $scope.baresCercanos = function() {
-        buscarBares($scope.posicionActual, $scope.distancia, null, function(Bares) {
+        var filtroActual = null;
+        if ($scope.selectedFiltro) {
+            filtroActual = new $scope.selectedFiltro.clase(new FiltroVacio(), '1');
+        }
+
+        buscarBares($scope.posicionActual, $scope.distancia, filtroActual, function(Bares) {
             listarBaresEnMapa(Bares);
         });
     };
