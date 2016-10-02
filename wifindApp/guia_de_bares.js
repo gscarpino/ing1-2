@@ -4,8 +4,9 @@ var Bar = require('./bar'),
     ModelBar = require('./models/bar');
 
 class GuiaDeBares {
-    constructor(bar, calculadorDistancias) {
-        this.calculadorDistancias = calculadorDistancias; 
+    constructor(calculadorDistancias, libroDeCriticas) {
+        this.calculadorDistancias = calculadorDistancias;
+        this.libroDeCriticas = libroDeCriticas;
     }
 
     agregar(bar, callback) {

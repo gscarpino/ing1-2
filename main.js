@@ -9,7 +9,8 @@
         mongoose = require('mongoose');
 
     var GuiaDeBares = require('./wifindApp/guia_de_bares'),
-        CalculadorDistancias = require('./wifindApp/calculador_distancias');
+        CalculadorDistancias = require('./wifindApp/calculador_distancias'),
+        LibroDeCriticas = require('./wifindApp/libro_de_criticas');
 
     mongoose.connect(database.uri);
 
@@ -22,7 +23,8 @@
     //
     var calcDist = new CalculadorDistancias();
     if (!calcDist) console.log("calcDist is null");
-    app.guiaDeBares = new GuiaDeBares(mongoose.models.Bares, calcDist);
+    var libroDeCriticas = new LibroDeCriticas();
+    app.guiaDeBares = new GuiaDeBares(calcDist, libroDeCriticas);
 
     app.use(function(req,res,next){
         console.log("[" + moment(Date.now()).format("DD/MM/YYYY HH:mm:ss") + "]: " + req.method + " " + req.originalUrl);
