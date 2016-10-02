@@ -1,7 +1,10 @@
 <style>
 .angular-google-map-container{
-	height: 60%;
+	height: 80%;
 	width: 99%
+}
+ui-view{
+	width: 98%;
 }
 </style>
 
@@ -55,21 +58,17 @@
             <md-button ng-click="goToState('Inicio')" class="md-raised"><md-icon class="material-icons">cancel</md-icon> Cancelar</md-button>
         </section>
 
-
     </div>
     </md-content>
 
-    <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
-      <md-content layout-padding="">
-          <ui-gmap-google-map ng-if="map.center" center='map.center' zoom='map.zoom' events='map.events'>
-          	<ui-gmap-circle center="bar.ubicacion" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="15" visible="true"></ui-gmap-circle>
+    <div flex-gt-sm="60" flex>
+        <ui-gmap-google-map ng-if="map.center" center='map.center' zoom='map.zoom' events='map.events'>
+            <ui-gmap-circle center="bar.ubicacion" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="15" visible="true">
+            </ui-gmap-circle>
 
-          	<ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" idkey="marker.id" click="marker.window.options.visible = !marker.window.options.visible;">
-
-          	</ui-gmap-marker>
-          </ui-gmap-google-map>
-      </md-content>
-
-    </md-sidenav>
+            <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" idkey="marker.id" click="marker.window.options.visible = !marker.window.options.visible;">
+            </ui-gmap-marker>
+        </ui-gmap-google-map>
+    </div>
 
 </section>
