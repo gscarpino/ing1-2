@@ -20,6 +20,7 @@ angular.module('wifindAppControllers')
 
                     $scope.$parent.address = results[0].formatted_address;
                     $scope.$parent.loading = false;
+                    $scope.radius = 400;
                     
                     callback(Ubicacion);
                 }
@@ -129,5 +130,14 @@ angular.module('wifindAppControllers')
     $scope.$on('mostrarBaresEnMapa', function(event, Data) {
         $scope.radius = Data.Radio;
         colocarMarcadores(Data.Bares);
+    });
+
+    $scope.$on('centrarBarEnMapa', function(event, Bar) {
+        $scope.radius = 0;
+        colocarMarcadores([Bar]);
+        centrarUbicacion({
+            lat: Bar.ubicacion.latitude,
+            lon: Bar.ubicacion.longitude
+        });
     });
 });

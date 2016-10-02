@@ -1,6 +1,11 @@
 angular.module('wifindAppControllers')
 .controller('BuscadorDeBares', function($scope, $http, $mdToast) {
     $scope.distancia = 400;
+    $scope.Bares = [];
+
+    buscarTodosLosBares(function(Bares) {
+        $scope.Bares = Bares;
+    });
 
     ///////////////////////////
     //  Metodos de la clase  //
@@ -35,7 +40,7 @@ angular.module('wifindAppControllers')
     }
 
     function ubicarBarEnMapa(Bar) {
-        $scope.$broadcast('mostrarBaresEnMapa', { Bares: [Bar], Radio: $scope.distancia });   
+        $scope.$broadcast('centrarBarEnMapa', Bar);   
     }
 
     function crearFiltroBusqueda(Caracteristica1, Caracterstica2) {
@@ -62,6 +67,10 @@ angular.module('wifindAppControllers')
             listarBaresEnMapa(Bares);
         });
     };
+
+    $scope.ubicarUnBar = function(Bar) {
+        ubicarBarEnMapa(Bar);
+    }
 
     ////////////////////////////////////
     // Comunicacion entre controllers //
