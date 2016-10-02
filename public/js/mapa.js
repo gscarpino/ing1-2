@@ -50,8 +50,8 @@ angular.module('wifindAppControllers')
 
     function centrarUbicacion(Ubicacion) {
         $scope.currentPosition = {
-            latitude: Ubicacion.lat,
-            longitude: Ubicacion.lon
+            latitude: Ubicacion.latitud,
+            longitude: Ubicacion.longitud
         }
         $scope.map.center = $scope.currentPosition;
         $scope.map.zoom = 17;
@@ -151,10 +151,8 @@ angular.module('wifindAppControllers')
     $scope.$on('centrarBarEnMapa', function(event, Bar) {
         $scope.radius = 0;
         colocarMarcadores([Bar]);
-        centrarUbicacion({
-            lat: Bar.ubicacion.latitude,
-            lon: Bar.ubicacion.longitude
-        });
+        ubicacionBar = new Ubicacion(Bar.ubicacion.latitude, Bar.ubicacion.longitude);
+        centrarUbicacion(ubicacionBar);
     });
 
 });
