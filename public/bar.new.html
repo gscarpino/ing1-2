@@ -29,7 +29,7 @@ ui-view{
 
             <md-input-container class="md-block">
               <label>Dirección</label>
-              <input ng-model="bar.direccion" type="text" ng-keypress="getCoordenadas($event)" ng-required="true">
+              <input ng-model="bar.direccion" type="text" ng-keypress="buscarDireccion($event)" ng-required="true">
               <md-icon class="material-icons">place</md-icon>
             </md-input-container>
 
@@ -61,13 +61,10 @@ ui-view{
     </div>
     </md-content>
 
-    <div flex-gt-sm="60" flex>
+    <div ng-controller="Mapa" flex-gt-sm="60" flex>
         <ui-gmap-google-map ng-if="map.center" center='map.center' zoom='map.zoom' events='map.events'>
-            <ui-gmap-circle center="bar.ubicacion" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="15" visible="true">
-            </ui-gmap-circle>
-
-            <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" idkey="marker.id" click="marker.window.options.visible = !marker.window.options.visible;">
-            </ui-gmap-marker>
+            <ui-gmap-circle center="bar.ubicacion" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="15" visible="true"></ui-gmap-circle>
+            <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" idkey="marker.id" click="marker.window.options.visible = !marker.window.options.visible;"></ui-gmap-marker>
         </ui-gmap-google-map>
     </div>
 
