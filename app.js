@@ -20,7 +20,7 @@ angular
             name: 'Nuevo Bar',
             url: '/bares/new',
             templateUrl: '/public/bar.new.html',
-            controller: 'BaresCtrl'
+            controller: 'FormularioBar'
         };
 
         $stateProvider.state(indexState);

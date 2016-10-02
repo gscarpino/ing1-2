@@ -3,7 +3,8 @@ angular.module('wifindAppControllers')
     $scope.Marcadores = [];
     var GoogleMapsApi = uiGmapGoogleMapApi;
     $scope.map = {};
-    
+    $scope.observers = [];
+
     ///////////////////////////
     //  Metodos de la clase  //
     ///////////////////////////
@@ -21,7 +22,7 @@ angular.module('wifindAppControllers')
                     $scope.$parent.address = results[0].formatted_address;
                     $scope.$parent.loading = false;
                     $scope.radius = 400;
-                    
+
                     callback(Ubicacion);
                 }
                 else {
@@ -102,6 +103,12 @@ angular.module('wifindAppControllers')
                         }];
                         $scope.$apply();
                         $scope.$emit('posicionActual', $scope.currentPosition);
+
+                        for (observer in $scope.observers)
+                        {
+                            observer.updateOnClickOnMap(eventName, originalEventArgs);
+                        }
+
                     }
                 }
             };
@@ -140,4 +147,10 @@ angular.module('wifindAppControllers')
             lon: Bar.ubicacion.longitude
         });
     });
+
+    $scope.$on('subscribeClickEvent', function(observer) {
+        console.log("subscribeClickEvent...")
+        $scope.observers.push(observer);
+    });
+
 });
