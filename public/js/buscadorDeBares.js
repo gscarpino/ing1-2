@@ -1,50 +1,65 @@
 angular.module('wifindAppControllers')
 .controller('BuscadorDeBares', function($scope, $http, $mdToast) {
-    $scope.buscarBares = function() {
-        $scope.markers = [];
-        console.log('Buscando bares...')
+    $scope.distancia = 400;
+
+    // Metodos de la clase
+    
+    function buscarBares(Ubicacion, Distancia, Filtro, callback) {
         $http({
             method: 'POST',
             url: $scope.url + '/api/bares/buscar',
             data: {
-                ubicacion: $scope.currentPosition,
-                distancia: $scope.distancia
+                ubicacion: Ubicacion,
+                distancia: Distancia
             }
         }).then(function successCallback(response) {
             var Bares = response.data.bares;
-            $scope.radius = $scope.distancia;
-            $scop.$broadcast('mostrarBaresEnMapa', Bares);
-        }, function errorCallback(response) {
+            callback(Bares);
+        });
+    }
 
+    function buscarTodosLosBares(callback) {
+        $http({
+            method: 'POST',
+            url: $scope.url + '/api/bares/buscar'
+        }).then(function successCallback(response) {
+            var Bares = response.data.bares;
+            callback(Bares);
+        });
+    }
+
+    function listarBaresEnMapa(Bares) {
+
+    }
+
+    function ubicarBarEnMapa(Bar) {
+
+    }
+
+    function crearFiltroBusqueda(Caracteristica1,Caracterstica2) {
+        // Filtro    
+    }
+
+    function filtrosDisponibles() {
+        // Collection<Filtro>
+    }
+
+    // Funciones de vista
+
+    $scope.buscarDireccion = function(event) {
+        if (event.which === 13) {
+            $scope.loading = true;
+            $scope.$broadcast('ubicarDireccion', $scope.address);
+        }
+    };
+    
+    $scope.baresCercanos = function() {
+        buscarBares($scope.posicionActual, $scope.distancia, null, function(Bares) {
+            $scope.$broadcast('mostrarBaresEnMapa', { Bares: Bares, Radio: $scope.distancia });
         });
     };
 
-    $scope.coordenadas = function(event) {
-        if (event.which === 13) {
-            $scope.loading = true;
-            uiGmapGoogleMapApi.then(function(maps) {
-                geocoder = new google.maps.Geocoder();
-                geocoder.geocode( { 'address': $scope.address}, function(results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        $scope.currentPosition = {
-                            latitude: results[0].geometry.location.lat(),
-                            longitude: results[0].geometry.location.lng()
-                        }
-                        console.log(results[0].formatted_address);
-                        $scope.map.center = $scope.currentPosition;
-                        $scope.map.zoom = 17;
-                        $scope.address = results[0].formatted_address;
-                        $scope.loading = false;
-                        $scope.$apply();
-                        $scope.buscarCercanos();
-                    }
-                    else {
-                        alert('Geocode was not successful for the following reason: ' + status);
-                        $scope.loading = false;
-                    }
-                });
-            });
-        }
-    }
-
+    $scope.$on('posicionActual', function(event, Ubicacion) {
+        $scope.posicionActual = Ubicacion;
+    });
 })

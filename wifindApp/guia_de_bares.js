@@ -23,10 +23,12 @@ class GuiaDeBares {
         ModelBar.find({}, function(err, bares){
             if(!err) {
                 bares.forEach(function(bar) {
-                    console.log(bar.nombre);
-                    var dist = calcDist.distanciaEntre(bar.ubicacion, ubicacion);
-                    console.log(dist);
-                    if (dist <= distancia){
+                    if (distancia) {
+                        var dist = calcDist.distanciaEntre(bar.ubicacion, ubicacion);
+                        if (dist <= distancia){
+                            bares_encontrados.push(bar);
+                        }
+                    } else {
                         bares_encontrados.push(bar);
                     }
                 });

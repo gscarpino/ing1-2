@@ -1,4 +1,4 @@
-angular.module('wifindAppControllers', [])
+angular.module('wifindAppControllers')
 .controller('Mapa', function($scope, uiGmapGoogleMapApi, $http, $mdToast) {
     $scope.markers = [];
     $scope.map = {};
@@ -17,12 +17,12 @@ angular.module('wifindAppControllers', [])
                     click: function(mapModel, eventName, originalEventArgs) {
                         var e = originalEventArgs[0];
                         $scope.currentPosition = {latitude: e.latLng.lat(), longitude: e.latLng.lng()};
-                        console.log($scope.currentPosition);
                         $scope.markers = [{
                             id: 0,
                             coords: $scope.currentPosition,
                         }];
                         $scope.$apply();
+                        $scope.$emit('posicionActual', $scope.currentPosition);
                     }
                 }
             };
@@ -33,35 +33,32 @@ angular.module('wifindAppControllers', [])
                     $scope.map.center = $scope.currentPosition;
                 });
             }
+
+            $scope.$emit('posicionActual', $scope.currentPosition);
         });
     }
     
-    function obtenerUbicacion(Direccion) {
-        if (event.which === 13) {
-            $scope.loading = true;
-            uiGmapGoogleMapApi.then(function(maps) {
-                geocoder = new google.maps.Geocoder();
-                geocoder.geocode( { 'address': $scope.address}, function(results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        var Ubicacion = {
-                            lat: results[0].geometry.location.lat(),
-                            lon: results[0].geometry.location.lng()
-                        };
+    function obtenerUbicacion(Direccion, callback) {
+        uiGmapGoogleMapApi.then(function(maps) {
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode( { 'address': Direccion}, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var Ubicacion = {
+                        lat: results[0].geometry.location.lat(),
+                        lon: results[0].geometry.location.lng()
+                    };
 
-                        $scope.address = results[0].formatted_address;
-                        $scope.loading = false;
-                        $scope.$apply();
-                        // $scope.buscarCercanos();
-                        
-                        return Ubicacion;
-                    }
-                    else {
-                        alert('Geocode was not successful for the following reason: ' + status);
-                        $scope.loading = false;
-                    }
-                });
+                    $scope.$parent.address = results[0].formatted_address;
+                    $scope.$parent.loading = false;
+                    
+                    callback(Ubicacion);
+                }
+                else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                    $scope.$parent.loading = false;
+                }
             });
-        }
+        });
     }
 
     function obtenerDireccion(Ubicacion) {
@@ -75,14 +72,19 @@ angular.module('wifindAppControllers', [])
         }
         $scope.map.center = $scope.currentPosition;
         $scope.map.zoom = 17;
+
+        $scope.$apply();
+
+        $scope.$emit('posicionActual', $scope.currentPosition);
     }
 
     function agregarMarcadores(Bares) {
         $scope.markers = [];
+        var id = 1;
 
         angular.forEach(Bares, function(Bar) {
             $scope.markers.push({
-                // id: id,
+                id: id,
                 coords: Bar.ubicacion,
                 options: {
                     icon: {
@@ -102,15 +104,17 @@ angular.module('wifindAppControllers', [])
                     }
                 }
             });
+
+            id++;
         });
     }
 
-    $scope.$on('obtenerUbicacion', function(Direccion) {
-        var Ubicacion = obtenerUbicacion(Direccion);
-        centrarUbicacion(Ubicacion);
+    $scope.$on('ubicarDireccion', function(event, Direccion) {
+        obtenerUbicacion(Direccion, centrarUbicacion);
     });
 
-    $scope.$on('mostrarBaresEnMapa', function(Bares) {
-        agregarMarcadores(Bares);
+    $scope.$on('mostrarBaresEnMapa', function(event, Data) {
+        $scope.radius = Data.Radio;
+        agregarMarcadores(Data.Bares);
     });
 });
