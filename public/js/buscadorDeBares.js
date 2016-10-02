@@ -84,9 +84,12 @@ angular.module('wifindAppControllers')
     
     $scope.baresCercanos = function() {
         var filtroActual = null;
-        if ($scope.selectedFiltro) {
-            filtroActual = new $scope.selectedFiltro.clase(new FiltroVacio(), '1');
-        }
+        console.log($scope.selectedFiltro);
+        angular.forEach($scope.Filtros, function(filtro) {
+            if (filtro.nombre == $scope.selectedFiltro.filtro) {
+                filtroActual = new filtro.clase(new FiltroVacio(), $scope.selectedFiltro.value);
+            }
+        });
 
         buscarBares($scope.posicionActual, $scope.distancia, filtroActual, function(Bares) {
             listarBaresEnMapa(Bares);
