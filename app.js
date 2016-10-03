@@ -38,6 +38,8 @@ angular
     // .value('site',{name: 'WifindBar', protocol: 'http', domain: 'wifindbar.sytes.net', port: '5000'})
     .value('site',{name: 'WifindBar', protocol: 'http', domain: 'localhost', port: '5000'})
 
+    //Este controller podria representar la clase "AdministradorDeSesion" que es conocida por el buscadorDeBares (que para mi deberia tener otro nombre, algo relacionado con la interfaz de usuario)
+    //SI fuese asi, habria que ver como acomodar alguna de las funciones que quedan colgadas aca.
     .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, site, $log, $window, $http, $mdToast, $state) {
         $state.go('Inicio');
         $scope.url = site.protocol + "://" + site.domain + ":" + site.port;
