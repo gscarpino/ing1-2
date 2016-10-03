@@ -13,17 +13,14 @@ angular.module('wifindAppControllers')
             geocoder = new google.maps.Geocoder();
             geocoder.geocode( { 'address': Direccion}, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
-                    var Ubicacion = {
-                        lat: results[0].geometry.location.lat(),
-                        lon: results[0].geometry.location.lng()
-                    };
+                   var ubi = new Ubicacion(results[0].geometry.location.lat(),results[0].geometry.location.lng());
 
                     // $scope.$parent.address = results[0].formatted_address;
                     $scope.$parent.loading = false;
                     $scope.radius = 400;
 
                     $scope.$emit('direccionActual', results[0].formatted_address);
-                    callback(Ubicacion);
+                    callback(ubi);
                 }
                 else {
                     alert('Geocode was not successful for the following reason: ' + status);
