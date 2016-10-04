@@ -65,10 +65,12 @@ angular
         function onSignIn(googleUser) {
             $scope.googleSignedIn = true;
             $scope.isRegistered = true;
+
             var profile = googleUser.getBasicProfile();
             console.log('Name: ' + profile.getName());
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail());
+            $scope.userName = profile.getEmail()
             var user = {
                 nombre: profile.getName(),
                 email: profile.getEmail()

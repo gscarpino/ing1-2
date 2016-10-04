@@ -3,6 +3,8 @@ angular.module('wifindAppControllers')
     $scope.distancia = 400;
     $scope.Bares = [];
     $scope.Filtros = [];
+    $scope.selectedFiltro1 = { filtro: null, value: null};
+    $scope.selectedFiltro2 = { filtro: null, value: null};
 
     buscarTodosLosBares(function(Bares) {
         $scope.Bares = Bares;
@@ -49,8 +51,14 @@ angular.module('wifindAppControllers')
         $scope.$broadcast('centrarBarEnMapa', Bar);
     }
 
-    function crearFiltroBusqueda(Caracteristica1, Caracterstica2) {
-        // Filtro
+    function crearFiltroBusqueda(Caracteristicas) {
+        var combinado = new FiltroVacio();
+
+        angular.forEach(Caracteristicas, function(Caracteristica) {
+            combinado = new Caracteristica.filtro(combinado, Caracteristica.valor);
+        });
+
+        return combinado;
     }
 
     function filtrosDisponibles() {
@@ -83,15 +91,27 @@ angular.module('wifindAppControllers')
     };
 
     $scope.baresCercanos = function() {
-        var filtroActual = null;
-        console.log($scope.selectedFiltro);
+        var filtrosParaAplicar = [];
+
         angular.forEach($scope.Filtros, function(filtro) {
-            if (filtro.nombre == $scope.selectedFiltro.filtro) {
-                filtroActual = new filtro.clase(new FiltroVacio(), $scope.selectedFiltro.value);
+            if (filtro.nombre == $scope.selectedFiltro1.filtro) {
+                filtrosParaAplicar.push({
+                    filtro: filtro.clase,
+                    valor: $scope.selectedFiltro1.value
+                })
+            }
+
+            if (filtro.nombre == $scope.selectedFiltro2.filtro) {
+                filtrosParaAplicar.push({
+                    filtro: filtro.clase,
+                    valor: $scope.selectedFiltro2.value
+                })
             }
         });
 
-        buscarBares($scope.posicionActual, $scope.distancia, filtroActual, function(Bares) {
+        var filtroCombinado = crearFiltroBusqueda(filtrosParaAplicar);
+
+        buscarBares($scope.posicionActual, $scope.distancia, filtroCombinado, function(Bares) {
             listarBaresEnMapa(Bares);
         });
     };
