@@ -5,7 +5,7 @@ module.exports = function(app) {
 
 
     /////////////////////////////////////////////////////////////////
-    // BARES
+    // USUARIOS
     /////////////////////////////////////////////////////////////////
 
     // Para usuarios registrados con Gmail (API de Google)
@@ -91,8 +91,10 @@ module.exports = function(app) {
 
     // Buscar bares
     app.post('/api/bares/buscar', function(req,res,next){
-        var ubicacion = req.body.ubicacion;
-        var resultados = app.guiaDeBares.buscar(req.body.ubicacion, req.body.distancia,
+        var resultados = app.guiaDeBares.buscar(
+            req.body.ubicacion,
+            req.body.distancia,
+            req.body.filtros,
             function(err, results) {
                 if (!err) {
                     res.jsonp({
@@ -146,4 +148,5 @@ module.exports = function(app) {
             }
         });
     });
+
 }

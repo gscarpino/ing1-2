@@ -25,7 +25,8 @@ angular.module('wifindAppControllers')
             url: $scope.url + '/api/bares/buscar',
             data: {
                 ubicacion: Ubicacion,
-                distancia: Distancia
+                distancia: Distancia,
+                filtros: filtroJSON
             }
         }).then(function successCallback(response) {
             var Bares = response.data.bares;
@@ -97,14 +98,14 @@ angular.module('wifindAppControllers')
             if (filtro.nombre == $scope.selectedFiltro1.filtro) {
                 filtrosParaAplicar.push({
                     filtro: filtro.clase,
-                    valor: $scope.selectedFiltro1.value
+                    valor: Number($scope.selectedFiltro1.value)
                 })
             }
 
             if (filtro.nombre == $scope.selectedFiltro2.filtro) {
                 filtrosParaAplicar.push({
                     filtro: filtro.clase,
-                    valor: $scope.selectedFiltro2.value
+                    valor: Number($scope.selectedFiltro2.value)
                 })
             }
         });
@@ -131,5 +132,5 @@ angular.module('wifindAppControllers')
     $scope.$on('direccionActual', function(event, direccion) {
         $scope.address = direccion;
         $scope.$apply();
-    });    
+    });
 })
