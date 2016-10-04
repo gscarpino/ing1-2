@@ -1,7 +1,7 @@
 'use strict';
 
 var Bar = require('./bar'),
-    ModelBar = require('./models/bar');
+    BarModel = require('./models/bar');
 
 class GuiaDeBares {
     constructor(calculadorDistancias, libroDeCriticas) {
@@ -10,30 +10,56 @@ class GuiaDeBares {
     }
 
     agregar(bar, callback) {
-        bar = new ModelBar( {nombre: bar.nombre, descripcion: bar.descripcion, ubicacion: bar.ubicacion, direccion: bar.direccion, wifi: bar.wifi, enchufes: bar.enchufes} );
+        bar = new BarModel( {nombre: bar.nombre, descripcion: bar.descripcion, ubicacion: bar.ubicacion, direccion: bar.direccion, wifi: bar.wifi, enchufes: bar.enchufes} );
         bar.save(function(err){
             console.log("Nuevo bar registrado");
             callback(err);
         });
     }
 
-    buscar(ubicacion, distancia, callback) {
-        var bares_encontrados = [];
+    buscar(ubicacion, distancia, filtros, callback) {
         var calcDist = this.calculadorDistancias;
-
-        ModelBar.find({}, function(err, bares){
+        var libroDeCriticas = this.libroDeCriticas;
+        BarModel.find({}, function(err, bares){
             if(!err) {
-                bares.forEach(function(bar) {
+                var bares_cercanos = [];
+                bares.forEach(function(barSchema) {
                     if (distancia) {
-                        var dist = calcDist.distanciaEntre(bar.ubicacion, ubicacion);
+                        var dist = calcDist.distanciaEntre(barSchema.ubicacion, ubicacion);
                         if (dist <= distancia){
-                            bares_encontrados.push(bar);
+                            bares_cercanos.push(barSchema);
                         }
                     } else {
-                        bares_encontrados.push(bar);
+                        bares_cercanos.push(barSchema);
                     }
                 });
-                callback(err, bares_encontrados);
+
+                if (filtros) {
+                    var bares_encontrados = [];
+                    bares_cercanos.forEach(function(barSchema) {
+                        console.log(barSchema.nombre);
+                        console.log(filtros);
+                        var promedios = libroDeCriticas.puntajesPromedio(barSchema);
+                        Object.keys(filtros).forEach(function(filtro) {
+                            if (promedios.hasOwnProperty(filtro))
+                            {
+                                console.log(filtro);
+                                console.log(promedios[filtro]);
+                                console.log(filtros[filtro]);
+                                if (promedios[filtro] >= filtros[filtro])
+                                {
+                                    var bar = new Bar(barSchema._id, barSchema.nombre,
+                                        barSchema.descripcion, barSchema.ubicacion, barSchema.direccion, promedios);
+                                    bares_encontrados.push(bar);
+                                }
+                            }
+                        });
+                    });
+                    callback(err, bares_encontrados);
+                }
+                else {
+                    callback(err, bares_cercanos);
+                }
             }
             else {
                 callback(err);
@@ -44,7 +70,7 @@ class GuiaDeBares {
     actualizar(editedBar, callback) {
         console.log("Actualizando bar");
         if (editedBar._id) {
-            ModelBar.update(
+            BarModel.update(
                 {_id: editedBar._id},
                 { $set: {
                     nombre: editedBar.nombre, descripcion: editedBar.descripcion,
@@ -61,7 +87,7 @@ class GuiaDeBares {
     eliminar(id, callback) {
         console.log("Eliminando bar");
         if (id) {
-            ModelBar.remove( {_id: id}, function(err) {
+            BarModel.remove( {_id: id}, function(err) {
                 callback(err);
             });
         }
