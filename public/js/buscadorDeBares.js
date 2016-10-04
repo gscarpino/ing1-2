@@ -13,7 +13,7 @@ angular.module('wifindAppControllers')
     ///////////////////////////
     //  Metodos de la clase  //
     ///////////////////////////
-    
+
     function buscarBares(Ubicacion, Distancia, Filtro, callback) {
         var filtroJSON = Filtro.filtrar();
         console.log(filtroJSON);
@@ -46,7 +46,7 @@ angular.module('wifindAppControllers')
     }
 
     function ubicarBarEnMapa(Bar) {
-        $scope.$broadcast('centrarBarEnMapa', Bar);   
+        $scope.$broadcast('centrarBarEnMapa', Bar);
     }
 
     function crearFiltroBusqueda(Caracteristica1, Caracterstica2) {
@@ -81,7 +81,7 @@ angular.module('wifindAppControllers')
             $scope.$broadcast('ubicarDireccion', $scope.address);
         }
     };
-    
+
     $scope.baresCercanos = function() {
         var filtroActual = null;
         console.log($scope.selectedFiltro);
@@ -107,4 +107,9 @@ angular.module('wifindAppControllers')
     $scope.$on('posicionActual', function(event, Ubicacion) {
         $scope.posicionActual = Ubicacion;
     });
+
+    $scope.$on('direccionActual', function(event, direccion) {
+        $scope.address = direccion;
+        $scope.$apply();
+    });    
 })
