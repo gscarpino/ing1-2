@@ -127,20 +127,20 @@
             <md-toolbar class="md-theme-indigo">
                 <h1 class="md-toolbar-tools">Wifind Bar</h1>
             </md-toolbar>
-            <md-content layout-padding>
+            <md-content layout-padding style="height:100%">
                 <li ng-click="goToState('Inicio')"><i class="material-icons">home</i>Inicio</li>
                 <li ng-if="!isRegistered" ng-click="goToState('Nuevo Usuario')"><i class="material-icons">person_add</i>Registrarse</li>
-                <li>
-                    <div ng-hide="googleSignedIn" class="g-signin2" ng-controller="LoginCtrl" data-onsuccess="onSignIn"></div>
-                   
-                    <a ng-controller="LoginCtrl"ng-show="googleSignedIn" href="#"  ng-click="signOut();">Sign out</a>
-                </li>
-                 <li>
-                    Bienvenido <span ng-show="googleSignedIn" ng-controller="LoginCtrl" ng-bind="userName"></span>!<br>
-                </li>
-                <li ng-show="googleSignedIn" ng-click="goToState('Nuevo Bar')"><i class="material-icons">add_box</i>Nuevo Bar</li>
-    
-                
+                <div ng-controller="LoginCtrl" style="padding:0px">
+                    <li style="padding:8px">
+                        <div ng-hide="googleSignedIn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                    
+                        <i class="material-icons" ng-show="googleSignedIn">close</i><a ng-show="googleSignedIn"  ng-click="signOut();">Sign out</a>
+                    </li>
+                    <li style="position:absolute;bottom:20px">
+                        Bienvenido <span ng-show="googleSignedIn" ng-bind="userName"></span>!<br>
+                    </li>
+                    <li ng-show="googleSignedIn" ng-click="goToState('Nuevo Bar')" style="padding:8px"><i class="material-icons">add_box</i>Nuevo Bar</li>
+                </div>
              
 
                 
