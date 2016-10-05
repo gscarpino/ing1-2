@@ -18,7 +18,6 @@ angular.module('wifindAppControllers')
 
     function buscarBares(Ubicacion, Distancia, Filtro, callback) {
         var filtroJSON = Filtro.filtrar();
-        console.log(filtroJSON);
 
         $http({
             method: 'POST',

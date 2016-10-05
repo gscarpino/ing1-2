@@ -34,7 +34,7 @@ class GuiaDeBares {
                     }
                 });
 
-                if (filtros) {
+                if (filtros && Object.keys(filtros).length !== 0) {
                     var bares_encontrados = [];
                     bares_cercanos.forEach(function(barSchema) {
                         console.log(barSchema.nombre);
