@@ -9,7 +9,7 @@ class Critica{
 	}
 
 	get comentario(){return this.comentario;}
-	get bar(){return this.comentario;}
+	get bar(){return this.bar;}
 	get calificaciones(){return this.calificaciones;}
 	get usuario(){return this.email}
 
