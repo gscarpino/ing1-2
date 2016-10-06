@@ -23,7 +23,7 @@ angular.module('wifindAppControllers')
             method: 'POST',
             url: $scope.url + '/api/bares/buscar',
             data: {
-                ubicacion: Ubicacion,
+                ubicacion: { latitude: Ubicacion.latitude, longitude: Ubicacion.longitude },
                 distancia: Distancia,
                 filtros: filtroJSON
             }

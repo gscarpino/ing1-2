@@ -84,8 +84,6 @@ angular.module('wifindAppControllers')
 
             id++;
         });
-
-        console.log($scope.Marcadores);
     }
 
     //////////////////////
