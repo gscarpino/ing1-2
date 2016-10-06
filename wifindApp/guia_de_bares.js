@@ -42,7 +42,7 @@ class GuiaDeBares {
                     var bares_encontrados = [];
                     bares_cercanos.forEach(function(barSchema) {
                         var cumpleCondiciones = true;
-                        var promedios = libroDeCriticas.puntajesPromedio(barSchema);
+                        var promedios = barSchema.promedios;
                         Object.keys(filtros).forEach(function(filtro) {
                             console.log("BAR: "+barSchema.nombre+", FILTRO: "+filtro+", PROMEDIO: "+promedios[filtro]+", MINIMO: "+filtros[filtro]);
                             if (promedios.hasOwnProperty(filtro))
@@ -51,6 +51,8 @@ class GuiaDeBares {
                                 {
                                     cumpleCondiciones = false;
                                 }
+                            } else {
+                                cumpleCondiciones = false;
                             }
                         });
 
