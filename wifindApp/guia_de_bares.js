@@ -24,36 +24,41 @@ class GuiaDeBares {
             if(!err) {
                 var bares_cercanos = [];
                 bares.forEach(function(barSchema) {
+                    var promedios = libroDeCriticas.puntajesPromedio(barSchema);
+                    var bar = new Bar(barSchema._id, barSchema.nombre,
+                                        barSchema.descripcion, barSchema.ubicacion, barSchema.direccion, promedios);
+                    
                     if (distancia) {
                         var dist = calcDist.distanciaEntre(barSchema.ubicacion, ubicacion);
                         if (dist <= distancia){
-                            bares_cercanos.push(barSchema);
+                            bares_cercanos.push(bar);
                         }
                     } else {
-                        bares_cercanos.push(barSchema);
+                        bares_cercanos.push(bar);
                     }
                 });
 
                 if (filtros && Object.keys(filtros).length !== 0) {
                     var bares_encontrados = [];
                     bares_cercanos.forEach(function(barSchema) {
-                        console.log(barSchema.nombre);
-                        console.log(filtros);
+                        var cumpleCondiciones = true;
                         var promedios = libroDeCriticas.puntajesPromedio(barSchema);
                         Object.keys(filtros).forEach(function(filtro) {
+                            console.log("BAR: "+barSchema.nombre+", FILTRO: "+filtro+", PROMEDIO: "+promedios[filtro]+", MINIMO: "+filtros[filtro]);
                             if (promedios.hasOwnProperty(filtro))
                             {
-                                console.log(filtro);
-                                console.log(promedios[filtro]);
-                                console.log(filtros[filtro]);
-                                if (promedios[filtro] >= filtros[filtro])
+                                if (promedios[filtro] < filtros[filtro])
                                 {
-                                    var bar = new Bar(barSchema._id, barSchema.nombre,
-                                        barSchema.descripcion, barSchema.ubicacion, barSchema.direccion, promedios);
-                                    bares_encontrados.push(bar);
+                                    cumpleCondiciones = false;
                                 }
                             }
                         });
+
+                        if (cumpleCondiciones) {
+                            var bar = new Bar(barSchema._id, barSchema.nombre,
+                                        barSchema.descripcion, barSchema.ubicacion, barSchema.direccion, promedios);
+                            bares_encontrados.push(bar);
+                        }
                     });
                     callback(err, bares_encontrados);
                 }

@@ -60,3 +60,12 @@ class FiltroWifi extends FiltroAdicional {
         return baseFilter;
     }
 }
+
+class FiltroPrecios extends FiltroAdicional {
+    filtrar() {
+        var baseFilter = super.filtrar();
+        baseFilter.precios = this.value;
+
+        return baseFilter;
+    }
+}

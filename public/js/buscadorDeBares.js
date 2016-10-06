@@ -73,6 +73,10 @@ angular.module('wifindAppControllers')
                 clase: FiltroEnchufes
             },
             {
+                nombre: 'Precios',
+                clase: FiltroPrecios
+            },
+            {
                 nombre: 'Higiene',
                 clase: FiltroHigiene
             }

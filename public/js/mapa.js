@@ -78,6 +78,7 @@ angular.module('wifindAppControllers')
                     title: Bar.nombre,
                     description: Bar.descripcion,
                     location: Bar.direccion,
+                    promedios: Bar.promedios,
                     options: {
                         visible: false
                     }
@@ -86,6 +87,8 @@ angular.module('wifindAppControllers')
 
             id++;
         });
+
+        console.log($scope.Marcadores);
     }
 
     //////////////////////
