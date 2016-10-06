@@ -1,5 +1,5 @@
 angular.module('wifindAppControllers')
-.controller('BuscadorDeBares', function($scope, $http, $mdToast) {
+.controller('BuscadorDeBares', function($scope, $http, $state, $mdToast) {
     $scope.distancia = 400;
     $scope.Bares = [];
     $scope.Filtros = [];
@@ -83,6 +83,47 @@ angular.module('wifindAppControllers')
         ];
     }
 
+    function registrarNuevoBar() {
+        var formularioBar = $scope.$parent;
+
+        console.log("agregando bar...");
+        console.log("nombre: " + formularioBar.nombre );
+        console.log("direccion: " + formularioBar.direccion );
+        console.log("ubicacion: ");
+        console.log(formularioBar.ubicacion);
+        console.log("descripcion: " + formularioBar.descripcion );
+
+        var nuevoBar = {
+            nombre: formularioBar.nombre,
+            descripcion: formularioBar.descripcion,
+            ubicacion:
+                {
+                    latitude: formularioBar.ubicacion.lat,
+                    longitude: formularioBar.ubicacion.lon
+                },
+            direccion: formularioBar.direccion,
+            wifi: formularioBar.carecteristicas[0].check,
+            enchufes: formularioBar.carecteristicas[1].check,
+        };
+
+        $http.post($scope.url + "/api/bares", nuevoBar).then(function(response){
+                $mdToast.show({
+                    hideDelay   : 1500,
+                    position    : 'top right',
+                    controller  : 'ToastCtrl',
+                    templateUrl : 'toast-template.html'
+
+                })
+                .then(function() {
+                    $state.go('Inicio');
+                });
+
+            },
+            function(error){
+                console.log("Error", error);
+            });
+    }
+
     /////////////////////////////
     //  Conexion con la vista  //
     /////////////////////////////
@@ -135,5 +176,9 @@ angular.module('wifindAppControllers')
     $scope.$on('direccionActual', function(event, direccion) {
         $scope.address = direccion;
         $scope.$apply();
+    });
+
+    $scope.$on('registrarNuevoBar', function(event) {
+        registrarNuevoBar();
     });
 })

@@ -23,19 +23,19 @@ ui-view{
             <div layout-gt-md="row">
               <md-input-container class="md-block" flex-gt-sm="">
                 <label>Nombre del Bar</label>
-                <input ng-model="bar.nombre" ng-required="true">
+                <input ng-model="nombre" ng-required="true">
               </md-input-container>
             </div>
 
             <md-input-container class="md-block">
               <label>Dirección</label>
-              <input ng-model="bar.direccion" type="text" ng-keypress="buscarDireccion($event)" ng-required="true">
+              <input ng-model="direccion" type="text" ng-keypress="buscarDireccion($event)" ng-required="true">
               <md-icon class="material-icons">place</md-icon>
             </md-input-container>
 
             <md-input-container class="md-block">
               <label>Descripción</label>
-              <textarea ng-model="bar.descripcion" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
+              <textarea ng-model="descripcion" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
             </md-input-container>
 
             <md-content>
@@ -53,7 +53,7 @@ ui-view{
 
         </form>
 
-        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <section ng-controller="BuscadorDeBares" layout="row" layout-sm="column" layout-align="center center" layout-wrap>
             <md-button ng-click="crearNuevoBar()" class="md-raised md-primary"><md-icon class="material-icons">save</md-icon> Guardar</md-button>
             <md-button ng-click="goToState('Inicio')" class="md-raised"><md-icon class="material-icons">cancel</md-icon> Cancelar</md-button>
         </section>
@@ -63,7 +63,7 @@ ui-view{
 
     <div ng-controller="Mapa" flex-gt-sm="60" flex>
         <ui-gmap-google-map ng-if="map.center" center='map.center' zoom='map.zoom' events='map.events'>
-            <ui-gmap-circle center="bar.ubicacion" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="15" visible="true"></ui-gmap-circle>
+            <ui-gmap-circle center="ubicacion" stroke="map.userMarker.stroke" fill="map.userMarker.fill" radius="15" visible="true"></ui-gmap-circle>
             <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" options="marker.options" idkey="marker.id" click="marker.window.options.visible = !marker.window.options.visible;"></ui-gmap-marker>
         </ui-gmap-google-map>
     </div>
